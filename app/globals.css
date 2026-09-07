@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --bg-color: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-main: #000000;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  
+  --accent-black: #0f0f11;
+  --border-light: rgba(0, 0, 0, 0.06);
+
+  --font-display: 'Suisse Intl', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Suisse Intl', 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body, a, button, input, textarea, select {
+    cursor: none;
+  }
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   Cuberto Navbar Strip (Breathable Wide Container)
+   ========================================================================== */
+.cb-navbar-strip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 28px 0;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition: all 0.3s ease;
+}
+
+.cb-navbar-container {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+.cb-navbar-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cb-navbar-grid-col.-left {
+  display: flex;
+  align-items: center;
+}
+
+.cb-navbar-grid-col.-right {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+}
+
+/* Logo Styling */
+.cb-navbar-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: #000000;
+}
+
+.logo-text-bold {
+  font-family: var(--font-display);
+  font-size: 1.95rem;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.logo-text-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+}
+
+/* Nav Items & Text Roll-Up Animation */
+.cb-navbar-navs {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
+.cb-navbar-nav-toggle {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.cb-navbar-nav-title {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.cb-navbar-nav-title span {
+  display: block;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.cb-navbar-nav-title span::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #000000;
+  font-weight: 700;
+}
+
+.cb-navbar-nav-toggle:hover .cb-navbar-nav-title span {
+  transform: translateY(-100%);
+}
+
+/* Language Switcher */
+.cb-lang-toggle {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #000000;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.cb-lang-toggle:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Contacts Button - Bottom-to-Top White Fill Hover Effect
+   ========================================================================== */
+.cb-btn_cta {
+  background: #000000;
+  color: #ffffff !important;
+  padding: 15px 38px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.02rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid #000000;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.4s cubic-bezier(0.76, 0, 0.24, 1), transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cb-btn_cta::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #ffffff;
+  border-radius: 999px;
+  z-index: -1;
+  transition: height 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.cb-btn_cta:hover::before {
+  height: 100%;
+}
+
+.cb-btn_cta:hover {
+  color: #000000 !important;
+  border-color: #000000;
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.cb-btn_cta-title span {
+  display: block;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.cb-btn_cta-title span::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #000000;
+  font-weight: 700;
+}
+
+.cb-btn_cta:hover .cb-btn_cta-title span {
+  transform: translateY(-100%);
+}
+
+/* Inverse CTA Button (For Dark Section) */
+.cb-btn_cta.-inverse-btn {
+  background: transparent;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cb-btn_cta.-inverse-btn::before {
+  background: #ffffff;
+}
+
+.cb-btn_cta.-inverse-btn:hover {
+  color: #000000 !important;
+  border-color: #ffffff;
+}
+
+.cb-btn_cta.-inverse-btn .cb-btn_cta-title span::before {
+  color: #000000;
+}
+
+/* Project Card Hover Animation */
+.cb-project-card:hover .cb-card-arrow {
+  transform: scale(1.15) rotate(15deg);
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   FAQ Creative Accordion Flowing Neon Border Animation
+   ========================================================================== */
+.cb-faq-item-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@keyframes spinNeonBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cb-faq-item-card::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: conic-gradient(
+    transparent 0deg,
+    #00f2fe 60deg,
+    #7928ca 120deg,
+    transparent 180deg
+  );
+  opacity: 0;
+  z-index: -2;
+  transition: opacity 0.4s ease;
+  animation: spinNeonBorder 4s linear infinite;
+  pointer-events: none;
+}
+
+.cb-faq-item-card::after {
+  content: '';
+  position: absolute;
+  inset: 1.5px;
+  background: #000000;
+  border-radius: 22px;
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.cb-faq-item-card.-active::after {
+  background: #0a0d14;
+}
+
+.cb-faq-item-card:hover::before {
+  opacity: 1;
+}
+
+.cb-faq-item-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.18);
+}
+
+.cb-faq-item-card:hover span {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Cuberto cb-input_light Styling Architecture
+   ========================================================================== */
+.cb-contact-group {
+  width: 100%;
+}
+
+.cb-input_light {
+  position: relative;
+  width: 100%;
+}
+
+.cb-input_light-box {
+  position: relative;
+  width: 100%;
+}
+
+.cb-input_light-box input,
+.cb-input_light-box textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
+  padding: 18px 0;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #000000;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: none;
+}
+
+.cb-input_light-box input::placeholder,
+.cb-input_light-box textarea::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.cb-input_light-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: #000000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.cb-input_light-box input:focus ~ .cb-input_light-line,
+.cb-input_light-box textarea:focus ~ .cb-input_light-line {
+  transform: scaleX(1);
+}
+
+/* ==========================================================================
+   Cuberto Footer Styling
+   ========================================================================== */
+.cb-footer-nav {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.cb-footer-nav-title {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.cb-footer-nav-title span {
+  display: block;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.cb-footer-nav-title span::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.cb-footer-nav:hover .cb-footer-nav-title span {
+  transform: translateY(-100%);
+}
+
+/* Circular Social Button matching Cuberto */
+.cb-btn_round {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cb-btn_round:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   Global Keyframes & Layout Utilities
+   ========================================================================== */
+@keyframes cbTextReveal {
+  0% {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.cb-tophead-title h1 {
+  display: block;
+  text-align: center;
+}
+
+/* Secondary Buttons */
+.btn-black-pill {
+  background: #000000;
+  color: #ffffff !important;
+  padding: 15px 36px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.02rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-black-pill:hover {
+  background: #27272a;
+  transform: scale(1.04);
+}
+
+.btn-outline-pill {
+  background: transparent;
+  color: #000000;
+  border: 1.5px solid #000000;
+  padding: 15px 36px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.02rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-pill:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Container & Sections */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+/* Cuberto Clean Cards */
+.cuberto-card {
+  background: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
+  padding: 40px;
+  transition: all 0.35s ease;
+}
+
+.cuberto-card:hover {
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .section-padding {
+    padding: 70px 0;
+  }
+  .cb-navbar-container {
+    padding: 0 20px;
+  }
+  .cb-navbar-grid-col.-right nav.cb-navbar-navs {
+    gap: 16px;
+    font-size: 0.85rem;
+  }
+  .cb-navbar-nav-toggle {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px !important;
+  }
+  .cb-navbar-strip {
+    padding: 16px 0;
+  }
+  .logo-text-bold {
+    font-size: 1.4rem;
+  }
+  .logo-text-tag {
+    font-size: 0.7rem;
+  }
+  .cb-navbar-grid-col.-right {
+    gap: 12px;
+  }
+  .cb-navbar-navs {
+    gap: 10px;
+  }
+  .cb-btn_cta {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  .cuberto-card {
+    padding: 24px 20px;
+  }
+  
+  /* ERP Projects Page Mobile Adjustments */
+  section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
