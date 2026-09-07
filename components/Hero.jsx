@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { ArrowUpRight } from 'lucide-react';
 
+// Vercel deployment sync trigger
 export default function Hero() {
   const { t } = useLanguage();
   const videos = ['/giris1.mp4', '/api/video?name=girsi2.mp4'];
