@@ -566,6 +566,137 @@ h1, h2, h3, h4 {
   gap: 24px;
 }
 
+/* ==========================================================================
+   Mobile Hamburger Button (Hidden on Desktop)
+   ========================================================================== */
+.cb-mobile-menu-trigger {
+  display: none;
+}
+
+.cb-hamburger {
+  background: none;
+  border: none;
+  width: 36px;
+  height: 28px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cb-hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background: #000000;
+  border-radius: 2px;
+  transition: all 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+  transform-origin: center;
+}
+
+.cb-hamburger.-active .cb-hamburger-line:nth-child(1) {
+  transform: translateY(12.5px) rotate(45deg);
+}
+
+.cb-hamburger.-active .cb-hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.cb-hamburger.-active .cb-hamburger-line:nth-child(3) {
+  transform: translateY(-12.5px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   Mobile Full-Screen Overlay Menu
+   ========================================================================== */
+.cb-mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.76, 0, 0.24, 1), visibility 0.4s;
+}
+
+.cb-mobile-overlay.-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cb-mobile-overlay-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.cb-mobile-nav-link {
+  text-decoration: none;
+  color: #000000;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  padding: 10px 24px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.cb-mobile-overlay.-open .cb-mobile-nav-link {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cb-mobile-overlay.-open .cb-mobile-nav-link:nth-child(1) { transition-delay: 0.08s; }
+.cb-mobile-overlay.-open .cb-mobile-nav-link:nth-child(2) { transition-delay: 0.14s; }
+.cb-mobile-overlay.-open .cb-mobile-nav-link:nth-child(3) { transition-delay: 0.20s; }
+.cb-mobile-overlay.-open .cb-mobile-nav-link:nth-child(4) { transition-delay: 0.26s; }
+.cb-mobile-overlay.-open .cb-mobile-nav-link:nth-child(5) { transition-delay: 0.32s; }
+
+.cb-mobile-nav-link:hover,
+.cb-mobile-nav-link:active {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000000;
+}
+
+.cb-mobile-overlay-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.76, 0, 0.24, 1) 0.38s;
+}
+
+.cb-mobile-overlay.-open .cb-mobile-overlay-actions {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cb-lang-toggle.-mobile {
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 24px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
 @media (max-width: 992px) {
   .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
@@ -576,12 +707,14 @@ h1, h2, h3, h4 {
   .cb-navbar-container {
     padding: 0 20px;
   }
-  .cb-navbar-grid-col.-right nav.cb-navbar-navs {
-    gap: 16px;
-    font-size: 0.85rem;
+
+  /* Hide desktop nav, show hamburger */
+  .cb-desktop-nav {
+    display: none !important;
   }
-  .cb-navbar-nav-toggle {
-    font-size: 0.85rem;
+  .cb-mobile-menu-trigger {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -598,12 +731,6 @@ h1, h2, h3, h4 {
   .logo-text-tag {
     font-size: 0.7rem;
   }
-  .cb-navbar-grid-col.-right {
-    gap: 12px;
-  }
-  .cb-navbar-navs {
-    gap: 10px;
-  }
   .cb-btn_cta {
     padding: 10px 20px;
     font-size: 0.85rem;
@@ -611,11 +738,34 @@ h1, h2, h3, h4 {
   .cuberto-card {
     padding: 24px 20px;
   }
+  .cb-mobile-nav-link {
+    font-size: 1.6rem;
+  }
   
   /* ERP Projects Page Mobile Adjustments */
   section {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cb-navbar-container {
+    padding: 0 16px;
+  }
+  .logo-text-bold {
+    font-size: 1.25rem;
+  }
+  .logo-text-tag {
+    font-size: 0.62rem;
+  }
+  .cb-mobile-nav-link {
+    font-size: 1.35rem;
+    padding: 8px 16px;
+  }
+  .cb-mobile-overlay-actions .cb-btn_cta {
+    padding: 12px 28px;
+    font-size: 0.92rem;
   }
 }
 
