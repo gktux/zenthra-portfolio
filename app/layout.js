@@ -13,26 +13,17 @@ export const metadata = {
   title: 'Zenthra Bilişim | Kurumsal Yazılım & Web Teknolojileri',
   description: 'Zenthra Bilişim - Geleceğin işletmeleri için ölçeklenebilir ERP sistemleri, Depo Live canlı stok otomasyonu, özel yazılımlar ve web teknolojileri.',
   keywords: 'Zenthra Bilişim, Kurumsal Yazılım, Web Teknolojileri, Zenthra ERP, Depo Live, WMS, IT Bakım, Web Tasarım',
-  icons: {
-    icon: [
-      { url: '/logo.png?v=2', type: 'image/png' },
-      { url: '/icon.png?v=2', type: 'image/png' },
-    ],
-    shortcut: '/logo.png?v=2',
-    apple: '/logo.png?v=2',
-  },
   openGraph: {
-    alternates: { canonical: '/' },
-  title: 'Zenthra Bilişim | Kurumsal Yazılım & Web Teknolojileri',
+    title: 'Zenthra Bilişim | Kurumsal Yazılım & Web Teknolojileri',
     description: 'Zenthra Bilişim - Kurumsal ERP sistemleri, Depo Live canlı stok otomasyonu, özel yazılımlar ve web teknolojileri.',
     siteName: 'Zenthra Bilişim',
     url: 'https://www.zenthrabilisim.com',
     images: [
       {
-        url: '/logo.png',
-        width: 800,
-        height: 800,
-        alt: 'Zenthra Bilişim Logo',
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Zenthra Bilişim — Kurumsal Yazılım ve Web Teknolojileri',
       },
     ],
     locale: 'tr_TR',
@@ -45,9 +36,6 @@ export default function RootLayout({ children }) {
     <html lang="tr">
       <head>
         <meta name="google-site-verification" content="vEm4p5z4Oa5jJi8BIfG1AZwMWLz5Lq4DLTHI6_Bs8q8" />
-        <link rel="icon" type="image/png" href="/logo.png?v=2" />
-        <link rel="shortcut icon" href="/logo.png?v=2" />
-        <link rel="apple-touch-icon" href="/logo.png?v=2" />
       </head>
       <body>
         <OrganizationSchema />
