@@ -1,7 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/context/LanguageContext';
-import { Globe, Github, Youtube, Linkedin, MessageCircle } from 'lucide-react';
+import { Globe, Linkedin, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -76,7 +76,7 @@ export default function Footer() {
           
           {/* Bottom Left Links & Copy */}
           <div className="cb-footer-bgrid-col -left" style={{ display: 'flex', alignItems: 'center', gap: '24px', fontSize: '0.85rem', color: '#64748b' }}>
-            <a href="#" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 600 }}>Gizlilik Politikası</a>
+            <a href="https://www.zenthrabilisim.com" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 600 }}>zenthrabilisim.com</a>
             <span>2026, Zenthra Bilişim</span>
           </div>
 
@@ -84,9 +84,8 @@ export default function Footer() {
           <div className="cb-footer-bgrid-col -right">
             <div className="cb-footer-socials" style={{ display: 'flex', gap: '12px' }}>
               <a className="cb-btn_round" href="https://wa.me/905315800753?text=Merhaba,%20size%20zenthrabilisim.com%20web%20sitesi%20üzerinden%20ulaşıyorum." target="_blank" rel="noopener noreferrer" title="WhatsApp"><MessageCircle size={18} /></a>
-              <a className="cb-btn_round" href="#" title="Website"><Globe size={18} /></a>
-              <a className="cb-btn_round" href="#" title="GitHub"><Github size={18} /></a>
-              <a className="cb-btn_round" href="#" title="LinkedIn"><Linkedin size={18} /></a>
+              <a className="cb-btn_round" href="https://www.zenthrabilisim.com" target="_blank" rel="noopener noreferrer" title="zenthrabilisim.com"><Globe size={18} /></a>
+              <a className="cb-btn_round" href="https://www.linkedin.com/company/zenthra-bi%CC%87li%CC%87%C5%9Fi%CC%87m/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={18} /></a>
             </div>
           </div>
 
