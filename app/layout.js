@@ -4,6 +4,10 @@ import CustomCursor from '@/components/CustomCursor';
 import SmoothScroll from '@/components/SmoothScroll';
 
 export const metadata = {
+  metadataBase: new URL('https://www.zenthrabilisim.com'),
+  alternates: {
+    canonical: 'https://www.zenthrabilisim.com',
+  },
   title: 'Zenthra Bilişim | Kurumsal Yazılım & Web Teknolojileri',
   description: 'Zenthra Bilişim - Geleceğin işletmeleri için ölçeklenebilir ERP sistemleri, Depo Live canlı stok otomasyonu, özel yazılımlar ve web teknolojileri.',
   keywords: 'Zenthra Bilişim, Kurumsal Yazılım, Web Teknolojileri, Zenthra ERP, Depo Live, WMS, IT Bakım, Web Tasarım',
@@ -19,6 +23,7 @@ export const metadata = {
     title: 'Zenthra Bilişim | Kurumsal Yazılım & Web Teknolojileri',
     description: 'Zenthra Bilişim - Kurumsal ERP sistemleri, Depo Live canlı stok otomasyonu, özel yazılımlar ve web teknolojileri.',
     siteName: 'Zenthra Bilişim',
+    url: 'https://www.zenthrabilisim.com',
     images: [
       {
         url: '/logo.png',
@@ -36,6 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <head>
+        <link rel="canonical" href="https://www.zenthrabilisim.com" />
         <link rel="icon" type="image/png" href="/logo.png?v=2" />
         <link rel="shortcut icon" href="/logo.png?v=2" />
         <link rel="apple-touch-icon" href="/logo.png?v=2" />
