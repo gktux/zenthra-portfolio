@@ -33,7 +33,6 @@ export default function Navbar() {
             {/* Left Column: Zenthra Bilişim Brand Logo */}
             <div className="cb-navbar-grid-col -left">
               <a href="/" className="cb-navbar-logo" aria-label="Zenthra Bilişim" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <img src="/logo.png" alt="Zenthra Bilişim Logo" style={{ height: '32px', width: 'auto', display: 'block' }} />
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
                   <span className="logo-text-bold">Zenthra</span>
                   <span className="logo-text-tag">bilişim</span>
