@@ -1,28 +1,11 @@
+const BASE = 'https://www.zenthrabilisim.com';
+
 export default function sitemap() {
+  const now = new Date();
   return [
-    {
-      url: 'https://www.zenthrabilisim.com',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: 'https://www.zenthrabilisim.com/projects/depo-live',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://www.zenthrabilisim.com/projects/erp',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://www.zenthrabilisim.com/contacts',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
+    { url: BASE, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${BASE}/projects/depo-live`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE}/projects/erp`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE}/contacts`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
   ];
 }
