@@ -98,12 +98,12 @@ export const zenthraDepoLiveData = {
         cevap: "Android ve iOS işletim sistemine sahip tüm profesyonel el terminalleri, tabletler ve akıllı telefonlarla tam uyumludur. Ayrıca kablosuz barkod/karekod okuyucuları da destekler."
       },
       {
-        soru: "Depo Live mevcut ERP (Logo, Netsis, Mikro, Nebim vb.) sistemimize bağlanabilir mi?",
-        cevap: "Evet. Zenthra Bilişim Depo Live, Türkiye'de yaygın olarak kullanılan tüm ERP ve ticari yazılımlarla (Logo, Netsis, Mikro, Nebim vb.) hazır API entegrasyonlarına sahiptir."
+        soru: "E-Ticaret ve pazaryeri (Trendyol, Hepsiburada, N11 vb.) siparişleri Depo Live'a nasıl aktarılır?",
+        cevap: "E-ticaret sitenizden veya pazaryerlerinden gelen siparişler Depo Live sistemine anında düşer. Saha personeli el terminalinde doğrudan toplama listesini görür ve toplama tamamlandığında stok tüm kanallarda otomatik güncellenir."
       },
       {
-        soru: "İnternet kesintisi yaşandığında saha operasyonu durur mu?",
-        cevap: "Hayır. Depo Live el terminali uygulaması çevrimdışı (offline) çalışma modunu destekler. Bağlantı yeniden sağlandığında tüm işlemler arka planda otomatik senkronize olur."
+        soru: "Birden fazla depomuz veya şubemiz varsa hepsini tek panelden yönetebilir miyiz?",
+        cevap: "Evet. Depo Live çoklu depo ve şube mimarisini destekler. Tüm depolarınız arasındaki stok transferlerini, canlı stok miktarlarını ve operasyonel hareketleri tek bir bulut panelden anlık olarak takip edebilirsiniz."
       },
       {
         soru: "Stok sayımları sırasında depoyu kapatmamız gerekir mi?",
@@ -218,12 +218,12 @@ export const zenthraDepoLiveData = {
         cevap: "Depo Live is compatible with all professional Android/iOS handheld terminals, industrial tablets, smartphones, and wireless barcode scanners."
       },
       {
-        soru: "Can Depo Live integrate with our current ERP system?",
-        cevap: "Yes. Zenthra Bilişim Depo Live features pre-built API integrations for leading ERP systems including Logo, Netsis, Mikro, Nebim, and custom APIs."
+        soru: "How are e-commerce and marketplace orders routed to Depo Live?",
+        cevap: "Orders received from your e-commerce platform or marketplaces sync instantly into Depo Live. Handheld terminals display real-time picking lists, and inventory updates automatically across all channels upon dispatch."
       },
       {
-        soru: "Does floor operation stop during internet outages?",
-        cevap: "No. The mobile handheld app supports offline mode. All local transactions automatically synchronize once connectivity is restored."
+        soru: "Can we manage multiple warehouses or branch locations from a single platform?",
+        cevap: "Yes. Depo Live supports multi-warehouse and branch operations. You can monitor stock transfers, real-time inventory levels, and staff activities across all locations from a unified cloud dashboard."
       },
       {
         soru: "Do we need to freeze operations during inventory audits?",
