@@ -249,10 +249,6 @@ export default function DepoLiveProjectPage() {
                     <ArrowRight size={18} />
                   </button>
                 </div>
-                
-                <span style={{ fontSize: '0.88rem', color: '#64748b', fontWeight: 600 }}>
-                  {isTr ? 'Anında Kurulumsuz Deneyin: app.zenthrabilisim.com.tr' : 'Instant Cloud Access: app.zenthrabilisim.com.tr'}
-                </span>
               </div>
 
               {/* Metrik Grid */}
@@ -311,7 +307,6 @@ export default function DepoLiveProjectPage() {
                 <span style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#ff5f56', display: 'inline-block' }}></span>
                 <span style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#ffbd2e', display: 'inline-block' }}></span>
                 <span style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#27c93f', display: 'inline-block' }}></span>
-                <span style={{ marginLeft: 'auto', fontSize: '0.75rem', color: '#64748b', fontWeight: 600, fontFamily: 'monospace' }}>app.zenthrabilisim.com.tr</span>
               </div>
 
               {/* Screen Display Image */}
