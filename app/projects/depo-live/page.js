@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import ScrollReveal from '@/components/ScrollReveal';
-import { CheckCircle2, ChevronDown, Check } from 'lucide-react';
+import { CheckCircle2, ChevronDown, Check, Sparkles, ExternalLink, ArrowRight } from 'lucide-react';
 import { zenthraDepoLiveData } from '@/data/zenthraDepoLiveData';
 import KvkkCheckboxes from '@/components/KvkkCheckboxes';
 
@@ -180,11 +180,97 @@ export default function DepoLiveProjectPage() {
                 color: '#475569',
                 lineHeight: 1.65,
                 maxWidth: '840px',
-                margin: '0 auto 36px auto',
+                margin: '0 auto 32px auto',
                 fontFamily: "var(--font-body)"
               }}>
                 {data.hero.altBaslik}
               </p>
+
+              {/* 14-Day Free Trial CTA Block */}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '16px',
+                marginBottom: '40px'
+              }}>
+                <div style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: 'rgba(37, 99, 235, 0.08)',
+                  border: '1px solid rgba(37, 99, 235, 0.25)',
+                  color: '#2563eb',
+                  padding: '8px 20px',
+                  borderRadius: '30px',
+                  fontSize: '0.9rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.02em'
+                }}>
+                  <Sparkles size={16} />
+                  <span>{data.freeTrialBadge}</span>
+                </div>
+
+                <div style={{
+                  display: 'flex',
+                  gap: '16px',
+                  flexWrap: 'wrap',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>
+                  <a
+                    href="https://app.zenthrabilisim.com.tr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      background: '#2563eb',
+                      color: '#ffffff',
+                      padding: '18px 36px',
+                      borderRadius: '50px',
+                      fontSize: '1.1rem',
+                      fontWeight: 800,
+                      textDecoration: 'none',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      boxShadow: '0 12px 30px rgba(37, 99, 235, 0.35)',
+                      transition: 'all 0.2s ease',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <span>{isTr ? '14 Gün Ücretsiz Deneyin' : 'Start 14-Day Free Trial'}</span>
+                    <ExternalLink size={18} />
+                  </a>
+
+                  <button
+                    onClick={() => {
+                      setShowDemoForm(true);
+                      const el = document.getElementById('iletisim');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    style={{
+                      background: '#0f172a',
+                      color: '#ffffff',
+                      padding: '18px 32px',
+                      borderRadius: '50px',
+                      fontSize: '1.05rem',
+                      fontWeight: 700,
+                      border: 'none',
+                      cursor: 'pointer',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '10px'
+                    }}
+                  >
+                    <span>{isTr ? 'Canlı Demo Talep Et' : 'Request Live Demo'}</span>
+                    <ArrowRight size={18} />
+                  </button>
+                </div>
+                
+                <span style={{ fontSize: '0.88rem', color: '#64748b', fontWeight: 600 }}>
+                  {isTr ? 'Anında Kurulumsuz Deneyin: app.zenthrabilisim.com.tr' : 'Instant Cloud Access: app.zenthrabilisim.com.tr'}
+                </span>
+              </div>
 
               {/* Metrik Grid */}
               <div style={{
@@ -534,18 +620,43 @@ export default function DepoLiveProjectPage() {
                 {data.ctaMetinleri.iletisim}
               </p>
 
-              {/* Action Button */}
-              <button
-                onClick={() => setShowDemoForm(!showDemoForm)}
-                className="cb-btn_cta -inverse-btn"
-                style={{ minWidth: '240px', padding: '16px 36px', cursor: 'pointer' }}
-              >
-                <span className="cb-btn_cta-title">
-                  <span data-text={showDemoForm ? "Formu Kapat" : "Hemen İletişime Geçin"}>
-                    {showDemoForm ? "Formu Kapat" : "Hemen İletişime Geçin"}
+              {/* Action Buttons */}
+              <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                <a
+                  href="https://app.zenthrabilisim.com.tr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: '#2563eb',
+                    color: '#ffffff',
+                    padding: '16px 36px',
+                    borderRadius: '50px',
+                    fontSize: '1.05rem',
+                    fontWeight: 800,
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    boxShadow: '0 10px 25px rgba(37, 99, 235, 0.4)',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  <span>{isTr ? '14 Gün Ücretsiz Deneyin' : 'Start 14-Day Free Trial'}</span>
+                  <ExternalLink size={18} />
+                </a>
+
+                <button
+                  onClick={() => setShowDemoForm(!showDemoForm)}
+                  className="cb-btn_cta -inverse-btn"
+                  style={{ minWidth: '220px', padding: '16px 36px', cursor: 'pointer' }}
+                >
+                  <span className="cb-btn_cta-title">
+                    <span data-text={showDemoForm ? "Formu Kapat" : "Hemen İletişime Geçin"}>
+                      {showDemoForm ? "Formu Kapat" : "Hemen İletişime Geçin"}
+                    </span>
                   </span>
-                </span>
-              </button>
+                </button>
+              </div>
 
               {/* Pure Cuberto Minimalist Line Form Container */}
               <div style={{

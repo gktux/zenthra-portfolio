@@ -2,6 +2,8 @@ export const zenthraDepoLiveData = {
   tr: {
     company: "Zenthra Bilişim",
     productName: "Zenthra Bilişim Depo Live",
+    freeTrialUrl: "https://app.zenthrabilisim.com.tr",
+    freeTrialBadge: "⚡ 14 Gün Ücretsiz Deneyin — Kredi Kartı Gerekmez",
     hero: {
       anaBaslik: "Zenthra Bilişim Depo Live: Depo ve Stok Süreçlerinizi Canlı ve Sıfır Hata ile Yönetin",
       altBaslik: "El terminalleri, karekod/barkod okuma, canlı lokasyon takibi ve uçtan uca ERP/e-ticaret entegrasyonları ile mal kabulden sevkiyata kadar tüm depo operasyonlarınızı anlık olarak izleyin.",
@@ -120,6 +122,8 @@ export const zenthraDepoLiveData = {
   en: {
     company: "Zenthra Bilişim",
     productName: "Zenthra Bilişim Depo Live",
+    freeTrialUrl: "https://app.zenthrabilisim.com.tr",
+    freeTrialBadge: "⚡ Start 14-Day Free Trial — No Credit Card Required",
     hero: {
       anaBaslik: "Zenthra Bilişim Depo Live: Real-Time & Zero-Error Warehouse Management",
       altBaslik: "Track and manage your entire warehouse operations from goods receipt to dispatch in real-time with handheld terminals, QR/barcode scanning, bin tracking, and ERP integration.",
