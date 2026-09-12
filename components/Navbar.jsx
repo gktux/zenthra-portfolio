@@ -61,7 +61,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="cb-navbar-nav">
-                  <a className="cb-navbar-nav-toggle" href="/#services">
+                  <a className="cb-navbar-nav-toggle" href="/hizmetler">
                     <span className="cb-navbar-nav-title">
                       <span data-text={t.nav.services}>{t.nav.services}</span>
                     </span>
@@ -140,7 +140,7 @@ export default function Navbar() {
           <a href="/projects/depo-live" className="cb-mobile-nav-link" onClick={handleNavClick}>
             Zenthra Bilişim Depo Live
           </a>
-          <a href="/#services" className="cb-mobile-nav-link" onClick={handleNavClick}>
+          <a href="/hizmetler" className="cb-mobile-nav-link" onClick={handleNavClick}>
             {t.nav.services}
           </a>
           <a href="/#projects" className="cb-mobile-nav-link" onClick={handleNavClick}>

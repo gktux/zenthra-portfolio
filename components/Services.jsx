@@ -4,6 +4,13 @@ import { useLanguage } from '@/context/LanguageContext';
 import { ArrowUpRight } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
+const SERVICE_LINKS = {
+  '01': '/hizmetler/ozel-yazilim',
+  '02': '/hizmetler/kurumsal-it-bakim',
+  '03': '/hizmetler/web-tasarim',
+  '04': '/hizmetler/yazici-bakim-onarim',
+};
+
 export default function Services() {
   const { t } = useLanguage();
 
@@ -46,7 +53,7 @@ export default function Services() {
                 </div>
                 
                 <div style={{ marginTop: '24px', display: 'flex', justifyContent: 'flex-end' }}>
-                  <a href="#contacts" style={{
+                  <a href={SERVICE_LINKS[item.id] || '/hizmetler'} aria-label={item.title} style={{
                     width: '44px',
                     height: '44px',
                     borderRadius: '50%',
