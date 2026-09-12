@@ -195,23 +195,6 @@ export default function DepoLiveProjectPage() {
                 marginBottom: '40px'
               }}>
                 <div style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  background: 'rgba(37, 99, 235, 0.08)',
-                  border: '1px solid rgba(37, 99, 235, 0.25)',
-                  color: '#2563eb',
-                  padding: '8px 20px',
-                  borderRadius: '30px',
-                  fontSize: '0.9rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.02em'
-                }}>
-                  <Sparkles size={16} />
-                  <span>{data.freeTrialBadge}</span>
-                </div>
-
-                <div style={{
                   display: 'flex',
                   gap: '16px',
                   flexWrap: 'wrap',
