@@ -57,6 +57,12 @@ body {
   body, a, button, input, textarea, select {
     cursor: none;
   }
+  [data-lenis-prevent], [data-lenis-prevent] * {
+    cursor: auto !important;
+  }
+  [data-lenis-prevent] button, [data-lenis-prevent] a {
+    cursor: pointer !important;
+  }
 }
 
 /* Headings */
@@ -464,6 +470,17 @@ h1, h2, h3, h4 {
 /* ==========================================================================
    Global Keyframes & Layout Utilities
    ========================================================================== */
+@keyframes cbModalScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @keyframes cbTextReveal {
   0% {
     transform: translateY(110%);

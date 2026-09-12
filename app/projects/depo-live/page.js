@@ -5,16 +5,16 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import ScrollReveal from '@/components/ScrollReveal';
-import { CheckCircle2, ChevronDown, Send, Check } from 'lucide-react';
-import { zenthraErpData } from '@/data/zenthraErpData';
+import { CheckCircle2, ChevronDown, Check } from 'lucide-react';
+import { zenthraDepoLiveData } from '@/data/zenthraDepoLiveData';
 import KvkkCheckboxes from '@/components/KvkkCheckboxes';
 
-const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxww9AQplejwu3YxZn6U62cBjPJ8FAkFQaNwR4g2Zg8CuCrZPqlLz1hth71A0QLjzQrNQ/exec";
+const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwcnVycJgdY5JIEB_vtCYa-JFifDpqZ7OwmyPpWSmDf-o6mY7JAu4s-0VeWQOAqZ-4j/exec";
 
-export default function ErpProjectPage() {
+export default function DepoLiveProjectPage() {
   const { lang } = useLanguage();
   const isTr = lang === 'tr';
-  const data = isTr ? zenthraErpData.tr : zenthraErpData.en;
+  const data = isTr ? zenthraDepoLiveData.tr : zenthraDepoLiveData.en;
 
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
   
@@ -28,10 +28,20 @@ export default function ErpProjectPage() {
   const [demoSubmitted, setDemoSubmitted] = useState(false);
   const [demoFormData, setDemoFormData] = useState({
     fullName: '',
-    businessType: isTr ? 'Üretim / Fabrika' : 'Manufacturing / Factory',
+    businessType: isTr ? 'Depo / Lojistik' : 'Warehouse / Logistics',
     phone: '',
     email: ''
   });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash;
+      const search = window.location.search;
+      if (hash === '#iletisim' || hash === '#demo' || search.includes('demo=true')) {
+        setShowDemoForm(true);
+      }
+    }
+  }, []);
 
   const [kvkkAccepted, setKvkkAccepted] = useState(false);
   const [commercialConsent, setCommercialConsent] = useState(false);
@@ -43,7 +53,7 @@ export default function ErpProjectPage() {
     
     setIsSubmitting(true);
 
-    // Security & Sanitization: Clean malicious formula characters (=, +, -, @)
+    // Security & Sanitization: Clean formula characters (=, +, -, @)
     const sanitize = (text) => {
       if (typeof text !== 'string') return '';
       let cleaned = text.trim();
@@ -58,17 +68,17 @@ export default function ErpProjectPage() {
       businessType: sanitize(demoFormData.businessType),
       phone: sanitize(demoFormData.phone),
       email: sanitize(demoFormData.email),
+      product: 'Zenthra Bilişim Depo Live',
       timestamp: new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' })
     };
 
     try {
-      // Use URLSearchParams with text/plain to guarantee Google Apps Script receives data seamlessly without CORS preflight issues
       const formData = new URLSearchParams();
       formData.append('fullName', safeData.fullName);
       formData.append('businessType', safeData.businessType);
       formData.append('phone', safeData.phone);
       formData.append('email', safeData.email);
-      formData.append('product', 'Zenthra Bilişim ERP');
+      formData.append('product', safeData.product);
       formData.append('kvkkConsent', kvkkAccepted ? 'Evet (Kabul Edildi)' : 'Hayır');
       formData.append('commercialConsent', commercialConsent ? 'Evet (İzin Verildi)' : 'Hayır');
       formData.append('marketingConsent', marketingConsent ? 'Evet (İzin Verildi)' : 'Hayır');
@@ -88,7 +98,7 @@ export default function ErpProjectPage() {
       setTimeout(() => {
         setDemoSubmitted(false);
         setShowDemoForm(false);
-        setDemoFormData({ fullName: '', businessType: 'Üretim / Fabrika', phone: '', email: '' });
+        setDemoFormData({ fullName: '', businessType: isTr ? 'Depo / Lojistik' : 'Warehouse / Logistics', phone: '', email: '' });
       }, 4000);
     } catch (err) {
       console.error('Form gönderim hatası:', err);
@@ -97,7 +107,7 @@ export default function ErpProjectPage() {
       setTimeout(() => {
         setDemoSubmitted(false);
         setShowDemoForm(false);
-        setDemoFormData({ fullName: '', businessType: 'Üretim / Fabrika', phone: '', email: '' });
+        setDemoFormData({ fullName: '', businessType: isTr ? 'Depo / Lojistik' : 'Warehouse / Logistics', phone: '', email: '' });
       }, 4000);
     }
   };
@@ -113,7 +123,6 @@ export default function ErpProjectPage() {
             if (!card) return;
             const rect = card.getBoundingClientRect();
             const windowHeight = window.innerHeight;
-            // Smooth focus threshold near center-top of viewport
             if (rect.top <= windowHeight * 0.58 && rect.bottom >= windowHeight * 0.28) {
               setActiveWhyIndex(index);
             }
@@ -128,71 +137,6 @@ export default function ErpProjectPage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const erpModules = isTr
-    ? zenthraErpData.moduller
-    : [
-        {
-          id: "wms",
-          modulAdi: "Warehouse Management (WMS)",
-          aciklama: "Track your stock from shelf to shipment in real-time; eliminate losses and errors.",
-          ozellikler: [
-            "Bin/location placement, picking waves and cycle counting",
-            "Full traceability with Lot, Serial Number and Quarantine tracking",
-            "Carrier integration, waybill and marketplace sync"
-          ]
-        },
-        {
-          id: "mes",
-          modulAdi: "Manufacturing Execution (MES)",
-          aciklama: "Plan and monitor the entire process from work orders to workstation efficiency.",
-          ozellikler: [
-            "Bill of Materials (BOM) and routing-based production planning",
-            "Shop floor tracking with job cards, engineering change management (ECO)",
-            "Uninterrupted manufacturing with downtime analysis and maintenance tracking"
-          ]
-        },
-        {
-          id: "qms",
-          modulAdi: "Quality Management (QMS)",
-          aciklama: "Catch non-conformities at the source, make your quality standards measurable.",
-          ozellikler: [
-            "Quality control, non-conformance (NCR) and CAPA management",
-            "Audit, calibration and statistical process control (SPC)",
-            "Process consistency with standard procedures and feedback templates"
-          ]
-        },
-        {
-          id: "procurement",
-          modulAdi: "Procurement Management",
-          aciklama: "Streamline your buying process from vendor selection to invoicing.",
-          ozellikler: [
-            "Requisition, RFQ and purchase order automation",
-            "Supplier quotation comparison and auto ranking",
-            "Performance evaluation with supplier scorecard system"
-          ]
-        },
-        {
-          id: "finance",
-          modulAdi: "Accounting & Finance",
-          aciklama: "Real-time financial statement and cash flow management fully compliant with legislation.",
-          ozellikler: [
-            "e-Invoice inbox, chart of accounts and journal integration",
-            "AR/AP ledger, checks, bank and budget management",
-            "Fixed assets, cost center and tax declaration support"
-          ]
-        },
-        {
-          id: "hr",
-          modulAdi: "Human Resources (HR)",
-          aciklama: "Manage the entire employee lifecycle from recruitment to performance management.",
-          ozellikler: [
-            "Recruitment, onboarding and personnel information management (PIM)",
-            "Leave, attendance and payroll integration",
-            "Performance appraisal, succession planning and training tracking"
-          ]
-        }
-      ];
-
   return (
     <div style={{ background: '#ffffff', color: '#000000', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Navbar />
@@ -204,8 +148,23 @@ export default function ErpProjectPage() {
           <ScrollReveal distance="40px" duration="0.8s">
             <div style={{ maxWidth: '960px', margin: '0 auto', textAlign: 'center' }}>
 
+              <span style={{
+                fontSize: '0.85rem',
+                fontWeight: 800,
+                color: '#64748b',
+                textTransform: 'uppercase',
+                letterSpacing: '0.14em',
+                display: 'inline-block',
+                marginBottom: '16px',
+                background: '#e2e8f0',
+                padding: '6px 16px',
+                borderRadius: '20px'
+              }}>
+                {isTr ? 'Canlı Depo & Stok Otomasyonu' : 'Live WMS & Inventory Automation'}
+              </span>
+
               <h1 style={{
-                fontSize: 'clamp(2.5rem, 5vw, 4.2rem)',
+                fontSize: 'clamp(2.4rem, 5vw, 4.1rem)',
                 fontWeight: 800,
                 lineHeight: 1.12,
                 letterSpacing: '-0.025em',
@@ -227,10 +186,12 @@ export default function ErpProjectPage() {
                 {data.hero.altBaslik}
               </p>
 
-              {/* Metrik Grid (Sadece 7/24) */}
+              {/* Metrik Grid */}
               <div style={{
                 display: 'flex',
                 justifyContent: 'center',
+                gap: '24px',
+                flexWrap: 'wrap',
                 marginTop: '40px'
               }}>
                 {data.hero.metrikler.map((m, idx) => (
@@ -238,7 +199,7 @@ export default function ErpProjectPage() {
                     background: '#ffffff',
                     border: '1px solid #e2e8f0',
                     borderRadius: '24px',
-                    padding: '24px 40px',
+                    padding: '24px 36px',
                     boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -248,7 +209,7 @@ export default function ErpProjectPage() {
                     <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#000000', fontFamily: '"SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif' }}>
                       {m.deger}
                     </div>
-                    <div style={{ fontSize: '1rem', color: '#475569', fontWeight: 600, fontFamily: "var(--font-body)", maxWidth: '220px', lineHeight: 1.35 }}>
+                    <div style={{ fontSize: '0.95rem', color: '#475569', fontWeight: 600, fontFamily: "var(--font-body)", maxWidth: '200px', lineHeight: 1.35 }}>
                       {m.aciklama}
                     </div>
                   </div>
@@ -258,51 +219,72 @@ export default function ErpProjectPage() {
             </div>
           </ScrollReveal>
 
-          {/* Real ERP System Screenshot Cover */}
+          {/* Apple Monitor Mockup Display Container */}
           <ScrollReveal distance="50px" duration="0.9s" delay={0.15}>
             <div style={{
               marginTop: '50px',
               width: '100%',
               maxWidth: '1200px',
               margin: '50px auto 0 auto',
-              borderRadius: '32px',
-              overflow: 'hidden',
-              boxShadow: '0 30px 70px rgba(0, 0, 0, 0.18)',
-              border: '1px solid rgba(0, 0, 0, 0.1)',
-              background: '#090d16'
+              borderRadius: '24px',
+              background: '#161922',
+              padding: '12px 12px 0 12px',
+              boxShadow: '0 35px 80px rgba(0, 0, 0, 0.35)',
+              border: '1px solid rgba(255, 255, 255, 0.12)'
             }}>
-              <img
-                src="/erp.png"
-                alt="Zenthra Bilişim ERP Portal Arayüzü"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  display: 'block',
-                  objectFit: 'cover'
-                }}
-              />
+              {/* Apple Window Header Dots */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '8px 12px 14px 12px'
+              }}>
+                <span style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#ff5f56', display: 'inline-block' }}></span>
+                <span style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#ffbd2e', display: 'inline-block' }}></span>
+                <span style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#27c93f', display: 'inline-block' }}></span>
+                <span style={{ marginLeft: 'auto', fontSize: '0.75rem', color: '#64748b', fontWeight: 600, fontFamily: 'monospace' }}>app.zenthrabilisim.com.tr</span>
+              </div>
+
+              {/* Screen Display Image */}
+              <div style={{
+                borderRadius: '16px 16px 0 0',
+                overflow: 'hidden',
+                background: '#090d16',
+                borderTop: '1px solid rgba(255, 255, 255, 0.08)'
+              }}>
+                <img
+                  src="/depo-live.png"
+                  alt="Zenthra Bilişim Depo Live Sistem Ekranı"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block',
+                    objectFit: 'cover'
+                  }}
+                />
+              </div>
             </div>
           </ScrollReveal>
 
         </div>
       </section>
 
-      {/* 6 Modules Grid Section */}
+      {/* 6 Modules / Capabilities Grid Section */}
       <section style={{ padding: '100px 0', background: '#ffffff' }}>
         <div className="container">
           
           <ScrollReveal distance="40px" duration="0.8s">
             <div style={{ textAlign: 'center', marginBottom: '60px', maxWidth: '800px', margin: '0 auto 60px auto' }}>
               <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.14em', display: 'block', marginBottom: '12px' }}>
-                {isTr ? 'Gelişmiş Modül Mimarisi' : 'Advanced Modular Architecture'}
+                {isTr ? 'Uçtan Uca Depo Yetenekleri' : 'End-to-End WMS Capabilities'}
               </span>
               <h2 style={{ fontSize: '2.6rem', fontWeight: 500, color: '#000000', letterSpacing: '-0.025em', fontFamily: "var(--font-display)", marginBottom: '16px' }}>
-                {isTr ? 'Uçtan Uca Entegre 6 Ana Modül' : '6 Modules, One Single Database'}
+                {isTr ? 'Deponuzu Dönüştüren 6 Temel Özellik' : '6 Core Capabilities Powering Your Warehouse'}
               </h2>
               <p style={{ fontSize: '1.1rem', color: '#475569', lineHeight: 1.6, fontFamily: "var(--font-body)" }}>
                 {isTr
-                  ? "Her modül tek başına güçlü, birlikte tam entegre. İhtiyacınıza göre başlayın, işletmeniz büyüdükçe genişletin."
-                  : "Each module is powerful on its own, flawless together. Start according to your needs and expand as your business grows."}
+                  ? "Mal kabulden kargolamaya kadar her adımı dijitalleştirin, el terminalleri ile insan hatasını sıfırlayın."
+                  : "Digitize every step from goods receipt to dispatch; eliminate manual entry errors using handheld terminals."}
               </p>
             </div>
           </ScrollReveal>
@@ -311,11 +293,11 @@ export default function ErpProjectPage() {
           <div className="grid-3" style={{ gap: '28px' }}>
             {data.moduller.map((mod, idx) => (
               <ScrollReveal key={idx} delay={idx * 0.06} distance="40px" duration="0.8s">
-                <div className="cuberto-card" style={{ display: 'flex', flexDirection: 'column', justifyBetween: 'space-between', height: '100%', padding: '36px 30px' }}>
+                <div className="cuberto-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', padding: '36px 30px' }}>
                   <div>
                     {/* Title */}
                     <h3 style={{
-                      fontSize: '1.5rem',
+                      fontSize: '1.45rem',
                       fontWeight: 800,
                       marginBottom: '12px',
                       color: '#000000',
@@ -362,7 +344,7 @@ export default function ErpProjectPage() {
         </div>
       </section>
 
-      {/* Why Choose Zenthra Bilişim ERP */}
+      {/* Why Choose Zenthra Bilişim Depo Live */}
       <section style={{ padding: '120px 0', background: '#ffffff', borderTop: '1px solid rgba(0,0,0,0.06)' }}>
         <div className="container">
           <ScrollReveal distance="50px" duration="0.85s">
@@ -370,10 +352,10 @@ export default function ErpProjectPage() {
             {/* Header */}
             <div style={{ textAlign: 'center', marginBottom: '60px', maxWidth: '800px', margin: '0 auto 60px auto' }}>
               <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.14em', display: 'block', marginBottom: '12px' }}>
-                {isTr ? 'Neden Zenthra Bilişim ERP?' : 'Why Choose Zenthra Bilişim ERP?'}
+                {isTr ? 'Neden Zenthra Bilişim Depo Live?' : 'Why Choose Zenthra Bilişim Depo Live?'}
               </span>
               <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 500, color: '#000000', marginBottom: '16px', lineHeight: 1.15, fontFamily: "var(--font-display)", letterSpacing: '-0.025em' }}>
-                {isTr ? 'Şirketinize Özel Esnek ve Güçlü Değer Önerileri' : 'Flexible Architecture Tailored to Your Company'}
+                {isTr ? 'Depo Operasyonlarınız İçin Öne Çıkan Değerler' : 'Distinct Advantages Designed for Modern Logistics'}
               </h2>
             </div>
 
@@ -403,7 +385,7 @@ export default function ErpProjectPage() {
                   >
                     <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', width: '100%' }}>
                       
-                      {/* Left: Title & Perfect Grid Expandable Description */}
+                      {/* Left: Title & Expandable Description */}
                       <div style={{ flex: 1, paddingRight: '40px' }}>
                         <h3 style={{
                           fontSize: isActive ? '2.1rem' : '1.55rem',
@@ -417,7 +399,7 @@ export default function ErpProjectPage() {
                           {item.baslik}
                         </h3>
 
-                        {/* Modern CSS Grid 1fr / 0fr Butter-Smooth Animation */}
+                        {/* Modern CSS Grid 1fr / 0fr Smooth Animation */}
                         <div style={{
                           display: 'grid',
                           gridTemplateRows: isActive ? '1fr' : '0fr',
@@ -474,7 +456,7 @@ export default function ErpProjectPage() {
                 {isTr ? 'Sıkça Sorulan Sorular' : 'Frequently Asked Questions'}
               </span>
               <h2 style={{ fontSize: '2.4rem', fontWeight: 500, color: '#000000', fontFamily: "var(--font-display)" }}>
-                {isTr ? 'Zenthra Bilişim ERP Hakkında Bilmeniz Gerekenler' : 'All You Need to Know About Zenthra Bilişim ERP'}
+                {isTr ? 'Zenthra Bilişim Depo Live Hakkında Merak Edilenler' : 'Everything You Need to Know About Depo Live'}
               </h2>
             </div>
 
@@ -531,10 +513,10 @@ export default function ErpProjectPage() {
       </section>
 
       {/* Final CTA Box with Pure Minimalist Cuberto Style Expandable Form */}
-      <section style={{ padding: '60px 0 100px 0', background: '#ffffff' }}>
+      <section id="iletisim" style={{ padding: '60px 0 100px 0', background: '#ffffff' }}>
         <div className="container">
           <ScrollReveal distance="50px" duration="0.85s">
-            <div style={{
+            <div id="demo" style={{
               background: '#000000',
               color: '#ffffff',
               borderRadius: '36px',
@@ -589,20 +571,20 @@ export default function ErpProjectPage() {
                           <Check size={28} />
                         </div>
                         <h4 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#ffffff', marginBottom: '8px', fontFamily: '"SF Pro Display", sans-serif' }}>
-                          Demo Talebiniz İletildi!
+                          Depo Live Demo Talebiniz Alındı!
                         </h4>
                         <p style={{ color: '#94a3b8', fontSize: '1.05rem', fontFamily: '"Inter", sans-serif' }}>
-                          Bilgileriniz Google E-Tablonuza kaydedildi. Ekibimiz en kısa sürede dönüş yapacaktır.
+                          Talebiniz kaydedildi. Uzman ekibimiz deponuz için canlı sunum planlamak üzere sizinle iletişime geçecektir.
                         </p>
                       </div>
                     ) : (
                       <>
                         <div style={{ marginBottom: '40px', textAlign: 'center' }}>
                           <h4 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#ffffff', marginBottom: '6px', fontFamily: '"SF Pro Display", sans-serif' }}>
-                            Ücretsiz Canlı Demo Randevusu
+                            Ücretsiz Depo Live Canlı Demo
                           </h4>
                           <p style={{ fontSize: '0.98rem', color: '#94a3b8', fontFamily: '"Inter", sans-serif' }}>
-                            Bilgilerinizi bırakın, işletmenize özel canlı ERP gösterimini planlayalım.
+                            Bilgilerinizi bırakın, deponuza özel canlı WMS gösterimini birlikte planlayalım.
                           </p>
                         </div>
 
@@ -628,8 +610,7 @@ export default function ErpProjectPage() {
                                 color: '#ffffff',
                                 fontSize: '1.05rem',
                                 outline: 'none',
-                                fontFamily: '"Inter", sans-serif',
-                                transition: 'border-color 0.3s ease'
+                                fontFamily: '"Inter", sans-serif'
                               }}
                             />
                           </div>
@@ -637,7 +618,7 @@ export default function ErpProjectPage() {
                           {/* İşletme Türü */}
                           <div>
                             <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 800, color: '#64748b', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                              İşletme Türü
+                              İşletme / Depo Türü
                             </label>
                             <select
                               value={demoFormData.businessType}
@@ -654,10 +635,10 @@ export default function ErpProjectPage() {
                                 fontFamily: '"Inter", sans-serif'
                               }}
                             >
-                              <option value="Üretim / Fabrika">Üretim / Fabrika</option>
                               <option value="Depo / Lojistik">Depo / Lojistik</option>
-                              <option value="Mağaza / Perakende">Mağaza / Perakende</option>
-                              <option value="Hizmet / Ticaret">Hizmet / Ticaret</option>
+                              <option value="Üretim / Fabrika">Üretim / Fabrika</option>
+                              <option value="E-Ticaret / Pazaryeri Satıcısı">E-Ticaret / Pazaryeri Satıcısı</option>
+                              <option value="Mağaza / Toptan Dağıtım">Mağaza / Toptan Dağıtım</option>
                               <option value="Diğer">Diğer</option>
                             </select>
                           </div>

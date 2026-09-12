@@ -73,12 +73,12 @@ export default function Projects() {
           </div>
         </ScrollReveal>
 
-        {/* Featured Project Large Card Showcase with Scroll Reveal */}
-        {erpProject && (
-          <ScrollReveal distance="60px" duration="0.9s" delay={0.15}>
-            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+        {/* Featured Projects Cards Showcase with Scroll Reveal */}
+        <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '48px' }}>
+          {t.projects.items && t.projects.items.map((proj, idx) => (
+            <ScrollReveal key={idx} distance="60px" duration="0.9s" delay={idx * 0.15}>
               <a
-                href="/projects/erp"
+                href={proj.link || (idx === 0 ? "/projects/erp" : "/projects/depo-live")}
                 style={{ textDecoration: 'none', color: '#ffffff', display: 'block' }}
                 className="cb-project-card"
               >
@@ -88,7 +88,6 @@ export default function Projects() {
                   borderRadius: '36px',
                   overflow: 'hidden',
                   position: 'relative',
-                  marginBottom: '24px',
                   background: '#111111',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -113,7 +112,7 @@ export default function Projects() {
                       borderRadius: '20px',
                       color: '#ffffff'
                     }}>
-                      {erpProject.category}
+                      {proj.category}
                     </span>
 
                     <div className="cb-card-arrow" style={{
@@ -131,7 +130,7 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  {/* ERP Real Image Cover Showcase */}
+                  {/* Real Image Cover Showcase */}
                   <div style={{
                     width: '100%',
                     height: '340px',
@@ -142,8 +141,8 @@ export default function Projects() {
                     background: '#000000'
                   }}>
                     <img
-                      src="/erp.png"
-                      alt="Zenthra Bilişim ERP Portali"
+                      src={proj.image || (idx === 0 ? "/erp.png" : "/depo-live.png")}
+                      alt={proj.title}
                       style={{
                         width: '100%',
                         height: '100%',
@@ -157,17 +156,17 @@ export default function Projects() {
 
                   <div>
                     <h3 style={{ fontSize: '2.2rem', fontWeight: 800, marginBottom: '8px', color: '#ffffff', fontFamily: "var(--font-display)" }}>
-                      {erpProject.title}
+                      {proj.title}
                     </h3>
                     <p style={{ color: '#cbd5e1', fontSize: '1.15rem', lineHeight: 1.6, maxWidth: '780px' }}>
-                      {erpProject.desc}
+                      {proj.desc}
                     </p>
                   </div>
                 </div>
               </a>
-            </div>
-          </ScrollReveal>
-        )}
+            </ScrollReveal>
+          ))}
+        </div>
 
       </div>
     </section>

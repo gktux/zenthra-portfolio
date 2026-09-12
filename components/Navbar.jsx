@@ -32,9 +32,12 @@ export default function Navbar() {
             
             {/* Left Column: Zenthra Bilişim Brand Logo */}
             <div className="cb-navbar-grid-col -left">
-              <a href="/" className="cb-navbar-logo" aria-label="Zenthra Bilişim">
-                <span className="logo-text-bold">Zenthra</span>
-                <span className="logo-text-tag">bilişim</span>
+              <a href="/" className="cb-navbar-logo" aria-label="Zenthra Bilişim" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <img src="/logo.png" alt="Zenthra Bilişim Logo" style={{ height: '32px', width: 'auto', display: 'block' }} />
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
+                  <span className="logo-text-bold">Zenthra</span>
+                  <span className="logo-text-tag">bilişim</span>
+                </div>
               </a>
             </div>
 
@@ -46,6 +49,14 @@ export default function Navbar() {
                   <a className="cb-navbar-nav-toggle" href="/projects/erp">
                     <span className="cb-navbar-nav-title">
                       <span data-text="Zenthra Bilişim ERP" style={{ color: '#000000', fontWeight: 700 }}>Zenthra Bilişim ERP</span>
+                    </span>
+                  </a>
+                </div>
+
+                <div className="cb-navbar-nav">
+                  <a className="cb-navbar-nav-toggle" href="/projects/depo-live">
+                    <span className="cb-navbar-nav-title">
+                      <span data-text="Zenthra Bilişim Depo Live" style={{ color: '#000000', fontWeight: 700 }}>Zenthra Bilişim Depo Live</span>
                     </span>
                   </a>
                 </div>
@@ -126,6 +137,9 @@ export default function Navbar() {
         <nav className="cb-mobile-overlay-nav">
           <a href="/projects/erp" className="cb-mobile-nav-link" onClick={handleNavClick}>
             Zenthra Bilişim ERP
+          </a>
+          <a href="/projects/depo-live" className="cb-mobile-nav-link" onClick={handleNavClick}>
+            Zenthra Bilişim Depo Live
           </a>
           <a href="/#services" className="cb-mobile-nav-link" onClick={handleNavClick}>
             {t.nav.services}

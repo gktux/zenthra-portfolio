@@ -5,19 +5,49 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import { useState } from 'react';
 import { CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
+import KvkkCheckboxes from '@/components/KvkkCheckboxes';
 
 export default function ContactsPage() {
   const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
-  const handleSubmit = (e) => {
+  const [kvkkAccepted, setKvkkAccepted] = useState(false);
+  const [commercialConsent, setCommercialConsent] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email) return;
+    if (!formData.name || !formData.email || !kvkkAccepted) return;
+
+    const postData = new URLSearchParams();
+    postData.append('fullName', formData.name.trim());
+    postData.append('businessType', 'İletişim Formu');
+    postData.append('phone', '');
+    postData.append('email', formData.email.trim());
+    postData.append('product', 'Genel İletişim Formu / Mesaj: ' + (formData.message ? formData.message.trim() : ''));
+    postData.append('kvkkConsent', kvkkAccepted ? 'Evet (Kabul Edildi)' : 'Hayır');
+    postData.append('commercialConsent', commercialConsent ? 'Evet (İzin Verildi)' : 'Hayır');
+    postData.append('marketingConsent', marketingConsent ? 'Evet (İzin Verildi)' : 'Hayır');
+    postData.append('timestamp', new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' }));
+
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbxww9AQplejwu3YxZn6U62cBjPJ8FAkFQaNwR4g2Zg8CuCrZPqlLz1hth71A0QLjzQrNQ/exec", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: postData.toString()
+      });
+    } catch (err) {
+      console.error('İletişim gönderim hatası:', err);
+    }
+
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ name: '', email: '', message: '' });
+      setKvkkAccepted(false);
+      setCommercialConsent(false);
+      setMarketingConsent(false);
     }, 4000);
   };
 
@@ -184,6 +214,17 @@ export default function ContactsPage() {
                       </div>
                     </div>
                   </div>
+
+                  {/* KVKK & Consent Checkboxes */}
+                  <KvkkCheckboxes
+                    kvkkAccepted={kvkkAccepted}
+                    setKvkkAccepted={setKvkkAccepted}
+                    commercialConsent={commercialConsent}
+                    setCommercialConsent={setCommercialConsent}
+                    marketingConsent={marketingConsent}
+                    setMarketingConsent={setMarketingConsent}
+                    theme="light"
+                  />
 
                   {/* Cuberto CTA Submit Button */}
                   <div style={{ marginTop: '12px' }}>

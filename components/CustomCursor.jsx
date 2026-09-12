@@ -140,7 +140,7 @@ export default function CustomCursor() {
           backgroundColor: dotColor,
           borderRadius: '50%',
           pointerEvents: 'none',
-          zIndex: 99999,
+          zIndex: 9999999,
           willChange: 'transform',
           transition: 'background-color 0.2s ease',
           boxShadow: isDarkBg ? '0 0 10px rgba(255, 255, 255, 0.8)' : 'none'
@@ -160,7 +160,7 @@ export default function CustomCursor() {
           border: `1.5px solid ${ringBorderColor}`,
           borderRadius: '50%',
           pointerEvents: 'none',
-          zIndex: 99998,
+          zIndex: 9999998,
           transform: 'scale(1)',
           transition: 'width 0.25s cubic-bezier(0.16, 1, 0.3, 1), height 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease',
           willChange: 'transform, width, height'

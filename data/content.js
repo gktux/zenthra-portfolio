@@ -53,7 +53,16 @@ export const dictionary = {
         {
           category: "Kurumsal ERP & Bulut",
           title: "Zenthra Bilişim ERP",
-          desc: "Şirketler için uçtan uca kaynak planlama, finans, stok ve operasyonel süreç yönetim platformu."
+          desc: "Şirketler için uçtan uca kaynak planlama, finans, stok ve operasyonel süreç yönetim platformu.",
+          link: "/projects/erp",
+          image: "/erp.png"
+        },
+        {
+          category: "Akıllı Depo & Lojistik WMS",
+          title: "Zenthra Bilişim Depo Live",
+          desc: "El terminalleri, karekod okuma ve anlık ERP entegrasyonu ile canlı stok ve depo otomasyon platformu.",
+          link: "/projects/depo-live",
+          image: "/depo-live.png"
         }
       ]
     },
@@ -174,7 +183,16 @@ export const dictionary = {
         {
           category: "Enterprise ERP & Cloud",
           title: "Zenthra Bilişim ERP",
-          desc: "End-to-end enterprise resource planning, financial control and operational management platform."
+          desc: "End-to-end enterprise resource planning, financial control and operational management platform.",
+          link: "/projects/erp",
+          image: "/erp.png"
+        },
+        {
+          category: "Smart Warehouse & WMS",
+          title: "Zenthra Bilişim Depo Live",
+          desc: "Real-time warehouse and inventory management platform with handheld terminal and ERP integration.",
+          link: "/projects/depo-live",
+          image: "/depo-live.png"
         }
       ]
     },

@@ -27,6 +27,9 @@ export default function ZenthraErpLanding() {
   const [activeModule, setActiveModule] = useState(0);
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [kvkkAccepted, setKvkkAccepted] = useState(false);
+  const [commercialConsent, setCommercialConsent] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -49,11 +52,15 @@ export default function ZenthraErpLanding() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    if (!kvkkAccepted) return;
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
       setIsDemoModalOpen(false);
       setFormData({ name: "", company: "", email: "", phone: "", moduleInterest: "Tüm Modüller" });
+      setKvkkAccepted(false);
+      setCommercialConsent(false);
+      setMarketingConsent(false);
     }, 2500);
   };
 
@@ -507,6 +514,17 @@ export default function ZenthraErpLanding() {
                       ))}
                     </select>
                   </div>
+
+                  {/* KVKK & Consent Checkboxes */}
+                  <KvkkCheckboxes
+                    kvkkAccepted={kvkkAccepted}
+                    setKvkkAccepted={setKvkkAccepted}
+                    commercialConsent={commercialConsent}
+                    setCommercialConsent={setCommercialConsent}
+                    marketingConsent={marketingConsent}
+                    setMarketingConsent={setMarketingConsent}
+                    theme="dark"
+                  />
 
                   <button
                     type="submit"
