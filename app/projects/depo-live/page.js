@@ -322,7 +322,7 @@ export default function DepoLiveProjectPage() {
                 borderTop: '1px solid rgba(255, 255, 255, 0.08)'
               }}>
                 <img
-                  src="/depo-live.png"
+                  src="/depo-live.png?v=2"
                   alt="Zenthra Bilişim Depo Live Sistem Ekranı"
                   style={{
                     width: '100%',
