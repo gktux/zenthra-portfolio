@@ -8,6 +8,9 @@ export const metadata = {
   alternates: {
     canonical: 'https://www.zenthrabilisim.com',
   },
+  verification: {
+    google: 'vEm4p5z4Oa5jJi8BIfG1AZwMWLz5Lq4DLTHI6_Bs8q8',
+  },
   title: 'Zenthra Bilişim | Kurumsal Yazılım & Web Teknolojileri',
   description: 'Zenthra Bilişim - Geleceğin işletmeleri için ölçeklenebilir ERP sistemleri, Depo Live canlı stok otomasyonu, özel yazılımlar ve web teknolojileri.',
   keywords: 'Zenthra Bilişim, Kurumsal Yazılım, Web Teknolojileri, Zenthra ERP, Depo Live, WMS, IT Bakım, Web Tasarım',
@@ -41,6 +44,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <head>
+        <meta name="google-site-verification" content="vEm4p5z4Oa5jJi8BIfG1AZwMWLz5Lq4DLTHI6_Bs8q8" />
         <link rel="canonical" href="https://www.zenthrabilisim.com" />
         <link rel="icon" type="image/png" href="/logo.png?v=2" />
         <link rel="shortcut icon" href="/logo.png?v=2" />
