@@ -162,6 +162,7 @@ h1, h2, h3, h4 {
 .cb-navbar-nav-title span {
   display: block;
   position: relative;
+  white-space: nowrap;
   transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
@@ -170,6 +171,7 @@ h1, h2, h3, h4 {
   position: absolute;
   top: 100%;
   left: 0;
+  white-space: nowrap;
   color: #000000;
   font-weight: 700;
 }
@@ -247,22 +249,10 @@ h1, h2, h3, h4 {
 }
 
 .cb-btn_cta-title span {
-  display: block;
+  display: inline-block;
   position: relative;
-  transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-.cb-btn_cta-title span::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  color: #000000;
-  font-weight: 700;
-}
-
-.cb-btn_cta:hover .cb-btn_cta-title span {
-  transform: translateY(-100%);
+  white-space: nowrap;
+  z-index: 2;
 }
 
 /* Inverse CTA Button (For Dark Section) */
@@ -279,10 +269,6 @@ h1, h2, h3, h4 {
 .cb-btn_cta.-inverse-btn:hover {
   color: #000000 !important;
   border-color: #ffffff;
-}
-
-.cb-btn_cta.-inverse-btn .cb-btn_cta-title span::before {
-  color: #000000;
 }
 
 /* Project Card Hover Animation */
@@ -430,6 +416,7 @@ h1, h2, h3, h4 {
 .cb-footer-nav-title span {
   display: block;
   position: relative;
+  white-space: nowrap;
   transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
@@ -438,6 +425,7 @@ h1, h2, h3, h4 {
   position: absolute;
   top: 100%;
   left: 0;
+  white-space: nowrap;
   color: #ffffff;
   font-weight: 700;
 }
