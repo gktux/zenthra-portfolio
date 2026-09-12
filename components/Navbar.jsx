@@ -32,10 +32,10 @@ export default function Navbar() {
             
             {/* Left Column: Zenthra Bilişim Brand Logo */}
             <div className="cb-navbar-grid-col -left">
-              <a href="/" className="cb-navbar-logo" aria-label="Zenthra Bilişim" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
-                  <span className="logo-text-bold">Zenthra</span>
-                  <span className="logo-text-tag">bilişim</span>
+              <a href="/" className="cb-navbar-logo" aria-label="Zenthra Bilişim" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '5px' }}>
+                  <span className="logo-text-bold" style={{ color: '#000000', fontWeight: 800, fontSize: '1.45rem', letterSpacing: '-0.03em' }}>Zenthra</span>
+                  <span className="logo-text-tag" style={{ color: '#06b6d4', fontWeight: 700, fontSize: '1.05rem', letterSpacing: '0.02em' }}>Bilişim</span>
                 </div>
               </a>
             </div>

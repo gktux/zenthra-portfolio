@@ -2,7 +2,7 @@ export const dictionary = {
   tr: {
     nav: {
       brandName: "Zenthra",
-      brandSub: "bilişim",
+      brandSub: "Bilişim",
       services: "Hizmetler",
       projects: "Projeler",
       missionVision: "Misyon & Vizyon",
@@ -128,7 +128,7 @@ export const dictionary = {
   en: {
     nav: {
       brandName: "Zenthra",
-      brandSub: "bilişim",
+      brandSub: "Bilişim",
       services: "Services",
       projects: "Projects",
       missionVision: "About Us",
