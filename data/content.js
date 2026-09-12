@@ -98,10 +98,6 @@ export const dictionary = {
           a: "Yüksek hız, SEO uyumu ve esneklik gerektiren projelerimizde Next.js, React ve modern Headless CMS mimarilerini tercih ediyoruz."
         },
         {
-          q: "Hızlı bir MVP (Minimum Uygulanabilir Ürün) yayına alabilir misiniz?",
-          a: "Kesinlikle. Girişimlerin fikri en hızlı şekilde doğrulaması için odaklanmış MVP ürünlerini birkaç hafta içinde prototipleyip yayına alıyoruz."
-        },
-        {
           q: "Projelerde fiyatlandırma modeliniz nasıldır?",
           a: "Kapsamı netleşmiş projelerde sabit fiyatlandırma, sürekli gelişen veya uzun vadeli ortaklıklarda ise efor bazlı esnek çalışma modelleri sunuyoruz."
         }
@@ -226,10 +222,6 @@ export const dictionary = {
         {
           q: "Do you build websites using Next.js or custom code?",
           a: "We build custom websites using modern technologies like Next.js, React and Headless CMS solutions for maximum speed, security and scalability."
-        },
-        {
-          q: "Can you help launch an MVP quickly?",
-          a: "Absolutely. We work closely with founders to prioritize core user flows and deliver a market-ready MVP in just a few weeks."
         },
         {
           q: "Do you work on fixed-price projects or Time & Materials?",
