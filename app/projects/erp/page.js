@@ -198,7 +198,7 @@ export default function ErpProjectPage() {
       <Navbar />
 
       {/* Hero Showcase Section */}
-      <section style={{ paddingTop: '180px', paddingBottom: '70px', background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)' }}>
+      <section style={{ paddingTop: '180px', paddingBottom: '70px', background: 'linear-gradient(180deg, #fbfbfd 0%, #ffffff 100%)' }}>
         <div className="container">
           
           <ScrollReveal distance="40px" duration="0.8s">
@@ -206,10 +206,10 @@ export default function ErpProjectPage() {
 
               <h1 style={{
                 fontSize: 'clamp(2.5rem, 5vw, 4.2rem)',
-                fontWeight: 800,
+                fontWeight: 600,
                 lineHeight: 1.12,
                 letterSpacing: '-0.025em',
-                color: '#0f172a',
+                color: '#1d1d1f',
                 marginBottom: '24px',
                 fontFamily: '"SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif'
               }}>
@@ -218,7 +218,7 @@ export default function ErpProjectPage() {
 
               <p style={{
                 fontSize: 'clamp(1.05rem, 1.8vw, 1.25rem)',
-                color: '#475569',
+                color: '#6e6e73',
                 lineHeight: 1.65,
                 maxWidth: '840px',
                 margin: '0 auto 36px auto',
@@ -245,10 +245,10 @@ export default function ErpProjectPage() {
                     gap: '20px',
                     textAlign: 'left'
                   }}>
-                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#000000', fontFamily: '"SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif' }}>
+                    <div style={{ fontSize: '2.5rem', fontWeight: 600, color: '#000000', fontFamily: '"SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif' }}>
                       {m.deger}
                     </div>
-                    <div style={{ fontSize: '1rem', color: '#475569', fontWeight: 600, fontFamily: "var(--font-body)", maxWidth: '220px', lineHeight: 1.35 }}>
+                    <div style={{ fontSize: '1rem', color: '#6e6e73', fontWeight: 600, fontFamily: "var(--font-body)", maxWidth: '220px', lineHeight: 1.35 }}>
                       {m.aciklama}
                     </div>
                   </div>
@@ -293,13 +293,13 @@ export default function ErpProjectPage() {
           
           <ScrollReveal distance="40px" duration="0.8s">
             <div style={{ textAlign: 'center', marginBottom: '60px', maxWidth: '800px', margin: '0 auto 60px auto' }}>
-              <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.14em', display: 'block', marginBottom: '12px' }}>
+              <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.14em', display: 'block', marginBottom: '12px' }}>
                 {isTr ? 'Gelişmiş Modül Mimarisi' : 'Advanced Modular Architecture'}
               </span>
               <h2 style={{ fontSize: '2.6rem', fontWeight: 500, color: '#000000', letterSpacing: '-0.025em', fontFamily: "var(--font-display)", marginBottom: '16px' }}>
                 {isTr ? 'Uçtan Uca Entegre 6 Ana Modül' : '6 Modules, One Single Database'}
               </h2>
-              <p style={{ fontSize: '1.1rem', color: '#475569', lineHeight: 1.6, fontFamily: "var(--font-body)" }}>
+              <p style={{ fontSize: '1.1rem', color: '#6e6e73', lineHeight: 1.6, fontFamily: "var(--font-body)" }}>
                 {isTr
                   ? "Her modül tek başına güçlü, birlikte tam entegre. İhtiyacınıza göre başlayın, işletmeniz büyüdükçe genişletin."
                   : "Each module is powerful on its own, flawless together. Start according to your needs and expand as your business grows."}
@@ -316,7 +316,7 @@ export default function ErpProjectPage() {
                     {/* Title */}
                     <h3 style={{
                       fontSize: '1.5rem',
-                      fontWeight: 800,
+                      fontWeight: 600,
                       marginBottom: '12px',
                       color: '#000000',
                       fontFamily: '"SF Pro Display", "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif',
@@ -327,7 +327,7 @@ export default function ErpProjectPage() {
 
                     {/* Description */}
                     <p style={{
-                      color: '#475569',
+                      color: '#6e6e73',
                       fontSize: '0.98rem',
                       lineHeight: 1.6,
                       marginBottom: '22px',
@@ -340,7 +340,7 @@ export default function ErpProjectPage() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '16px', borderTop: '1px solid #e2e8f0', paddingTop: '18px' }}>
                       {mod.ozellikler.map((oz, oIdx) => (
                         <div key={oIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                          <CheckCircle2 size={16} color="#0f172a" style={{ marginTop: '2px', flexShrink: 0 }} />
+                          <CheckCircle2 size={16} color="#1d1d1f" style={{ marginTop: '2px', flexShrink: 0 }} />
                           <span style={{
                             fontSize: '0.86rem',
                             color: '#1e293b',
@@ -369,7 +369,7 @@ export default function ErpProjectPage() {
             
             {/* Header */}
             <div style={{ textAlign: 'center', marginBottom: '60px', maxWidth: '800px', margin: '0 auto 60px auto' }}>
-              <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.14em', display: 'block', marginBottom: '12px' }}>
+              <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.14em', display: 'block', marginBottom: '12px' }}>
                 {isTr ? 'Neden Zenthra Bilişim ERP?' : 'Why Choose Zenthra Bilişim ERP?'}
               </span>
               <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 500, color: '#000000', marginBottom: '16px', lineHeight: 1.15, fontFamily: "var(--font-display)", letterSpacing: '-0.025em' }}>
@@ -407,8 +407,8 @@ export default function ErpProjectPage() {
                       <div style={{ flex: 1, paddingRight: '40px' }}>
                         <h3 style={{
                           fontSize: isActive ? '2.1rem' : '1.55rem',
-                          fontWeight: 800,
-                          color: isActive ? '#ffffff' : '#0f172a',
+                          fontWeight: 600,
+                          color: isActive ? '#ffffff' : '#1d1d1f',
                           fontFamily: '"SF Pro Display", "Plus Jakarta Sans", sans-serif',
                           transition: 'font-size 0.65s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s ease',
                           letterSpacing: '-0.025em',
@@ -446,8 +446,8 @@ export default function ErpProjectPage() {
                       {/* Right: Number Badge */}
                       <div style={{
                         fontSize: '1.75rem',
-                        fontWeight: 800,
-                        color: isActive ? '#ffffff' : '#94a3b8',
+                        fontWeight: 600,
+                        color: isActive ? '#ffffff' : '#86868b',
                         fontFamily: '"SF Pro Display", sans-serif',
                         flexShrink: 0,
                         transition: 'color 0.5s ease'
@@ -470,7 +470,7 @@ export default function ErpProjectPage() {
         <div className="container" style={{ maxWidth: '900px' }}>
           <ScrollReveal distance="40px" duration="0.8s">
             <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-              <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '12px' }}>
+              <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '12px' }}>
                 {isTr ? 'Sıkça Sorulan Sorular' : 'Frequently Asked Questions'}
               </span>
               <h2 style={{ fontSize: '2.4rem', fontWeight: 500, color: '#000000', fontFamily: "var(--font-display)" }}>
@@ -485,7 +485,7 @@ export default function ErpProjectPage() {
                   <div key={idx} style={{
                     border: '1px solid #e2e8f0',
                     borderRadius: '20px',
-                    background: '#f8fafc',
+                    background: '#fbfbfd',
                     overflow: 'hidden',
                     transition: 'all 0.2s ease'
                   }}>
@@ -499,7 +499,7 @@ export default function ErpProjectPage() {
                         textAlign: 'left',
                         fontSize: '1.1rem',
                         fontWeight: 600,
-                        color: '#0f172a',
+                        color: '#1d1d1f',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
@@ -508,12 +508,12 @@ export default function ErpProjectPage() {
                       }}
                     >
                       <span>{faq.soru}</span>
-                      <ChevronDown size={20} color="#64748b" style={{ transform: isOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s ease' }} />
+                      <ChevronDown size={20} color="#86868b" style={{ transform: isOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s ease' }} />
                     </button>
                     {isOpen && (
                       <div style={{
                         padding: '0 28px 24px 28px',
-                        color: '#475569',
+                        color: '#6e6e73',
                         fontSize: '1rem',
                         lineHeight: 1.6,
                         fontFamily: "var(--font-body)",
@@ -545,10 +545,10 @@ export default function ErpProjectPage() {
               boxShadow: '0 30px 70px rgba(0,0,0,0.25)',
               transition: 'all 0.5s ease'
             }}>
-              <h3 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '16px', fontFamily: '"SF Pro Display", sans-serif', letterSpacing: '-0.02em' }}>
+              <h3 style={{ fontSize: '2.2rem', fontWeight: 600, color: '#ffffff', marginBottom: '16px', fontFamily: '"SF Pro Display", sans-serif', letterSpacing: '-0.02em' }}>
                 {data.ctaMetinleri.demoTalebi}
               </h3>
-              <p style={{ color: '#94a3b8', fontSize: '1.1rem', marginBottom: '36px', lineHeight: 1.6, maxWidth: '700px', margin: '0 auto 36px auto', fontFamily: '"Inter", sans-serif' }}>
+              <p style={{ color: '#86868b', fontSize: '1.1rem', marginBottom: '36px', lineHeight: 1.6, maxWidth: '700px', margin: '0 auto 36px auto', fontFamily: '"Inter", sans-serif' }}>
                 {data.ctaMetinleri.iletisim}
               </p>
 
@@ -588,20 +588,20 @@ export default function ErpProjectPage() {
                         <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: '#ffffff', color: '#000000', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto' }}>
                           <Check size={28} />
                         </div>
-                        <h4 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#ffffff', marginBottom: '8px', fontFamily: '"SF Pro Display", sans-serif' }}>
+                        <h4 style={{ fontSize: '1.6rem', fontWeight: 600, color: '#ffffff', marginBottom: '8px', fontFamily: '"SF Pro Display", sans-serif' }}>
                           Demo Talebiniz İletildi!
                         </h4>
-                        <p style={{ color: '#94a3b8', fontSize: '1.05rem', fontFamily: '"Inter", sans-serif' }}>
+                        <p style={{ color: '#86868b', fontSize: '1.05rem', fontFamily: '"Inter", sans-serif' }}>
                           Bilgileriniz Google E-Tablonuza kaydedildi. Ekibimiz en kısa sürede dönüş yapacaktır.
                         </p>
                       </div>
                     ) : (
                       <>
                         <div style={{ marginBottom: '40px', textAlign: 'center' }}>
-                          <h4 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#ffffff', marginBottom: '6px', fontFamily: '"SF Pro Display", sans-serif' }}>
+                          <h4 style={{ fontSize: '1.6rem', fontWeight: 600, color: '#ffffff', marginBottom: '6px', fontFamily: '"SF Pro Display", sans-serif' }}>
                             Ücretsiz Canlı Demo Randevusu
                           </h4>
-                          <p style={{ fontSize: '0.98rem', color: '#94a3b8', fontFamily: '"Inter", sans-serif' }}>
+                          <p style={{ fontSize: '0.98rem', color: '#86868b', fontFamily: '"Inter", sans-serif' }}>
                             Bilgilerinizi bırakın, işletmenize özel canlı ERP gösterimini planlayalım.
                           </p>
                         </div>
@@ -610,7 +610,7 @@ export default function ErpProjectPage() {
                           
                           {/* Ad Soyad */}
                           <div>
-                            <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 800, color: '#64748b', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                            <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#86868b', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                               Ad Soyad
                             </label>
                             <input
@@ -636,7 +636,7 @@ export default function ErpProjectPage() {
 
                           {/* İşletme Türü */}
                           <div>
-                            <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 800, color: '#64748b', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                            <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#86868b', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                               İşletme Türü
                             </label>
                             <select
@@ -664,7 +664,7 @@ export default function ErpProjectPage() {
 
                           {/* Telefon */}
                           <div>
-                            <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 800, color: '#64748b', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                            <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#86868b', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                               Telefon
                             </label>
                             <input
@@ -689,7 +689,7 @@ export default function ErpProjectPage() {
 
                           {/* E-Posta */}
                           <div>
-                            <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 800, color: '#64748b', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                            <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#86868b', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                               E-Posta
                             </label>
                             <input

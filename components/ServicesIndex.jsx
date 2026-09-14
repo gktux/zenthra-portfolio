@@ -16,8 +16,8 @@ export default function ServicesIndex({ services }) {
             <span
               style={{
                 fontSize: '0.85rem',
-                fontWeight: 800,
-                color: '#64748b',
+                fontWeight: 600,
+                color: '#86868b',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
               }}
@@ -37,7 +37,7 @@ export default function ServicesIndex({ services }) {
             </h1>
             <p
               style={{
-                color: '#475569',
+                color: '#6e6e73',
                 fontSize: '1.15rem',
                 lineHeight: 1.7,
                 maxWidth: '720px',
@@ -53,7 +53,7 @@ export default function ServicesIndex({ services }) {
 
       <section
         className="section-padding"
-        style={{ background: '#f8fafc', borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '60px' }}
+        style={{ background: '#fbfbfd', borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '60px' }}
       >
         <div className="container">
           <div className="grid-2">
@@ -77,8 +77,8 @@ export default function ServicesIndex({ services }) {
                       <div
                         style={{
                           fontSize: '1.25rem',
-                          fontWeight: 800,
-                          color: '#94a3b8',
+                          fontWeight: 600,
+                          color: '#86868b',
                           marginBottom: '16px',
                           fontFamily: 'var(--font-display)',
                         }}
@@ -90,7 +90,7 @@ export default function ServicesIndex({ services }) {
                       </h2>
                       <p
                         style={{
-                          color: '#475569',
+                          color: '#6e6e73',
                           fontSize: '1rem',
                           lineHeight: 1.6,
                           fontFamily: 'var(--font-body)',

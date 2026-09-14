@@ -25,8 +25,8 @@ export default function Clients() {
           <div style={{ marginBottom: '44px' }}>
             <span style={{
               fontSize: '0.82rem',
-              fontWeight: 800,
-              color: '#64748b',
+              fontWeight: 600,
+              color: '#86868b',
               textTransform: 'uppercase',
               letterSpacing: '0.14em',
               background: '#f1f5f9',
@@ -38,8 +38,8 @@ export default function Clients() {
             </span>
             <h3 style={{
               fontSize: 'clamp(1.5rem, 3vw, 2.2rem)',
-              fontWeight: 800,
-              color: '#0f172a',
+              fontWeight: 600,
+              color: '#1d1d1f',
               marginTop: '14px',
               fontFamily: '"SF Pro Display", sans-serif',
               letterSpacing: '-0.02em'
@@ -60,7 +60,7 @@ export default function Clients() {
               <div
                 key={idx}
                 style={{
-                  background: '#f8fafc',
+                  background: '#fbfbfd',
                   border: '1px solid #e2e8f0',
                   borderRadius: '20px',
                   padding: '28px 20px',
@@ -80,20 +80,20 @@ export default function Clients() {
                   if (nameEl) nameEl.style.color = '#ffffff';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#f8fafc';
+                  e.currentTarget.style.background = '#fbfbfd';
                   e.currentTarget.style.borderColor = '#e2e8f0';
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
                   const nameEl = e.currentTarget.querySelector('.ref-name');
-                  if (nameEl) nameEl.style.color = '#0f172a';
+                  if (nameEl) nameEl.style.color = '#1d1d1f';
                 }}
               >
                 <div
                   className="ref-name"
                   style={{
                     fontSize: '1.1rem',
-                    fontWeight: 800,
-                    color: '#0f172a',
+                    fontWeight: 600,
+                    color: '#1d1d1f',
                     letterSpacing: '0.05em',
                     fontFamily: '"SF Pro Display", sans-serif',
                     transition: 'color 0.3s ease'

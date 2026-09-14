@@ -29,7 +29,7 @@ export default function Projects() {
         {/* Section Header */}
         <ScrollReveal distance="40px" duration="0.8s">
           <div style={{ marginBottom: '60px' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '16px' }}>
+            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '16px' }}>
               {t.projects.badge}
             </span>
 
@@ -39,7 +39,7 @@ export default function Projects() {
                 style={{
                   fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)',
                   lineHeight: 1.1,
-                  fontWeight: 800,
+                  fontWeight: 600,
                   color: '#ffffff',
                   letterSpacing: '-0.04em',
                   fontFamily: "var(--font-display)"
@@ -104,7 +104,7 @@ export default function Projects() {
                   }}>
                     <span style={{
                       fontSize: '0.82rem',
-                      fontWeight: 800,
+                      fontWeight: 600,
                       textTransform: 'uppercase',
                       letterSpacing: '0.1em',
                       background: 'rgba(255, 255, 255, 0.1)',
@@ -155,7 +155,7 @@ export default function Projects() {
                   </div>
 
                   <div>
-                    <h3 style={{ fontSize: '2.2rem', fontWeight: 800, marginBottom: '8px', color: '#ffffff', fontFamily: "var(--font-display)" }}>
+                    <h3 style={{ fontSize: '2.2rem', fontWeight: 600, marginBottom: '8px', color: '#ffffff', fontFamily: "var(--font-display)" }}>
                       {proj.title}
                     </h3>
                     <p style={{ color: '#cbd5e1', fontSize: '1.15rem', lineHeight: 1.6, maxWidth: '780px' }}>

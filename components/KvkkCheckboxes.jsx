@@ -78,8 +78,8 @@ export default function KvkkCheckboxes({
   }, []);
 
   const isDark = theme === 'dark';
-  const textColor = isDark ? '#cbd5e1' : '#475569';
-  const linkColor = isDark ? '#ffffff' : '#0f172a';
+  const textColor = isDark ? '#cbd5e1' : '#6e6e73';
+  const linkColor = isDark ? '#ffffff' : '#1d1d1f';
   const borderColor = isDark ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.12)';
 
   return (
@@ -166,7 +166,7 @@ export default function KvkkCheckboxes({
           >
             KVKK Aydınlatma Metni
           </button>{' '}
-          kapsamındaki haklarımı ve veri işleme şartlarını okudum, kabul ediyorum. <span style={{ color: '#ef4444', fontWeight: 800 }}>* (Zorunlu)</span>
+          kapsamındaki haklarımı ve veri işleme şartlarını okudum, kabul ediyorum. <span style={{ color: '#ef4444', fontWeight: 600 }}>* (Zorunlu)</span>
         </span>
       </label>
 
@@ -257,7 +257,7 @@ export default function KvkkCheckboxes({
             data-lenis-prevent-touch="true"
             style={{
               background: '#ffffff',
-              color: '#0f172a',
+              color: '#1d1d1f',
               borderRadius: '20px',
               maxWidth: '640px',
               width: '100%',
@@ -281,7 +281,7 @@ export default function KvkkCheckboxes({
               justifyContent: 'space-between',
               background: '#ffffff'
             }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, margin: 0, color: '#0f172a', fontFamily: '"SF Pro Display", sans-serif' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 600, margin: 0, color: '#1d1d1f', fontFamily: '"SF Pro Display", sans-serif' }}>
                 {kvkkTexts[activeModal].title}
               </h3>
               <button
@@ -290,7 +290,7 @@ export default function KvkkCheckboxes({
                 style={{
                   background: '#f1f5f9',
                   border: 'none',
-                  color: '#64748b',
+                  color: '#86868b',
                   width: '32px',
                   height: '32px',
                   borderRadius: '50%',
@@ -302,8 +302,8 @@ export default function KvkkCheckboxes({
                   fontWeight: 'bold',
                   transition: 'all 0.2s ease'
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = '#e2e8f0'; e.currentTarget.style.color = '#0f172a'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = '#f1f5f9'; e.currentTarget.style.color = '#64748b'; }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = '#e2e8f0'; e.currentTarget.style.color = '#1d1d1f'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = '#f1f5f9'; e.currentTarget.style.color = '#86868b'; }}
               >
                 <X size={18} />
               </button>
@@ -321,7 +321,7 @@ export default function KvkkCheckboxes({
                 flex: 1,
                 fontSize: '0.92rem',
                 lineHeight: 1.65,
-                color: '#475569',
+                color: '#6e6e73',
                 whiteSpace: 'pre-line',
                 fontFamily: '"Inter", -apple-system, sans-serif',
                 cursor: 'auto'
@@ -337,13 +337,13 @@ export default function KvkkCheckboxes({
               borderTop: '1px solid #e2e8f0',
               display: 'flex',
               justifyContent: 'flex-end',
-              background: '#f8fafc'
+              background: '#fbfbfd'
             }}>
               <button
                 type="button"
                 onClick={() => setActiveModal(null)}
                 style={{
-                  background: '#0f172a',
+                  background: '#1d1d1f',
                   color: '#ffffff',
                   border: 'none',
                   padding: '10px 24px',
@@ -355,7 +355,7 @@ export default function KvkkCheckboxes({
                   transition: 'background 0.2s ease'
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = '#1e293b'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = '#0f172a'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = '#1d1d1f'; }}
               >
                 Kapat
               </button>

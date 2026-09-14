@@ -171,3 +171,25 @@ export function BreadcrumbSchema({ items = [] }) {
     />
   );
 }
+
+export function ArticleSchema({ headline, description, url, image, datePublished }) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    image,
+    inLanguage: 'tr-TR',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    datePublished,
+    dateModified: datePublished,
+    author: { '@id': 'https://www.zenthrabilisim.com/#organization' },
+    publisher: { '@id': 'https://www.zenthrabilisim.com/#organization' },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}

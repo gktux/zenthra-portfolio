@@ -78,7 +78,7 @@ export default function Hero() {
         <div style={{ overflow: 'hidden', maxWidth: '750px', margin: '0 auto 48px auto' }}>
           <p style={{
             fontSize: 'clamp(1.05rem, 1.8vw, 1.35rem)',
-            color: '#475569',
+            color: '#6e6e73',
             fontWeight: 400,
             lineHeight: 1.5,
             fontFamily: "var(--font-body)",
@@ -117,7 +117,7 @@ export default function Hero() {
             boxShadow: '0 24px 60px rgba(0, 0, 0, 0.12)',
             border: '1px solid rgba(0, 0, 0, 0.08)',
             position: 'relative',
-            background: '#0f172a',
+            background: '#1d1d1f',
             animation: 'cbTextReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both'
           }}
         >

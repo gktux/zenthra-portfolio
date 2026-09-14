@@ -34,7 +34,7 @@ export default function Footer() {
                   </a>
                 </div>
 
-                <div className="cb-footer-location-caption" style={{ fontSize: '0.75rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px' }}>
+                <div className="cb-footer-location-caption" style={{ fontSize: '0.75rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px' }}>
                   Zenthra Bilişim • Samsun
                 </div>
                 <div className="cb-footer-location-address" style={{ fontSize: '0.92rem', color: '#cbd5e1', lineHeight: 1.4 }}>
@@ -49,7 +49,13 @@ export default function Footer() {
           <div className="cb-footer-grid-col -right">
             <div className="cb-footer-navs" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px 48px' }}>
               <a className="cb-footer-nav" href="/projects/erp">
-                <span className="cb-footer-nav-title"><span data-text="Zenthra Bilişim ERP" style={{ color: '#3b82f6' }}>Zenthra Bilişim ERP</span></span>
+                <span className="cb-footer-nav-title"><span data-text="Zenthra Bilişim ERP" style={{ color: '#0071e3' }}>Zenthra Bilişim ERP</span></span>
+              </a>
+              <a className="cb-footer-nav" href="/projects/depo-live">
+                <span className="cb-footer-nav-title"><span data-text="Depo Yönetim Programı" style={{ color: '#0071e3' }}>Depo Yönetim Programı</span></span>
+              </a>
+              <a className="cb-footer-nav" href="/rehber">
+                <span className="cb-footer-nav-title"><span data-text="Rehber">Rehber</span></span>
               </a>
               <a className="cb-footer-nav" href="/#services">
                 <span className="cb-footer-nav-title"><span data-text={t.nav.services}>{t.nav.services}</span></span>
@@ -75,7 +81,7 @@ export default function Footer() {
         <div className="cb-footer-bgrid" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '24px', paddingTop: '40px', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
           
           {/* Bottom Left Links & Copy */}
-          <div className="cb-footer-bgrid-col -left" style={{ display: 'flex', alignItems: 'center', gap: '24px', fontSize: '0.85rem', color: '#64748b' }}>
+          <div className="cb-footer-bgrid-col -left" style={{ display: 'flex', alignItems: 'center', gap: '24px', fontSize: '0.85rem', color: '#86868b' }}>
             <a href="https://www.zenthrabilisim.com" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 600 }}>zenthrabilisim.com</a>
             <span>2026, Zenthra Bilişim</span>
           </div>

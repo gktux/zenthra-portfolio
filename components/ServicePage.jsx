@@ -19,20 +19,20 @@ export default function ServicePage({ service }) {
           <ScrollReveal distance="40px" duration="0.8s">
             <nav
               aria-label="breadcrumb"
-              style={{ fontSize: '0.9rem', color: '#94a3b8', marginBottom: '24px', fontFamily: 'var(--font-body)' }}
+              style={{ fontSize: '0.9rem', color: '#86868b', marginBottom: '24px', fontFamily: 'var(--font-body)' }}
             >
-              <a href="/" style={{ color: '#94a3b8', textDecoration: 'none' }}>Ana Sayfa</a>
+              <a href="/" style={{ color: '#86868b', textDecoration: 'none' }}>Ana Sayfa</a>
               <span style={{ margin: '0 8px' }}>/</span>
-              <a href="/hizmetler" style={{ color: '#94a3b8', textDecoration: 'none' }}>Hizmetler</a>
+              <a href="/hizmetler" style={{ color: '#86868b', textDecoration: 'none' }}>Hizmetler</a>
               <span style={{ margin: '0 8px' }}>/</span>
-              <span style={{ color: '#475569' }}>{service.h1}</span>
+              <span style={{ color: '#6e6e73' }}>{service.h1}</span>
             </nav>
 
             <span
               style={{
                 fontSize: '0.85rem',
-                fontWeight: 800,
-                color: '#64748b',
+                fontWeight: 600,
+                color: '#86868b',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
               }}
@@ -55,7 +55,7 @@ export default function ServicePage({ service }) {
 
             <p
               style={{
-                color: '#475569',
+                color: '#6e6e73',
                 fontSize: '1.15rem',
                 lineHeight: 1.7,
                 maxWidth: '720px',
@@ -94,7 +94,7 @@ export default function ServicePage({ service }) {
       {/* Kapsam */}
       <section
         className="section-padding"
-        style={{ background: '#f8fafc', borderTop: '1px solid rgba(0,0,0,0.06)' }}
+        style={{ background: '#fbfbfd', borderTop: '1px solid rgba(0,0,0,0.06)' }}
       >
         <div className="container">
           <ScrollReveal distance="40px" duration="0.8s">
@@ -102,8 +102,8 @@ export default function ServicePage({ service }) {
               <span
                 style={{
                   fontSize: '0.85rem',
-                  fontWeight: 800,
-                  color: '#64748b',
+                  fontWeight: 600,
+                  color: '#86868b',
                   textTransform: 'uppercase',
                   letterSpacing: '0.1em',
                 }}
@@ -150,7 +150,7 @@ export default function ServicePage({ service }) {
                     </h3>
                     <p
                       style={{
-                        color: '#475569',
+                        color: '#6e6e73',
                         fontSize: '1rem',
                         lineHeight: 1.6,
                         fontFamily: 'var(--font-body)',
@@ -174,8 +174,8 @@ export default function ServicePage({ service }) {
               <span
                 style={{
                   fontSize: '0.85rem',
-                  fontWeight: 800,
-                  color: '#64748b',
+                  fontWeight: 600,
+                  color: '#86868b',
                   textTransform: 'uppercase',
                   letterSpacing: '0.1em',
                 }}
@@ -225,7 +225,7 @@ export default function ServicePage({ service }) {
                   {openFaqIndex === idx && (
                     <p
                       style={{
-                        color: '#475569',
+                        color: '#6e6e73',
                         fontSize: '1.02rem',
                         lineHeight: 1.7,
                         paddingBottom: '26px',
@@ -245,7 +245,7 @@ export default function ServicePage({ service }) {
       {/* CTA */}
       <section
         className="section-padding"
-        style={{ background: '#f8fafc', borderTop: '1px solid rgba(0,0,0,0.06)' }}
+        style={{ background: '#fbfbfd', borderTop: '1px solid rgba(0,0,0,0.06)' }}
       >
         <div className="container">
           <ScrollReveal distance="40px" duration="0.8s">
@@ -261,7 +261,7 @@ export default function ServicePage({ service }) {
               </h2>
               <p
                 style={{
-                  color: '#475569',
+                  color: '#6e6e73',
                   fontSize: '1.05rem',
                   maxWidth: '560px',
                   margin: '0 auto 32px',

@@ -61,14 +61,14 @@ export default function ContactsPage() {
           
           {/* Page Headline */}
           <div style={{ marginBottom: '60px' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '12px' }}>
+            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '12px' }}>
               {t.contacts.badge}
             </span>
 
             <h1 style={{
               fontSize: 'clamp(2.8rem, 6vw, 4.8rem)',
               lineHeight: 1.05,
-              fontWeight: 800,
+              fontWeight: 600,
               color: '#000000',
               letterSpacing: '-0.045em',
               fontFamily: "'Plus Jakarta Sans', sans-serif",
@@ -77,7 +77,7 @@ export default function ContactsPage() {
               {t.contacts.title}
             </h1>
 
-            <p style={{ fontSize: '1.2rem', color: '#475569', maxWidth: '680px', lineHeight: 1.5 }}>
+            <p style={{ fontSize: '1.2rem', color: '#6e6e73', maxWidth: '680px', lineHeight: 1.5 }}>
               {t.contacts.subtitle}
             </p>
           </div>
@@ -88,10 +88,10 @@ export default function ContactsPage() {
             {/* Left Column: Direct Office Info */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
               <div>
-                <h2 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#000000', marginBottom: '16px' }}>
+                <h2 style={{ fontSize: '1.8rem', fontWeight: 600, color: '#000000', marginBottom: '16px' }}>
                   {t.contacts.infoTitle}
                 </h2>
-                <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: 1.6 }}>
+                <p style={{ color: '#6e6e73', fontSize: '1.05rem', lineHeight: 1.6 }}>
                   Zenthra Bilişim ekibi olarak dijital projelerinize yön vermek ve sorularınızı yanıtlamak için buradayız.
                 </p>
               </div>
@@ -103,7 +103,7 @@ export default function ContactsPage() {
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Adres</div>
+                    <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Adres</div>
                     <div style={{ fontWeight: 700, fontSize: '1.05rem', color: '#000000' }}>{t.contacts.address}</div>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export default function ContactsPage() {
                     <Phone size={20} />
                   </div>
                   <div>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Telefon & WhatsApp</div>
+                    <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Telefon & WhatsApp</div>
                     <div style={{ fontWeight: 700, fontSize: '1.05rem', color: '#000000', display: 'flex', items: 'center', gap: '12px' }}>
                       <span>{t.contacts.phone}</span>
                       <a
@@ -141,7 +141,7 @@ export default function ContactsPage() {
                     <Mail size={20} />
                   </div>
                   <div>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.08em' }}>E-Posta</div>
+                    <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.08em' }}>E-Posta</div>
                     <div style={{ fontWeight: 700, fontSize: '1.05rem', color: '#000000' }}>{t.contacts.email}</div>
                   </div>
                 </div>
@@ -154,7 +154,7 @@ export default function ContactsPage() {
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '60px 20px' }}>
                   <CheckCircle size={54} color="#000000" style={{ margin: '0 auto 20px auto' }} />
-                  <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#000000', marginBottom: '10px' }}>
+                  <h3 style={{ fontSize: '1.6rem', fontWeight: 600, color: '#000000', marginBottom: '10px' }}>
                     {t.contacts.sentSuccess}
                   </h3>
                 </div>

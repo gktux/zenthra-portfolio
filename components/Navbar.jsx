@@ -34,8 +34,8 @@ export default function Navbar() {
             <div className="cb-navbar-grid-col -left">
               <a href="/" className="cb-navbar-logo" aria-label="Zenthra Bilişim" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '5px' }}>
-                  <span className="logo-text-bold" style={{ color: '#000000', fontWeight: 800, fontSize: '1.45rem', letterSpacing: '-0.03em' }}>Zenthra</span>
-                  <span className="logo-text-tag" style={{ color: '#06b6d4', fontWeight: 700, fontSize: '1.05rem', letterSpacing: '0.02em' }}>Bilişim</span>
+                  <span className="logo-text-bold" style={{ color: '#000000', fontWeight: 600, fontSize: '1.45rem', letterSpacing: '-0.03em' }}>Zenthra</span>
+                  <span className="logo-text-tag" style={{ color: '#0071e3', fontWeight: 700, fontSize: '1.05rem', letterSpacing: '0.02em' }}>Bilişim</span>
                 </div>
               </a>
             </div>
@@ -47,7 +47,7 @@ export default function Navbar() {
                 <div className="cb-navbar-nav">
                   <a className="cb-navbar-nav-toggle" href="/projects/erp">
                     <span className="cb-navbar-nav-title">
-                      <span data-text="Zenthra Bilişim ERP" style={{ color: '#000000', fontWeight: 700 }}>Zenthra Bilişim ERP</span>
+                      <span data-text="ERP" style={{ color: '#000000', fontWeight: 600 }}>ERP</span>
                     </span>
                   </a>
                 </div>
@@ -55,7 +55,15 @@ export default function Navbar() {
                 <div className="cb-navbar-nav">
                   <a className="cb-navbar-nav-toggle" href="/projects/depo-live">
                     <span className="cb-navbar-nav-title">
-                      <span data-text="Zenthra Bilişim Depo Live" style={{ color: '#000000', fontWeight: 700 }}>Zenthra Bilişim Depo Live</span>
+                      <span data-text="Depo Live" style={{ color: '#000000', fontWeight: 600 }}>Depo Live</span>
+                    </span>
+                  </a>
+                </div>
+
+                <div className="cb-navbar-nav">
+                  <a className="cb-navbar-nav-toggle" href="/rehber">
+                    <span className="cb-navbar-nav-title">
+                      <span data-text="Rehber" style={{ color: '#000000', fontWeight: 600 }}>Rehber</span>
                     </span>
                   </a>
                 </div>
@@ -135,10 +143,13 @@ export default function Navbar() {
       <div className={`cb-mobile-overlay ${mobileMenuOpen ? '-open' : ''}`}>
         <nav className="cb-mobile-overlay-nav">
           <a href="/projects/erp" className="cb-mobile-nav-link" onClick={handleNavClick}>
-            Zenthra Bilişim ERP
+            Zenthra ERP
           </a>
           <a href="/projects/depo-live" className="cb-mobile-nav-link" onClick={handleNavClick}>
-            Zenthra Bilişim Depo Live
+            Depo Live — Depo Yönetim Programı
+          </a>
+          <a href="/rehber" className="cb-mobile-nav-link" onClick={handleNavClick}>
+            Rehber
           </a>
           <a href="/hizmetler" className="cb-mobile-nav-link" onClick={handleNavClick}>
             {t.nav.services}
