@@ -1,4 +1,5 @@
-import { SoftwareSchema } from '@/components/StructuredData';
+import { SoftwareSchema, FaqSchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { zenthraDepoLiveData } from '@/data/zenthraDepoLiveData';
 
 export const metadata = {
   title: 'Depo Yönetim Programı | Barkodlu Stok Takibi — Zenthra Depo Live',
@@ -36,6 +37,14 @@ export default function DepoLiveLayout({ children }) {
           'Seri, lot ve son kullanma takibi',
           'Depolar arası transfer',
           'Telefonla el terminali kullanımı',
+        ]}
+      />
+      <FaqSchema items={zenthraDepoLiveData.tr.sss} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Ana Sayfa', url: 'https://www.zenthrabilisim.com' },
+          { name: 'Projeler', url: 'https://www.zenthrabilisim.com/projects/depo-live' },
+          { name: 'Depo Live', url: 'https://www.zenthrabilisim.com/projects/depo-live' },
         ]}
       />
       {children}

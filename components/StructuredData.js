@@ -23,6 +23,30 @@ export function OrganizationSchema() {
         inLanguage: 'tr-TR',
         publisher: { '@id': 'https://www.zenthrabilisim.com/#organization' },
       },
+      {
+        '@type': 'ProfessionalService',
+        '@id': 'https://www.zenthrabilisim.com/#localbusiness',
+        name: 'Zenthra Bilişim',
+        url: 'https://www.zenthrabilisim.com',
+        image: 'https://www.zenthrabilisim.com/logo.png',
+        email: 'info@zenthrabilisim.com',
+        telephone: '+90-531-580-07-53',
+        priceRange: '₺₺',
+        address: { '@type': 'PostalAddress', addressCountry: 'TR', addressRegion: 'Samsun', addressLocality: 'Samsun' },
+        areaServed: [
+          { '@type': 'Country', name: 'Türkiye' },
+          { '@type': 'AdministrativeArea', name: 'Samsun' },
+        ],
+        parentOrganization: { '@id': 'https://www.zenthrabilisim.com/#organization' },
+        knowsAbout: [
+          'Depo yönetim sistemi',
+          'WMS yazılımı',
+          'ERP programı',
+          'Stok takip programı',
+          'Özel yazılım geliştirme',
+          'Kurumsal IT bakım',
+        ],
+      },
     ],
   };
   return (
@@ -101,6 +125,44 @@ export function ServiceSchema({ service }) {
         ],
       },
     ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+export function FaqSchema({ items = [] }) {
+  if (!items.length) return null;
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((f) => ({
+      '@type': 'Question',
+      name: f.soru ?? f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.cevap ?? f.a },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+export function BreadcrumbSchema({ items = [] }) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.name,
+      item: it.url,
+    })),
   };
   return (
     <script

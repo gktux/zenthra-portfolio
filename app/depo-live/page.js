@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation';
+import { permanentRedirect } from 'next/navigation';
 
 export default function DepoLiveRedirectPage() {
-  redirect('/projects/depo-live');
+  permanentRedirect('/projects/depo-live');
 }
