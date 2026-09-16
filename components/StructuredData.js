@@ -3,7 +3,10 @@ const ORG = {
   '@id': 'https://www.zenthrabilisim.com/#organization',
   name: 'Zenthra Bilişim',
   url: 'https://www.zenthrabilisim.com',
-  logo: 'https://www.zenthrabilisim.com/logo.png',
+  // Google, SERP favicon'unu ve Bilgi Paneli logosunu bu alandan secer; favicon.ico
+  // ikinci planda kalir. logo.png beyaz zeminli ve %40 bosluklu oldugu icin 16px'te
+  // marka kutusu kayboluyordu. icon.png ayni maskeli isareti 512x512 verir.
+  logo: 'https://www.zenthrabilisim.com/icon.png',
   email: 'info@zenthrabilisim.com',
   telephone: '+90-531-580-07-53',
   areaServed: { '@type': 'Country', name: 'Türkiye' },
@@ -28,7 +31,7 @@ export function OrganizationSchema() {
         '@id': 'https://www.zenthrabilisim.com/#localbusiness',
         name: 'Zenthra Bilişim',
         url: 'https://www.zenthrabilisim.com',
-        image: 'https://www.zenthrabilisim.com/logo.png',
+        image: 'https://www.zenthrabilisim.com/icon.png',
         email: 'info@zenthrabilisim.com',
         telephone: '+90-531-580-07-53',
         priceRange: '₺₺',
