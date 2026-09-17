@@ -5,8 +5,8 @@ export const zenthraDepoLiveData = {
     freeTrialUrl: "https://app.zenthrabilisim.com.tr",
     freeTrialBadge: "⚡ 14 Gün Ücretsiz Deneyin — Kredi Kartı Gerekmez",
     hero: {
-      anaBaslik: "Zenthra Bilişim Depo Live: Depo ve Stok Süreçlerinizi Canlı ve Sıfır Hata ile Yönetin",
-      altBaslik: "El terminalleri, karekod/barkod okuma, canlı lokasyon takibi ve uçtan uca ERP/e-ticaret entegrasyonları ile mal kabulden sevkiyata kadar tüm depo operasyonlarınızı anlık olarak izleyin.",
+      anaBaslik: "Depo Programı: Depo ve Stok Süreçlerinizi Canlı ve Sıfır Hata ile Yönetin",
+      altBaslik: "Zenthra Bilişim Depo Live, mal kabulden sevkiyata kadar tüm süreci tek ekranda toplayan barkodlu bir depo programıdır. El terminali, karekod okuma, canlı raf lokasyonu ve ERP/e-ticaret entegrasyonlarıyla deponuzu anlık izleyin.",
       metrikler: [
         { deger: "7/24", aciklama: "Canlı Stok & El Terminali Senkronizasyonu" },
         { deger: "%99.9", aciklama: "Sayım ve Sevkiyat Doğruluğu" }
@@ -93,6 +93,14 @@ export const zenthraDepoLiveData = {
       }
     ],
     sss: [
+      {
+        soru: "Depo programı nedir, stok takip programından farkı nedir?",
+        cevap: "Stok takip programı \"elimde kaç adet var\" sorusunu yanıtlar. Depo programı (WMS) buna \"hangi rafta, hangi lotta, kim koydu, kim aldı\" bilgisini ekler; mal kabul, raf yerleştirme, sayım, toplama ve sevkiyat adımlarını barkodla yönetir. Zenthra Bilişim Depo Live ikisini tek sistemde birleştiren bir depo programıdır."
+      },
+      {
+        soru: "Depo programı fiyatları nasıl belirleniyor, ücretsiz deneyebilir miyim?",
+        cevap: "Kullanıcı sayısı ve ihtiyaç duyulan modüllere göre aylık abonelik uygulanır; kurulum ücreti alınmaz. Karar vermeden önce 14 gün boyunca kendi verilerinizle ücretsiz deneyebilir, kredi kartı bilgisi girmeden hesap açabilirsiniz."
+      },
       {
         soru: "Zenthra Bilişim Depo Live hangi el terminalleri ve cihazlarla çalışır?",
         cevap: "Android ve iOS işletim sistemine sahip tüm profesyonel el terminalleri, tabletler ve akıllı telefonlarla tam uyumludur. Ayrıca kablosuz barkod/karekod okuyucuları da destekler."

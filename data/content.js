@@ -58,9 +58,9 @@ export const dictionary = {
           image: "/erp.png"
         },
         {
-          category: "Akıllı Depo & Lojistik WMS",
-          title: "Zenthra Bilişim Depo Live",
-          desc: "El terminalleri, karekod okuma ve anlık ERP entegrasyonu ile canlı stok ve depo otomasyon platformu.",
+          category: "Depo Programı & Lojistik WMS",
+          title: "Zenthra Bilişim Depo Live — Depo Programı",
+          desc: "Mal kabulden sevkiyata tüm süreci barkodla yöneten depo programı: el terminali, karekod okuma, raf bazlı canlı stok ve anlık ERP entegrasyonu.",
           link: "/projects/depo-live",
           image: "/depo-live.png"
         }

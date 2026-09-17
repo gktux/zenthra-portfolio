@@ -2,14 +2,14 @@ import { SoftwareSchema, FaqSchema, BreadcrumbSchema } from '@/components/Struct
 import { zenthraDepoLiveData } from '@/data/zenthraDepoLiveData';
 
 export const metadata = {
-  title: 'Depo Yönetim Programı | Barkodlu Stok Takibi — Zenthra Depo Live',
+  title: 'Depo Programı | Barkodlu Depo Yönetim Sistemi — Zenthra Depo Live',
   description:
-    'Depo Live ile mal kabul, raf yerleştirme, sayım, toplama ve sevkiyatı tek sistemde yönetin. Telefonunuz el terminaline dönüşür, stok raf bazında anlık akar. Ücretsiz demo talep edin.',
+    'Barkodlu depo programı: mal kabul, raf yerleştirme, sayım, toplama ve sevkiyat tek sistemde. Telefonunuz el terminaline dönüşür, stok raf bazında anlık akar. 14 gün ücretsiz deneyin.',
   keywords:
-    'depo yönetim programı, depo yönetim sistemi, stok takip programı, barkodlu depo programı, WMS yazılımı, el terminali stok, raf bazlı stok takibi, depo otomasyonu',
+    'depo programı, depo yönetim programı, depo yönetim sistemi, stok takip programı, barkodlu depo programı, WMS yazılımı, el terminali stok, raf bazlı stok takibi, depo otomasyonu, depo programı fiyatları',
   alternates: { canonical: '/projects/depo-live' },
   openGraph: {
-    title: 'Depo Yönetim Programı | Barkodlu Stok Takibi — Zenthra Depo Live',
+    title: 'Depo Programı | Barkodlu Depo Yönetim Sistemi — Zenthra Depo Live',
     description:
       'Mal kabulden sevkiyata uçtan uca depo yönetimi. Barkodla çalışın, stok raf bazında anlık aksın. Seri, lot ve son kullanma takibi hazır.',
     url: '/projects/depo-live',
@@ -25,7 +25,7 @@ export default function DepoLiveLayout({ children }) {
     <>
       <SoftwareSchema
         name="Zenthra Depo Live"
-        description="Mal kabul, raf yerleştirme, sayım, toplama ve sevkiyatı tek sistemde yöneten barkodlu depo yönetim programı. Telefon el terminali olarak kullanılır."
+        description="Mal kabul, raf yerleştirme, sayım, toplama ve sevkiyatı tek sistemde yöneten barkodlu depo programı (WMS). Telefon el terminali olarak kullanılır."
         url="https://www.zenthrabilisim.com/projects/depo-live"
         image="https://www.zenthrabilisim.com/depo-live.png"
         features={[

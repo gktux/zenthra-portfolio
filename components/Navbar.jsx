@@ -20,8 +20,28 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
-  const handleNavClick = () => {
+  const handleNavClick = (e, href) => {
     setMobileMenuOpen(false);
+
+    if (href && href.includes('#')) {
+      const hash = href.substring(href.indexOf('#'));
+      const path = href.substring(0, href.indexOf('#'));
+
+      if (typeof window !== 'undefined' && (window.location.pathname === '/' || path === '' || path === '/')) {
+        const targetEl = document.querySelector(hash);
+        if (targetEl) {
+          if (e) e.preventDefault();
+          
+          if (window.lenis) {
+            window.lenis.scrollTo(targetEl, { offset: -70, duration: 1.2 });
+          } else {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+          
+          window.history.pushState(null, '', hash);
+        }
+      }
+    }
   };
 
   return (
@@ -31,12 +51,11 @@ export default function Navbar() {
           <div className="cb-navbar-grid">
             
             {/* Left Column: Zenthra Bilişim Brand Logo */}
-            <div className="cb-navbar-grid-col -left">
-              <a href="/" className="cb-navbar-logo" aria-label="Zenthra Bilişim" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '5px' }}>
-                  <span className="logo-text-bold" style={{ color: '#000000', fontWeight: 600, fontSize: '1.45rem', letterSpacing: '-0.03em' }}>Zenthra</span>
-                  <span className="logo-text-tag" style={{ color: '#0071e3', fontWeight: 700, fontSize: '1.05rem', letterSpacing: '0.02em' }}>Bilişim</span>
-                </div>
+            <div className="cb-navbar-grid-col -left" style={{ display: 'flex', alignItems: 'center' }}>
+              <a href="/" className="cb-navbar-logo" aria-label="Zenthra Bilişim" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
+                <span className="logo-text-bold" style={{ color: '#000000', fontWeight: 700, fontSize: '1.45rem', letterSpacing: '-0.03em', lineHeight: 1, whiteSpace: 'nowrap', transform: 'translateY(-2px)' }}>
+                  ZENTHRA BİLİŞİM
+                </span>
               </a>
             </div>
 
@@ -45,15 +64,7 @@ export default function Navbar() {
               <nav className="cb-navbar-navs">
                 
                 <div className="cb-navbar-nav">
-                  <a className="cb-navbar-nav-toggle" href="/projects/erp">
-                    <span className="cb-navbar-nav-title">
-                      <span data-text="ERP" style={{ color: '#000000', fontWeight: 600 }}>ERP</span>
-                    </span>
-                  </a>
-                </div>
-
-                <div className="cb-navbar-nav">
-                  <a className="cb-navbar-nav-toggle" href="/projects/depo-live">
+                  <a className="cb-navbar-nav-toggle" href="/projects/depo-live" onClick={(e) => handleNavClick(e, '/projects/depo-live')}>
                     <span className="cb-navbar-nav-title">
                       <span data-text="Depo Live" style={{ color: '#000000', fontWeight: 600 }}>Depo Live</span>
                     </span>
@@ -61,15 +72,15 @@ export default function Navbar() {
                 </div>
 
                 <div className="cb-navbar-nav">
-                  <a className="cb-navbar-nav-toggle" href="/rehber">
+                  <a className="cb-navbar-nav-toggle" href="/projects/erp" onClick={(e) => handleNavClick(e, '/projects/erp')}>
                     <span className="cb-navbar-nav-title">
-                      <span data-text="Rehber" style={{ color: '#000000', fontWeight: 600 }}>Rehber</span>
+                      <span data-text="ERP" style={{ color: '#000000', fontWeight: 600 }}>ERP</span>
                     </span>
                   </a>
                 </div>
 
                 <div className="cb-navbar-nav">
-                  <a className="cb-navbar-nav-toggle" href="/hizmetler">
+                  <a className="cb-navbar-nav-toggle" href="/#services" onClick={(e) => handleNavClick(e, '/#services')}>
                     <span className="cb-navbar-nav-title">
                       <span data-text={t.nav.services}>{t.nav.services}</span>
                     </span>
@@ -77,7 +88,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="cb-navbar-nav">
-                  <a className="cb-navbar-nav-toggle" href="/#projects">
+                  <a className="cb-navbar-nav-toggle" href="/#projects" onClick={(e) => handleNavClick(e, '/#projects')}>
                     <span className="cb-navbar-nav-title">
                       <span data-text={t.nav.projects}>{t.nav.projects}</span>
                     </span>
@@ -85,7 +96,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="cb-navbar-nav">
-                  <a className="cb-navbar-nav-toggle" href="/#mission">
+                  <a className="cb-navbar-nav-toggle" href="/#mission" onClick={(e) => handleNavClick(e, '/#mission')}>
                     <span className="cb-navbar-nav-title">
                       <span data-text={t.nav.missionVision}>{t.nav.missionVision}</span>
                     </span>
@@ -93,7 +104,15 @@ export default function Navbar() {
                 </div>
 
                 <div className="cb-navbar-nav">
-                  <a className="cb-navbar-nav-toggle" href="/#faq">
+                  <a className="cb-navbar-nav-toggle" href="/rehber" onClick={(e) => handleNavClick(e, '/rehber')}>
+                    <span className="cb-navbar-nav-title">
+                      <span data-text="Rehber" style={{ color: '#000000', fontWeight: 600 }}>Rehber</span>
+                    </span>
+                  </a>
+                </div>
+
+                <div className="cb-navbar-nav">
+                  <a className="cb-navbar-nav-toggle" href="/#faq" onClick={(e) => handleNavClick(e, '/#faq')}>
                     <span className="cb-navbar-nav-title">
                       <span data-text={t.nav.faq}>{t.nav.faq}</span>
                     </span>
@@ -142,25 +161,25 @@ export default function Navbar() {
       {/* Mobile Full-Screen Overlay Menu */}
       <div className={`cb-mobile-overlay ${mobileMenuOpen ? '-open' : ''}`}>
         <nav className="cb-mobile-overlay-nav">
-          <a href="/projects/erp" className="cb-mobile-nav-link" onClick={handleNavClick}>
+          <a href="/projects/depo-live" className="cb-mobile-nav-link" onClick={(e) => handleNavClick(e, '/projects/depo-live')}>
+            Depo Live — Depo Programı
+          </a>
+          <a href="/projects/erp" className="cb-mobile-nav-link" onClick={(e) => handleNavClick(e, '/projects/erp')}>
             Zenthra ERP
           </a>
-          <a href="/projects/depo-live" className="cb-mobile-nav-link" onClick={handleNavClick}>
-            Depo Live — Depo Yönetim Programı
-          </a>
-          <a href="/rehber" className="cb-mobile-nav-link" onClick={handleNavClick}>
-            Rehber
-          </a>
-          <a href="/hizmetler" className="cb-mobile-nav-link" onClick={handleNavClick}>
+          <a href="/#services" className="cb-mobile-nav-link" onClick={(e) => handleNavClick(e, '/#services')}>
             {t.nav.services}
           </a>
-          <a href="/#projects" className="cb-mobile-nav-link" onClick={handleNavClick}>
+          <a href="/#projects" className="cb-mobile-nav-link" onClick={(e) => handleNavClick(e, '/#projects')}>
             {t.nav.projects}
           </a>
-          <a href="/#mission" className="cb-mobile-nav-link" onClick={handleNavClick}>
+          <a href="/#mission" className="cb-mobile-nav-link" onClick={(e) => handleNavClick(e, '/#mission')}>
             {t.nav.missionVision}
           </a>
-          <a href="/#faq" className="cb-mobile-nav-link" onClick={handleNavClick}>
+          <a href="/rehber" className="cb-mobile-nav-link" onClick={(e) => handleNavClick(e, '/rehber')}>
+            Rehber
+          </a>
+          <a href="/#faq" className="cb-mobile-nav-link" onClick={(e) => handleNavClick(e, '/#faq')}>
             {t.nav.faq}
           </a>
 

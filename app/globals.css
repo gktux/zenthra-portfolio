@@ -117,8 +117,7 @@ h1, h2, h3, h4 {
 .cb-navbar-logo {
   text-decoration: none;
   display: flex;
-  align-items: baseline;
-  gap: 8px;
+  align-items: center;
   color: #000000;
 }
 
@@ -134,7 +133,7 @@ h1, h2, h3, h4 {
   font-weight: 700;
   color: #86868b;
   letter-spacing: 0.05em;
-  text-transform: lowercase;
+  text-transform: none;
 }
 
 /* Nav Items & Text Roll-Up Animation */
@@ -537,20 +536,63 @@ h1, h2, h3, h4 {
   padding: 120px 0;
 }
 
-/* Cuberto Clean Cards */
+/* Cuberto Clean Cards with Flowing Black Neon Border on Hover */
 .cuberto-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   background: #fbfbfd;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1.5px solid rgba(0, 0, 0, 0.25);
   border-radius: 24px;
   padding: 40px;
-  transition: all 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.cuberto-card::before {
+  content: '';
+  position: absolute;
+  top: -65%;
+  left: -65%;
+  width: 230%;
+  height: 230%;
+  background: conic-gradient(
+    transparent 0deg,
+    rgba(0, 0, 0, 0.1) 40deg,
+    #000000 90deg,
+    #000000 110deg,
+    rgba(0, 0, 0, 0.1) 160deg,
+    transparent 200deg
+  );
+  opacity: 0;
+  z-index: -2;
+  transition: opacity 0.4s ease;
+  animation: spinNeonBorder 3s linear infinite;
+  pointer-events: none;
+}
+
+.cuberto-card::after {
+  content: '';
+  position: absolute;
+  inset: 1.5px;
+  background: #fbfbfd;
+  border-radius: 22.5px;
+  z-index: -1;
+  transition: background 0.35s ease;
 }
 
 .cuberto-card:hover {
-  background: #ffffff;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  background: transparent;
+  border-color: transparent;
   transform: translateY(-6px);
-  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16);
+}
+
+.cuberto-card:hover::before {
+  opacity: 1;
+}
+
+.cuberto-card:hover::after {
+  background: #ffffff;
 }
 
 /* Grid Layouts */

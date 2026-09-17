@@ -19,7 +19,7 @@ export default function Faq() {
         
         {/* FAQ Header */}
         <ScrollReveal distance="40px" duration="0.8s">
-          <div className="cb-faq-header" style={{ marginBottom: '70px' }}>
+          <div className="cb-faq-header" style={{ marginBottom: '70px', textAlign: 'center' }}>
             <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '12px' }}>
               {t.faq.badge}
             </span>
@@ -32,7 +32,8 @@ export default function Faq() {
                   fontWeight: 600,
                   color: '#ffffff',
                   letterSpacing: '-0.04em',
-                  fontFamily: "var(--font-display)"
+                  fontFamily: "var(--font-display)",
+                  textAlign: 'center'
                 }}
               >
                 {t.faq.title}

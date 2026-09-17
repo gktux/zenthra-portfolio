@@ -27,8 +27,8 @@ export default function Projects() {
       <div className="container">
         
         {/* Section Header */}
-        <ScrollReveal distance="40px" duration="0.8s">
-          <div style={{ marginBottom: '60px' }}>
+        <ScrollReveal>
+          <div style={{ marginBottom: '60px', textAlign: 'center' }}>
             <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '16px' }}>
               {t.projects.badge}
             </span>
@@ -45,29 +45,7 @@ export default function Projects() {
                   fontFamily: "var(--font-display)"
                 }}
               >
-                {titleWords.map((word, idx) => (
-                  <span
-                    key={idx}
-                    aria-hidden="true"
-                    style={{
-                      overflow: 'clip',
-                      verticalAlign: 'top',
-                      margin: '-0.15em 0.15em',
-                      display: 'inline-block'
-                    }}
-                  >
-                    <span
-                      aria-hidden="true"
-                      style={{
-                        padding: '0.15em',
-                        display: 'inline-block',
-                        animation: `cbTextReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${idx * 0.08}s both`
-                      }}
-                    >
-                      {word}
-                    </span>
-                  </span>
-                ))}
+                {t.projects.title}
               </h2>
             </div>
           </div>
@@ -76,7 +54,7 @@ export default function Projects() {
         {/* Featured Projects Cards Showcase with Scroll Reveal */}
         <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '48px' }}>
           {t.projects.items && t.projects.items.map((proj, idx) => (
-            <ScrollReveal key={idx} distance="60px" duration="0.9s" delay={idx * 0.15}>
+            <ScrollReveal key={idx} delay={idx * 0.1}>
               <a
                 href={proj.link || (idx === 0 ? "/projects/erp" : "/projects/depo-live")}
                 style={{ textDecoration: 'none', color: '#ffffff', display: 'block' }}

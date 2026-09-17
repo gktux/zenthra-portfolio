@@ -19,7 +19,7 @@ export default function Services() {
       <div className="container">
         
         {/* Section Header with Scroll Reveal */}
-        <ScrollReveal distance="40px" duration="0.8s">
+        <ScrollReveal>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '60px', flexWrap: 'wrap', gap: '20px' }}>
             <div>
               <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
@@ -38,7 +38,7 @@ export default function Services() {
         {/* Services List Grid with Staggered Scroll Reveal */}
         <div className="grid-2">
           {t.services.items.map((item, idx) => (
-            <ScrollReveal key={item.id} delay={idx * 0.1} distance="50px" duration="0.85s">
+            <ScrollReveal key={item.id} delay={idx * 0.08}>
               <div className="cuberto-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '260px', height: '100%' }}>
                 <div>
                   <div style={{ fontSize: '1.25rem', fontWeight: 600, color: '#86868b', marginBottom: '16px', fontFamily: "var(--font-display)" }}>
