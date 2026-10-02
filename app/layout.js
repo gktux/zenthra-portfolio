@@ -10,6 +10,9 @@ import Script from 'next/script';
 const GOOGLE_ADS_ID = 'AW-18446998627';
 // GA4 "ana site" akisi. Ayni gtag.js yuklemesine ikinci config olarak biner.
 const GA4_ID = 'G-1NJ1VPY1BR';
+// Tag Manager konteyneri. GA4 ve Ads zaten gtag ile yukleniyor; konteynere
+// ayni etiketler eklenirse sayim ikiye katlanir.
+const GTM_ID = 'GTM-W9C4QLFR';
 
 export const metadata = {
   metadataBase: new URL('https://www.zenthrabilisim.com'),
@@ -45,6 +48,21 @@ export default function RootLayout({ children }) {
         <meta name="google-site-verification" content="vEm4p5z4Oa5jJi8BIfG1AZwMWLz5Lq4DLTHI6_Bs8q8" />
       </head>
       <body>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} strategy="afterInteractive" />
         <Script id="google-ads" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
