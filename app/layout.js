@@ -3,6 +3,11 @@ import { LanguageProvider } from '@/context/LanguageContext';
 import CustomCursor from '@/components/CustomCursor';
 import { OrganizationSchema } from '@/components/StructuredData';
 import SmoothScroll from '@/components/SmoothScroll';
+import Script from 'next/script';
+
+// Google Ads etiketi. linker: reklamdan gelen gclid app alan adina
+// (kayit orada) tasinsin, donusum kampanyaya baglansin.
+const GOOGLE_ADS_ID = 'AW-18446998627';
 
 export const metadata = {
   metadataBase: new URL('https://www.zenthrabilisim.com'),
@@ -38,6 +43,13 @@ export default function RootLayout({ children }) {
         <meta name="google-site-verification" content="vEm4p5z4Oa5jJi8BIfG1AZwMWLz5Lq4DLTHI6_Bs8q8" />
       </head>
       <body>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} strategy="afterInteractive" />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_ADS_ID}', { linker: { domains: ['zenthrabilisim.com', 'app.zenthrabilisim.com.tr'] } });`}
+        </Script>
         <OrganizationSchema />
         <LanguageProvider>
           <SmoothScroll>
