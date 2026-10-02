@@ -8,6 +8,8 @@ import Script from 'next/script';
 // Google Ads etiketi. linker: reklamdan gelen gclid app alan adina
 // (kayit orada) tasinsin, donusum kampanyaya baglansin.
 const GOOGLE_ADS_ID = 'AW-18446998627';
+// GA4 "ana site" akisi. Ayni gtag.js yuklemesine ikinci config olarak biner.
+const GA4_ID = 'G-1NJ1VPY1BR';
 
 export const metadata = {
   metadataBase: new URL('https://www.zenthrabilisim.com'),
@@ -48,7 +50,9 @@ export default function RootLayout({ children }) {
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GOOGLE_ADS_ID}', { linker: { domains: ['zenthrabilisim.com', 'app.zenthrabilisim.com.tr'] } });`}
+gtag('set', 'linker', { domains: ['zenthrabilisim.com', 'app.zenthrabilisim.com.tr'] });
+gtag('config', '${GOOGLE_ADS_ID}');
+gtag('config', '${GA4_ID}');`}
         </Script>
         <OrganizationSchema />
         <LanguageProvider>
