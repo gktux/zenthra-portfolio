@@ -43,7 +43,6 @@ export default function DepoLiveLayout({ children }) {
       <BreadcrumbSchema
         items={[
           { name: 'Ana Sayfa', url: 'https://www.zenthrabilisim.com' },
-          { name: 'Projeler', url: 'https://www.zenthrabilisim.com/projects/depo-live' },
           { name: 'Depo Live', url: 'https://www.zenthrabilisim.com/projects/depo-live' },
         ]}
       />

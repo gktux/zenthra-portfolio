@@ -4,7 +4,8 @@ import { rehberListesi } from '@/data/rehberData';
 const BASE = 'https://www.zenthrabilisim.com';
 
 export default function sitemap() {
-  const now = new Date();
+  // Gercek icerik degisim tarihi; her derlemede new Date() vermek Google'in lastmod'a guvenini bitirir.
+  const now = new Date('2026-10-03');
   const core = [
     { url: BASE, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${BASE}/projects/depo-live`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
