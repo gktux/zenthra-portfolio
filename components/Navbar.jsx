@@ -80,6 +80,14 @@ export default function Navbar() {
                 </div>
 
                 <div className="cb-navbar-nav">
+                  <a className="cb-navbar-nav-toggle" href="https://hizliokuma.zenthrabilisim.com.tr" target="_blank" rel="noopener noreferrer">
+                    <span className="cb-navbar-nav-title">
+                      <span data-text="Zenthra Odak" style={{ color: '#000000', fontWeight: 600 }}>Zenthra Odak</span>
+                    </span>
+                  </a>
+                </div>
+
+                <div className="cb-navbar-nav">
                   <a className="cb-navbar-nav-toggle" href="/#services" onClick={(e) => handleNavClick(e, '/#services')}>
                     <span className="cb-navbar-nav-title">
                       <span data-text={t.nav.services}>{t.nav.services}</span>
@@ -166,6 +174,9 @@ export default function Navbar() {
           </a>
           <a href="/projects/erp" className="cb-mobile-nav-link" onClick={(e) => handleNavClick(e, '/projects/erp')}>
             Zenthra ERP
+          </a>
+          <a href="https://hizliokuma.zenthrabilisim.com.tr" target="_blank" rel="noopener noreferrer" className="cb-mobile-nav-link">
+            Zenthra Odak
           </a>
           <a href="/#services" className="cb-mobile-nav-link" onClick={(e) => handleNavClick(e, '/#services')}>
             {t.nav.services}
