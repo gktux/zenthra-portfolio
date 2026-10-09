@@ -63,6 +63,13 @@ export const dictionary = {
           desc: "Mal kabulden sevkiyata tüm süreci barkodla yöneten depo programı: el terminali, karekod okuma, raf bazlı canlı stok ve anlık ERP entegrasyonu.",
           link: "/projects/depo-live",
           image: "/depo-live.png"
+        },
+        {
+          category: "Eğitim Yazılımı",
+          title: "Zenthra Odak",
+          desc: "Okuma hızını ve anlama becerisini geliştiren interaktif hızlı okuma eğitim programı.",
+          link: "https://hizliokuma.zenthrabilisim.com.tr",
+          image: "/odak.png"
         }
       ]
     },
@@ -189,6 +196,13 @@ export const dictionary = {
           desc: "Real-time warehouse and inventory management platform with handheld terminal and ERP integration.",
           link: "/projects/depo-live",
           image: "/depo-live.png"
+        },
+        {
+          category: "Education Software",
+          title: "Zenthra Odak",
+          desc: "Interactive speed reading training program that improves reading speed and comprehension.",
+          link: "https://hizliokuma.zenthrabilisim.com.tr",
+          image: "/odak.png"
         }
       ]
     },

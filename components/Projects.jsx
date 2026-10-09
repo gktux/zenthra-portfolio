@@ -4,6 +4,9 @@ import { useLanguage } from '@/context/LanguageContext';
 import { ArrowUpRight } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
+// Uzun / kisa sirayla: masonry daginik gorunum
+const IMAGE_HEIGHTS = ['620px', '560px', '520px', '640px'];
+
 export default function Projects() {
   const { t } = useLanguage();
 
@@ -28,7 +31,7 @@ export default function Projects() {
         
         {/* Section Header */}
         <ScrollReveal>
-          <div style={{ marginBottom: '60px', textAlign: 'center' }}>
+          <div style={{ maxWidth: '1130px', margin: '0 auto 110px', textAlign: 'left' }}>
             <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#86868b', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '16px' }}>
               {t.projects.badge}
             </span>
@@ -51,98 +54,45 @@ export default function Projects() {
           </div>
         </ScrollReveal>
 
-        {/* Featured Projects Cards Showcase with Scroll Reveal */}
-        <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '48px' }}>
-          {t.projects.items && t.projects.items.map((proj, idx) => (
-            <ScrollReveal key={idx} delay={idx * 0.1}>
-              <a
-                href={proj.link || (idx === 0 ? "/projects/erp" : "/projects/depo-live")}
-                style={{ textDecoration: 'none', color: '#ffffff', display: 'block' }}
-                className="cb-project-card"
-              >
-                <div style={{
-                  width: '100%',
-                  minHeight: '480px',
-                  borderRadius: '36px',
-                  overflow: 'hidden',
-                  position: 'relative',
-                  background: '#111111',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                  boxShadow: '0 24px 60px rgba(0,0,0,0.7)',
-                  padding: '40px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '32px'
-                }}>
-                  <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center'
-                  }}>
-                    <span style={{
-                      fontSize: '0.82rem',
-                      fontWeight: 600,
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.1em',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      padding: '8px 20px',
-                      borderRadius: '20px',
-                      color: '#ffffff'
-                    }}>
-                      {proj.category}
-                    </span>
-
-                    <div className="cb-card-arrow" style={{
-                      width: '54px',
-                      height: '54px',
-                      borderRadius: '50%',
-                      background: '#ffffff',
-                      color: '#000000',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      transition: 'transform 0.3s ease'
-                    }}>
-                      <ArrowUpRight size={24} />
+        {/* Cuberto tarzi: iki sutun, sag sutun asagi kaymis, uzun/kisa gorseller */}
+        <style>{`
+          .cb-work-grid { max-width: 1130px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; column-gap: 120px; align-items: start; }
+          .cb-work-col { display: flex; flex-direction: column; gap: 110px; }
+          .cb-work-col--right { padding-top: 150px; }
+          .cb-work-media { width: 100%; border-radius: 24px; overflow: hidden; background: #111; }
+          .cb-work-media img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+          .cb-work-item:hover .cb-work-media img { transform: scale(1.04); }
+          .cb-work-item:hover .cb-work-title { opacity: 0.7; }
+          @media (max-width: 860px) {
+            .cb-work-grid { grid-template-columns: 1fr; }
+            .cb-work-col { gap: 64px; }
+            .cb-work-col--right { padding-top: 64px; }
+          }
+        `}</style>
+        <div className="cb-work-grid">
+          {[0, 1].map((col) => (
+            <div key={col} className={`cb-work-col${col === 1 ? ' cb-work-col--right' : ''}`}>
+              {(t.projects.items || []).map((proj, idx) => idx % 2 !== col ? null : (
+                <ScrollReveal key={idx} delay={col * 0.1}>
+                  <a href={proj.link} {...(proj.link.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className="cb-work-item" style={{ textDecoration: 'none', color: '#ffffff', display: 'block' }}>
+                    <div className="cb-work-media" style={{ height: IMAGE_HEIGHTS[idx % IMAGE_HEIGHTS.length] }}>
+                      <img src={proj.image} alt={proj.title} />
                     </div>
-                  </div>
-
-                  {/* Real Image Cover Showcase */}
-                  <div style={{
-                    width: '100%',
-                    height: '340px',
-                    borderRadius: '24px',
-                    overflow: 'hidden',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    boxShadow: '0 16px 40px rgba(0,0,0,0.5)',
-                    background: '#000000'
-                  }}>
-                    <img
-                      src={proj.image || (idx === 0 ? "/erp.png" : "/depo-live.png")}
-                      alt={proj.title}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: 'top center',
-                        display: 'block',
-                        transition: 'transform 0.5s ease'
-                      }}
-                    />
-                  </div>
-
-                  <div>
-                    <h3 style={{ fontSize: '2.2rem', fontWeight: 600, marginBottom: '8px', color: '#ffffff', fontFamily: "var(--font-display)" }}>
-                      {proj.title}
-                    </h3>
-                    <p style={{ color: '#cbd5e1', fontSize: '1.15rem', lineHeight: 1.6, maxWidth: '780px' }}>
-                      {proj.desc}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </ScrollReveal>
+                    <div style={{ marginTop: '28px' }}>
+                      <span style={{ fontSize: '0.8rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#86868b', display: 'block', marginBottom: '10px' }}>
+                        {proj.category}
+                      </span>
+                      <h3 className="cb-work-title" style={{ fontSize: '1.5rem', fontWeight: 500, lineHeight: 1.3, color: '#ffffff', fontFamily: "var(--font-display)", transition: 'opacity 0.3s ease', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                        {proj.title} <ArrowUpRight size={22} style={{ flexShrink: 0, marginTop: '4px' }} />
+                      </h3>
+                      <p style={{ color: '#a1a1aa', fontSize: '1rem', lineHeight: 1.6, marginTop: '8px' }}>
+                        {proj.desc}
+                      </p>
+                    </div>
+                  </a>
+                </ScrollReveal>
+              ))}
+            </div>
           ))}
         </div>
 
