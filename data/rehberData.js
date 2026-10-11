@@ -458,6 +458,240 @@ export const rehberYazilari = {
     ],
     ilgili: ['stok-takip-programi', 'depo-yonetim-programi', 'wms-nedir'],
   },
+
+  'pdks-nedir': {
+    slug: 'pdks-nedir',
+    title: 'PDKS Nedir? Personel Devam Kontrol Sistemi Nasıl Çalışır? (2026)',
+    metaDescription:
+      'PDKS nedir, ne işe yarar, nasıl çalışır? Yüz tanıma, parmak izi, kartlı ve mobil PDKS cihazları, puantaj, fazla mesai hesabı, KVKK ve kurulum adımları. Armongate yetkili bayisinden rehber.',
+    keywords:
+      'pdks nedir, pdks ne demek, pdks açılımı, personel devam kontrol sistemi nedir, pdks nasıl çalışır, pdks sistemi, pdks cihazı, personel takip sistemi, giriş çıkış takip sistemi, mesai takip sistemi, puantaj sistemi, armongate pdks',
+    badge: 'PDKS',
+    h1: 'PDKS Nedir? Personel Devam Kontrol Sistemi Rehberi',
+    lead:
+      'PDKS (Personel Devam Kontrol Sistemi), çalışanların işe giriş ve çıkış saatlerini bir cihaz üzerinden kayıt altına alan, mesai, fazla mesai, geç kalma ve devamsızlığı otomatik hesaplayan sistemdir. Kâğıt imza föyü ve Excel puantajın yerini alır; maaş hesabındaki tartışmaları ve hataları bitirir.',
+    okuma: '8 dakika',
+    guncelleme: '2026-10-12',
+    bolumler: [
+      {
+        h2: 'PDKS ne demek, açılımı nedir?',
+        paragraflar: [
+          'PDKS, "Personel Devam Kontrol Sistemi" ifadesinin kısaltmasıdır. Personel takip sistemi, giriş çıkış takip sistemi, mesai takip sistemi veya zaman takip sistemi olarak da geçer. Hepsinin ortak noktası, personelin işyerinde ne zaman bulunduğunu doğrulanabilir şekilde kaydetmektir.',
+          'Bir PDKS iki parçadan oluşur: girişe monte edilen PDKS cihazı (terminal) ve bu cihazdan gelen kayıtları işleyen PDKS yazılımı. Cihaz kimliği doğrular, yazılım ise vardiya kurallarına göre kimin ne kadar çalıştığını hesaplar.',
+        ],
+      },
+      {
+        h2: 'PDKS nasıl çalışır?',
+        paragraflar: [
+          'Personel işe geldiğinde cihaza yüzünü gösterir, parmağını okutur, kartını yaklaştırır veya telefonunu okutur. Cihaz kişiyi tanır ve saat bilgisiyle birlikte giriş kaydı oluşturur. Çıkışta aynı işlem tekrarlanır ve kayıtlar PDKS yazılımına aktarılır.',
+          'Yazılım bu kayıtları vardiya tanımlarıyla eşleştirir: 08:00 vardiyasına 08:12 de gelen personel için geç kalma, 18:00 çıkışlı vardiyada 20:00 de çıkan personel için fazla mesai hesaplanır. Ay sonunda bordroya hazır puantaj raporu tek tıkla alınır.',
+        ],
+        liste: [
+          'Kimlik doğrulama: yüz tanıma, parmak izi, kart (RFID/Mifare), şifre, QR veya mobil uygulama',
+          'Kayıt: giriş-çıkış saati, cihaz ve konum bilgisi',
+          'Hesaplama: normal mesai, fazla mesai, geç kalma, erken çıkış, devamsızlık, izin',
+          'Raporlama: kişi, departman ve şube bazlı puantaj; Excel ve bordro aktarımı',
+          'Geçiş kontrol: kapı, turnike ve bariyer açma, bölge bazlı yetki',
+        ],
+      },
+      {
+        h2: 'PDKS cihazı çeşitleri: hangisi size uygun?',
+        paragraflar: [
+          'Doğru cihaz çalışma ortamına göre seçilir. Ofiste iyi çalışan bir cihaz, tozlu bir üretim sahasında veya eldivenle çalışılan bir depoda sorun çıkarabilir.',
+        ],
+        liste: [
+          'Yüz tanıma PDKS: temassız, hızlı ve hijyenik; kart paylaşımı gibi suistimalleri engeller',
+          'Parmak izi PDKS: ekonomik ve güvenilir; ofis ve mağaza ortamları için ideal',
+          'Kartlı PDKS: toz, yağ ve eldiven olan sahalarda pratik; turnike ile kolay entegre olur',
+          'Mobil PDKS: telefon Bluetooth, NFC veya QR ile dijital anahtara dönüşür; saha ve şantiye ekipleri için uygun',
+          'Hibrit terminaller: aynı cihazda yüz, parmak izi, kart ve şifre seçenekleri',
+        ],
+      },
+      {
+        h2: 'PDKS işletmeye ne kazandırır?',
+        paragraflar: [
+          'En görünür kazanç puantaj süresidir: her ay günlerce süren imza föyü ve Excel kontrolü dakikalara iner. Daha büyük kazanç ise doğruluktur. Yanlış hesaplanan fazla mesai hem maliyet hem de iş hukuku riski yaratır.',
+          'PDKS ayrıca disiplini görünür kılar. Geç kalma ve erken çıkış raporu tartışmaya değil veriye dayanır; adil yönetim çalışan memnuniyetini de artırır.',
+        ],
+        liste: [
+          'Puantaj ve bordro hazırlığında ciddi zaman tasarrufu',
+          'Fazla mesai ve izin hesabında hatasızlık',
+          'Kart paylaşma ve arkadaşı yerine imza atma gibi suistimallerin sonu',
+          'Çok şubeli işletmelerde merkezi takip',
+          'Denetimlerde düzenli ve güvenilir kayıt',
+        ],
+      },
+      {
+        h2: 'PDKS ve KVKK: dikkat edilmesi gerekenler',
+        paragraflar: [
+          'Yüz ve parmak izi verisi KVKK kapsamında özel nitelikli kişisel veridir. Biyometrik PDKS kullanan işletmenin aydınlatma metni hazırlaması, açık rıza alması ve rıza vermeyen personel için kart veya şifre gibi alternatif yöntem sunması gerekir.',
+          'Armongate KVKK uyumlu bir PDKS ve geçiş kontrol çözümüdür. Kurulum sırasında bu süreçlerin nasıl yürütüleceği konusunda yol gösteriyoruz.',
+        ],
+      },
+      {
+        h2: 'PDKS kurulumu nasıl yapılır?',
+        paragraflar: [
+          'Kurulum keşifle başlar: giriş noktaları, personel sayısı, vardiya düzeni ve internet altyapısı incelenir. Ardından cihaz seçimi, kablolama ve montaj yapılır, yazılım kurulur, personel kayıtları (yüz, parmak izi veya kart) tanımlanır ve vardiya kuralları girilir. Tek girişli bir işletmede kurulum genellikle bir gün içinde tamamlanır.',
+        ],
+      },
+    ],
+    faq: [
+      { soru: 'PDKS zorunlu mu?', cevap: 'Genel olarak yasal zorunluluk değildir; ancak çalışma ve fazla mesai sürelerinin kayıt altına alınması beklenir. Denetimde en güvenilir kayıt cihaz tabanlı PDKS kaydıdır.' },
+      { soru: 'PDKS internet olmadan çalışır mı?', cevap: 'Evet. Cihazlar kayıtları kendi hafızasında tutar, bağlantı geldiğinde yazılıma aktarır. Bulut tabanlı sistemlerde anlık takip için internet önerilir.' },
+      { soru: 'PDKS ile turnike birlikte kullanılabilir mi?', cevap: 'Evet. PDKS cihazı turnike, kapı veya bariyerle entegre edilerek yetkili personelin geçişine izin verir ve aynı anda giriş-çıkış kaydı oluşturur.' },
+      { soru: 'Armongate PDKS nereden alınır?', cevap: 'Zenthra Bilişim Armongate yetkili bayisidir. Cihaz satışı, kurulum, yazılım ve teknik destek için iletişim sayfamızdan ücretsiz keşif talep edebilirsiniz.' },
+    ],
+    ilgili: ['yuz-tanima-pdks', 'pdks-fiyatlari'],
+    cta: {
+      badge: 'Armongate Yetkili Bayi',
+      title: 'Yüz tanıma, parmak izi ve kartlı PDKS — kurulum dahil',
+      text: 'Zenthra Bilişim, Armongate yetkili bayisi olarak PDKS cihazı, turnike ve geçiş kontrol sistemlerini keşiften kuruluma, puantaj yazılımından teknik desteğe kadar tek elden sağlar. Ücretsiz keşif ve teklif için bize ulaşın.',
+      href: '/hizmetler/pdks-personel-devam-kontrol-sistemi',
+      button: 'PDKS Çözümlerini İnceleyin',
+    },
+  },
+
+  'yuz-tanima-pdks': {
+    slug: 'yuz-tanima-pdks',
+    title: 'Yüz Tanıma PDKS mi, Parmak İzi mi, Kartlı mı? Karşılaştırma (2026)',
+    metaDescription:
+      'Yüz tanıma PDKS, parmak izi okuyucu, kartlı ve mobil geçiş sistemlerinin karşılaştırması: hız, güvenlik, hijyen, maliyet ve hangi sektöre hangi cihaz uygun. Armongate yetkili bayi rehberi.',
+    keywords:
+      'yüz tanıma pdks, yüz tanıma sistemi, yüz tanımalı personel takip, yüz tanıma cihazı, parmak izi pdks, parmak izi okuyucu, parmak izli personel takip, kartlı pdks, kartlı geçiş sistemi, mobil pdks, qr kod geçiş, biyometrik pdks, armongate yüz tanıma',
+    badge: 'PDKS',
+    h1: 'Yüz Tanıma, Parmak İzi, Kart: Hangi PDKS Cihazı?',
+    lead:
+      'PDKS cihazı seçerken en sık sorulan soru: yüz tanıma mı, parmak izi mi, kart mı? Doğru cevap çalışma ortamınıza, personel sayınıza ve güvenlik ihtiyacınıza göre değişir. Bu rehberde her yöntemin güçlü ve zayıf yanlarını karşılaştırıyoruz.',
+    okuma: '6 dakika',
+    guncelleme: '2026-10-12',
+    bolumler: [
+      {
+        h2: 'Yüz tanıma PDKS',
+        paragraflar: [
+          'Yüz tanıma terminalleri personeli kameraya bakması yeterli olacak şekilde çok kısa sürede tanır. Temassız olduğu için hijyeniktir; kart taşıma veya kart paylaşma sorunu yoktur. Kalabalık vardiya geçişlerinde kuyruk oluşturmaz.',
+        ],
+        liste: [
+          'Artı: temassız, hızlı, suistimale kapalı, eldivenle kullanılabilir',
+          'Artı: kart maliyeti ve kart kaybı yok',
+          'Dikkat: biyometrik veri olduğu için KVKK açık rızası gerekir',
+          'Uygun alanlar: fabrika, hastane, gıda üretimi, okul, kalabalık vardiyalı işletmeler',
+        ],
+      },
+      {
+        h2: 'Parmak izi PDKS',
+        paragraflar: [
+          'Parmak izi okuyucular uzun yıllardır kullanılan, ekonomik ve güvenilir bir yöntemdir. Küçük ve orta ölçekli ofislerde maliyet-performans açısından güçlü bir seçenektir.',
+        ],
+        liste: [
+          'Artı: ekonomik, yaygın, güvenilir',
+          'Dikkat: toz, yağ, çimento veya yıpranmış parmaklarda okuma zorlaşabilir',
+          'Dikkat: temaslı olduğu için hijyen hassasiyeti olan yerlerde ikinci tercih',
+          'Uygun alanlar: ofis, mağaza, büro, klinik',
+        ],
+      },
+      {
+        h2: 'Kartlı PDKS ve geçiş kontrol',
+        paragraflar: [
+          'RFID veya Mifare kartlar her ortamda çalışır ve turnike entegrasyonu en kolay yöntemdir. Zayıf yanı kartın başkasına verilebilmesidir; bu yüzden kart çoğu zaman yüz tanıma veya parmak izi ile birlikte kullanılır.',
+        ],
+        liste: [
+          'Artı: zorlu sahalarda sorunsuz, turnike ve kapı ile kolay entegrasyon',
+          'Dikkat: kart kaybı ve kart paylaşımı riski',
+          'Uygun alanlar: şantiye, depo, ağır sanayi, ziyaretçi geçişi',
+        ],
+      },
+      {
+        h2: 'Mobil PDKS: telefonla geçiş',
+        paragraflar: [
+          'Armongate mobil çözümleriyle personelin telefonu Bluetooth, NFC veya QR kod ile dijital anahtara dönüşür. Kart dağıtmaya gerek kalmaz; saha ekipleri, çok şubeli yapılar ve ortak kullanım alanları için idealdir.',
+        ],
+      },
+      {
+        h2: 'Kısa karar tablosu',
+        paragraflar: ['Tek bir doğru yoktur; birçok işletmede en iyi sonuç hibrit kullanımdan gelir. Örneğin ana girişte yüz tanıma, depoda kart, saha ekibinde mobil geçiş.'],
+        liste: [
+          'Hijyen ve hız öncelikli: yüz tanıma',
+          'Düşük bütçe, ofis ortamı: parmak izi',
+          'Toz, yağ, eldiven, turnike: yüz tanıma veya kart',
+          'Saha, şantiye, çok şube: mobil PDKS',
+          'En yüksek güvenlik: yüz tanıma + kart (çift doğrulama)',
+        ],
+      },
+    ],
+    faq: [
+      { soru: 'Yüz tanıma gözlük veya maske ile çalışır mı?', cevap: 'Güncel yüz tanıma terminallerinin çoğu gözlükle sorunsuz çalışır. Maske desteği cihaz modeline göre değişir; keşifte ihtiyacınıza uygun modeli belirliyoruz.' },
+      { soru: 'Yüz tanıma fotoğrafla kandırılabilir mi?', cevap: 'Canlılık tespiti (liveness) olan profesyonel terminaller fotoğraf veya ekran görüntüsüyle yapılan denemeleri reddeder.' },
+      { soru: 'Mevcut kartlı sisteme yüz tanıma eklenebilir mi?', cevap: 'Çoğu durumda evet. Mevcut kart altyapısı korunarak yüz tanıma terminali eklenebilir; keşifte uyumluluğu kontrol ediyoruz.' },
+    ],
+    ilgili: ['pdks-nedir', 'pdks-fiyatlari'],
+    cta: {
+      badge: 'Armongate Yetkili Bayi',
+      title: 'Yüz tanıma, parmak izi ve kartlı PDKS — kurulum dahil',
+      text: 'Zenthra Bilişim, Armongate yetkili bayisi olarak PDKS cihazı, turnike ve geçiş kontrol sistemlerini keşiften kuruluma, puantaj yazılımından teknik desteğe kadar tek elden sağlar. Ücretsiz keşif ve teklif için bize ulaşın.',
+      href: '/hizmetler/pdks-personel-devam-kontrol-sistemi',
+      button: 'PDKS Çözümlerini İnceleyin',
+    },
+  },
+
+  'pdks-fiyatlari': {
+    slug: 'pdks-fiyatlari',
+    title: 'PDKS Fiyatları 2026: PDKS Cihazı ve Kurulum Maliyeti Neye Göre Değişir?',
+    metaDescription:
+      'PDKS fiyatları neye göre belirlenir? Yüz tanıma ve parmak izi cihazları, turnike, yazılım lisansı, bulut abonelik ve kurulum maliyetleri. Armongate yetkili bayisinden ücretsiz keşif ve teklif.',
+    keywords:
+      'pdks fiyatları, pdks cihazı fiyatları, pdks cihazı fiyat, yüz tanıma pdks fiyat, parmak izi okuyucu fiyat, personel takip sistemi fiyatları, kartlı geçiş sistemi fiyatları, turnike fiyatları, pdks programı fiyat, armongate fiyat',
+    badge: 'PDKS',
+    h1: 'PDKS Fiyatları: Maliyeti Belirleyen 6 Kalem',
+    lead:
+      'PDKS fiyatı tek bir cihaz fiyatından ibaret değildir. Toplam maliyeti cihaz tipi, giriş noktası sayısı, turnike ihtiyacı, yazılım modeli ve kurulum belirler. Bu rehber, teklif alırken neyi karşılaştırmanız gerektiğini anlatır.',
+    okuma: '5 dakika',
+    guncelleme: '2026-10-12',
+    bolumler: [
+      {
+        h2: 'PDKS maliyetini belirleyen kalemler',
+        paragraflar: ['Teklifleri karşılaştırırken yalnızca cihaz fiyatına bakmak yanıltıcıdır. Aşağıdaki kalemlerin hepsini aynı teklifte görmelisiniz.'],
+        liste: [
+          'Cihaz tipi: parmak izi daha ekonomik, yüz tanıma ve hibrit terminaller üst segment',
+          'Giriş noktası sayısı: her kapı veya turnike için ayrı okuyucu',
+          'Geçiş donanımı: turnike, bariyer, elektromanyetik kilit',
+          'Yazılım: tek seferlik lisans veya bulut abonelik',
+          'Kurulum: keşif, kablolama, montaj, personel kaydı ve eğitim',
+          'Destek: garanti, yerinde servis ve yazılım güncellemeleri',
+        ],
+      },
+      {
+        h2: 'Bulut mu, yerel kurulum mu?',
+        paragraflar: [
+          'Bulut tabanlı PDKS sunucu ve BT altyapı maliyeti gerektirmez; abonelikle çalışır ve çok şubeli yapılar için idealdir. Yerel kurulum ise verinin şirket içinde kalmasını isteyen kurumlara uygundur. Armongate her iki modeli de destekler.',
+        ],
+      },
+      {
+        h2: 'Ucuz PDKS cihazının gizli maliyeti',
+        paragraflar: [
+          'Garanti ve servis desteği olmayan cihazlar arızada puantajı durdurur; yazılımı zayıf sistemlerde veriler yine Excel üzerinde elle düzeltilir. Yetkili bayiden alınan orijinal cihaz, garanti ve yerel teknik destekle bu riskleri ortadan kaldırır.',
+        ],
+      },
+      {
+        h2: 'Doğru teklif nasıl alınır?',
+        paragraflar: [
+          'Personel sayısı, giriş noktası sayısı, vardiya düzeni, turnike ihtiyacı ve şube sayısını hazırlayın. Zenthra Bilişim olarak Samsun ve Karadeniz Bölgesi genelinde ücretsiz keşif yapıyor, Türkiye genelinde Armongate PDKS cihaz satışı ve uzaktan kurulum desteği veriyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      { soru: 'PDKS fiyatları neden firmaya göre çok farklı?', cevap: 'Cihaz kalitesi, yazılım kapsamı, kurulumun dahil olup olmaması ve garanti süresi tekliften teklife değişir. Aynı kapsamı karşılaştırdığınızdan emin olun.' },
+      { soru: 'Kurulum fiyata dahil mi?', cevap: 'Zenthra Bilişim tekliflerinde keşif, montaj, yazılım kurulumu ve personel eğitimi kapsamı açıkça belirtilir.' },
+      { soru: 'Başlangıç maliyetini düşürmenin yolu var mı?', cevap: 'Bulut abonelik modeli sunucu ve lisans yatırımını ortadan kaldırarak başlangıç maliyetini düşürür. Proje büyüklüğüne göre ödeme planını teklifte konuşuyoruz.' },
+    ],
+    ilgili: ['pdks-nedir', 'yuz-tanima-pdks'],
+    cta: {
+      badge: 'Armongate Yetkili Bayi',
+      title: 'Yüz tanıma, parmak izi ve kartlı PDKS — kurulum dahil',
+      text: 'Zenthra Bilişim, Armongate yetkili bayisi olarak PDKS cihazı, turnike ve geçiş kontrol sistemlerini keşiften kuruluma, puantaj yazılımından teknik desteğe kadar tek elden sağlar. Ücretsiz keşif ve teklif için bize ulaşın.',
+      href: '/hizmetler/pdks-personel-devam-kontrol-sistemi',
+      button: 'PDKS Çözümlerini İnceleyin',
+    },
+  },
 };
 
 export const rehberListesi = Object.values(rehberYazilari).map((y) => ({

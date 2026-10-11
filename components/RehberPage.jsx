@@ -6,7 +6,16 @@ import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import { ChevronDown, Check, ArrowRight, Clock } from 'lucide-react';
 
+const VARSAYILAN_CTA = {
+  badge: 'Zenthra Depo Live',
+  title: 'Bu rehberdeki her adımı yapan bir depo yönetim programı',
+  text: 'Depo Live; mal kabul, raf yerleştirme, sipariş toplama, depoyu kapatmadan sayım ve sevkiyatı tek sistemde yürütür. Personel kendi telefonunu el terminali olarak kullanır, stok raf bazında anlık akar.',
+  href: '/projects/depo-live',
+  button: "Depo Live'ı İnceleyin",
+};
+
 export default function RehberPage({ yazi, ilgiliYazilar = [] }) {
+  const cta = yazi.cta || VARSAYILAN_CTA;
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   return (
@@ -210,7 +219,7 @@ export default function RehberPage({ yazi, ilgiliYazilar = [] }) {
                     letterSpacing: '0.1em',
                   }}
                 >
-                  Zenthra Depo Live
+                  {cta.badge}
                 </span>
                 <h2
                   style={{
@@ -220,7 +229,7 @@ export default function RehberPage({ yazi, ilgiliYazilar = [] }) {
                     lineHeight: 1.3,
                   }}
                 >
-                  Bu rehberdeki her adımı yapan bir depo yönetim programı
+                  {cta.title}
                 </h2>
                 <p
                   style={{
@@ -230,12 +239,11 @@ export default function RehberPage({ yazi, ilgiliYazilar = [] }) {
                     marginBottom: '22px',
                   }}
                 >
-                  Depo Live; mal kabul, raf yerleştirme, sipariş toplama, depoyu kapatmadan sayım ve sevkiyatı tek
-                  sistemde yürütür. Personel kendi telefonunu el terminali olarak kullanır, stok raf bazında anlık akar.
+                  {cta.text}
                 </p>
                 <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                  <a className="cb-btn cb-btn_cta -md -fill" href="/projects/depo-live">
-                    <span className="cb-btn_cta-title">Depo Live&apos;ı İnceleyin</span>
+                  <a className="cb-btn cb-btn_cta -md -fill" href={cta.href}>
+                    <span className="cb-btn_cta-title">{cta.button}</span>
                   </a>
                   <a
                     href="/contacts"
