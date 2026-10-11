@@ -9,6 +9,7 @@ const SERVICE_LINKS = {
   '02': '/hizmetler/kurumsal-it-bakim',
   '03': '/hizmetler/web-tasarim',
   '04': '/hizmetler/yazici-bakim-onarim',
+  '05': '/hizmetler/pdks-personel-devam-kontrol-sistemi',
 };
 
 export default function Services() {

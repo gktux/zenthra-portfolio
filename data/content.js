@@ -42,6 +42,11 @@ export const dictionary = {
           id: "04",
           title: "Yazıcı Bakım & Onarım Hizmetleri",
           desc: "Karadeniz Bölgesi genelinde tüm marka ve model yazıcı, fotokopi ve tarayıcı cihazları için orijinal yedek parça, periyodik bakım, kartuş/toner servisi ve hızlı tamir çözümleri."
+        },
+        {
+          id: "05",
+          title: "PDKS & Personel Takip Sistemleri",
+          desc: "Armongate yetkili bayisi olarak KVKK uyumlu PDKS cihazları; telefon, kart ve QR ile geçiş, bulut tabanlı puantaj, turnike ve ziyaretçi yönetimi. Satış, kurulum ve teknik destek."
         }
       ]
     },
@@ -175,6 +180,11 @@ export const dictionary = {
           id: "04",
           title: "Printer Maintenance & Repair Services",
           desc: "Comprehensive maintenance, repair, original spare parts, toner/cartridge support, and fast service for all printer models across the Black Sea region."
+        },
+        {
+          id: "05",
+          title: "PDKS & Time Attendance Systems",
+          desc: "Authorized Armongate dealer: mobile (Bluetooth, NFC, QR) and card-based attendance terminals, cloud time tracking, turnstiles and access control. Sales, installation, payroll-ready software and support."
         }
       ]
     },

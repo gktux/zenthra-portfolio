@@ -114,6 +114,36 @@ export const servicesData = {
       { q: 'Kaynak kodu bize ait olur mu?', a: 'Anlaşmaya göre değişir; talep eden müşterilerimize kaynak kod devri yapıyoruz. Sözleşmede net şekilde belirtiliyor.' },
     ],
   },
+  'pdks-personel-devam-kontrol-sistemi': {
+    slug: 'pdks-personel-devam-kontrol-sistemi',
+    num: '05',
+    title: 'PDKS ve Geçiş Kontrol Sistemleri | Armongate Yetkili Bayi — Samsun',
+    metaDescription:
+      'Armongate yetkili bayisi Zenthra Bilişim: KVKK uyumlu PDKS cihazı, mobil (Bluetooth, NFC, QR) ve kartlı geçiş kontrol, bulut tabanlı personel takip ve puantaj. Samsun ve Türkiye geneli satış, kurulum, destek.',
+    keywords:
+      'pdks, pdks sistemi, pdks cihazı, personel devam kontrol sistemi, armongate, armongate bayi, armongate pdks, armongate v serisi, geçiş kontrol sistemi, kartlı geçiş sistemi, mobil geçiş, qr kod geçiş, nfc geçiş, bulut pdks, personel takip sistemi, puantaj programı, mesai takip, ziyaretçi yönetimi, turnike sistemi, pdks samsun',
+    badge: 'Armongate Yetkili Bayi',
+    h1: 'PDKS ve Geçiş Kontrol Sistemleri',
+    lead: 'Armongate yetkili bayisi olarak KVKK uyumlu PDKS ve geçiş kontrol sistemlerini kuruyoruz. Akıllı telefon, kart veya QR ile geçiş; giriş-çıkış, mesai ve puantaj bulutta tek ekranda.',
+    serviceType: 'Personel devam kontrol sistemi (PDKS) ve geçiş kontrol satış, kurulum ve destek',
+    areaServed: 'Türkiye',
+    features: [
+      { title: 'Armongate PDKS Cihazları', desc: 'Armongate V Serisi akıllı okuyucular ve PDKS terminalleri. Orijinal ürün, yetkili bayi garantisi ve kurulumu.' },
+      { title: 'Mobil ve Temassız Geçiş', desc: 'Bluetooth, NFC ve QR kod desteği ile akıllı telefon dijital anahtara dönüşür. Kart taşıma, kart kaybı ve kart paylaşımı sorunu biter.' },
+      { title: 'Bulut Tabanlı Yönetim', desc: 'Sunucu ve BT altyapı maliyeti olmadan bulut yazılımla yönetim; istenirse tesis içi (yerel) kurulum. SSL şifreleme, VPN gerektirmez.' },
+      { title: 'Puantaj ve Mesai Takibi', desc: 'Giriş-çıkış kayıtlarından mesai, fazla mesai, geç kalma ve devamsızlık raporu. Bordroya hazır çıktı.' },
+      { title: 'Kapı, Turnike ve Ziyaretçi Yönetimi', desc: 'Kapı, bariyer ve turnike entegrasyonu, bölge bazlı yetkilendirme ve ziyaretçi kaydı. Kim, nereye, ne zaman girdi kayıt altında.' },
+      { title: 'Entegrasyon ve Destek', desc: 'REST ve socket API ile ERP, bordro ve özel yazılım entegrasyonu. Keşif, montaj, eğitim, yerinde ve uzaktan teknik destek.' },
+    ],
+    faq: [
+      { q: 'PDKS nedir, ne işe yarar?', a: 'PDKS (Personel Devam Kontrol Sistemi), çalışanların giriş-çıkış saatlerini cihazla kayıt altına alan ve mesai, fazla mesai, geç kalma ve devamsızlığı otomatik hesaplayan sistemdir. Manuel puantaj hatalarını ve maaş hesabındaki anlaşmazlıkları ortadan kaldırır.' },
+      { q: 'Neden Armongate?', a: 'Armongate; mobil, kartlı ve QR geçişi tek platformda birleştiren, bulut veya yerel kurulabilen, KVKK uyumlu bir PDKS ve geçiş kontrol çözümüdür. Zenthra Bilişim yetkili bayi olarak orijinal cihaz, garanti, kurulum ve desteği doğrudan sağlar.' },
+      { q: 'Kartsız, telefonla geçiş nasıl çalışır?', a: 'Personelin telefonuna dijital kimlik tanımlanır. Okuyucuya yaklaşınca Bluetooth, NFC veya QR kod ile kimlik doğrulanır ve kayıt PDKS sistemine düşer. İsteyen personel için kart seçeneği de kullanılabilir.' },
+      { q: 'PDKS verileri maaş ve muhasebe programına aktarılır mı?', a: 'Evet. Puantaj raporları Excel olarak alınabilir ve bordro programlarına aktarılabilir. API desteği sayesinde Zenthra ERP ve diğer sistemlerle doğrudan entegrasyon yapıyoruz.' },
+      { q: 'Hangi bölgelere kurulum yapıyorsunuz?', a: 'Samsun ve Karadeniz Bölgesi genelinde yerinde keşif ve kurulum yapıyoruz. Türkiye genelinde cihaz satışı ve uzaktan yazılım kurulum desteği veriyoruz.' },
+      { q: 'Fiyat nasıl belirleniyor?', a: 'Kapı ve personel sayısı, geçiş yöntemi (mobil, kart, QR), turnike ihtiyacı ve bulut ya da yerel kurulum tercihine göre değişir. Ücretsiz keşif sonrası net teklif veriyoruz.' },
+    ],
+  },
 };
 
 export const servicesList = Object.values(servicesData);
