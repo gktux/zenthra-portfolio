@@ -119,16 +119,17 @@ export const servicesData = {
     num: '05',
     title: 'PDKS ve Geçiş Kontrol Sistemleri | Armongate Yetkili Bayi — Samsun',
     metaDescription:
-      'Armongate yetkili bayisi Zenthra Bilişim: KVKK uyumlu PDKS cihazı, mobil (Bluetooth, NFC, QR) ve kartlı geçiş kontrol, bulut tabanlı personel takip ve puantaj. Samsun ve Türkiye geneli satış, kurulum, destek.',
+      'Armongate yetkili bayisi Zenthra Bilişim: KVKK uyumlu PDKS cihazı, yüz tanıma, parmak izi, kartlı ve mobil (Bluetooth, NFC, QR) geçiş kontrol, bulut tabanlı personel takip ve puantaj. Samsun ve Türkiye geneli satış, kurulum, destek.',
     keywords:
-      'pdks, pdks sistemi, pdks cihazı, personel devam kontrol sistemi, armongate, armongate bayi, armongate pdks, armongate v serisi, geçiş kontrol sistemi, kartlı geçiş sistemi, mobil geçiş, qr kod geçiş, nfc geçiş, bulut pdks, personel takip sistemi, puantaj programı, mesai takip, ziyaretçi yönetimi, turnike sistemi, pdks samsun',
+      'pdks, pdks sistemi, pdks cihazı, yüz tanıma pdks, yüz tanıma sistemi, parmak izi okuyucu, parmak izi pdks, personel devam kontrol sistemi, armongate, armongate bayi, armongate pdks, armongate v serisi, geçiş kontrol sistemi, kartlı geçiş sistemi, mobil geçiş, qr kod geçiş, nfc geçiş, bulut pdks, personel takip sistemi, puantaj programı, mesai takip, ziyaretçi yönetimi, turnike sistemi, pdks samsun',
     badge: 'Armongate Yetkili Bayi',
     h1: 'PDKS ve Geçiş Kontrol Sistemleri',
-    lead: 'Armongate yetkili bayisi olarak KVKK uyumlu PDKS ve geçiş kontrol sistemlerini kuruyoruz. Akıllı telefon, kart veya QR ile geçiş; giriş-çıkış, mesai ve puantaj bulutta tek ekranda.',
+    lead: 'Armongate yetkili bayisi olarak KVKK uyumlu PDKS ve geçiş kontrol sistemlerini kuruyoruz. Yüz tanıma, parmak izi, kart, akıllı telefon veya QR ile geçiş; giriş-çıkış, mesai ve puantaj bulutta tek ekranda.',
     serviceType: 'Personel devam kontrol sistemi (PDKS) ve geçiş kontrol satış, kurulum ve destek',
     areaServed: 'Türkiye',
     features: [
       { title: 'Armongate PDKS Cihazları', desc: 'Armongate V Serisi akıllı okuyucular ve PDKS terminalleri. Orijinal ürün, yetkili bayi garantisi ve kurulumu.' },
+      { title: 'Yüz Tanıma ve Parmak İzi', desc: 'Biyometrik PDKS terminalleri ile kişiye özel doğrulama. Arkadaşı yerine kart okutma gibi suistimallere son; yüz tanıma ile temassız ve hijyenik geçiş.' },
       { title: 'Mobil ve Temassız Geçiş', desc: 'Bluetooth, NFC ve QR kod desteği ile akıllı telefon dijital anahtara dönüşür. Kart taşıma, kart kaybı ve kart paylaşımı sorunu biter.' },
       { title: 'Bulut Tabanlı Yönetim', desc: 'Sunucu ve BT altyapı maliyeti olmadan bulut yazılımla yönetim; istenirse tesis içi (yerel) kurulum. SSL şifreleme, VPN gerektirmez.' },
       { title: 'Puantaj ve Mesai Takibi', desc: 'Giriş-çıkış kayıtlarından mesai, fazla mesai, geç kalma ve devamsızlık raporu. Bordroya hazır çıktı.' },
@@ -137,11 +138,12 @@ export const servicesData = {
     ],
     faq: [
       { q: 'PDKS nedir, ne işe yarar?', a: 'PDKS (Personel Devam Kontrol Sistemi), çalışanların giriş-çıkış saatlerini cihazla kayıt altına alan ve mesai, fazla mesai, geç kalma ve devamsızlığı otomatik hesaplayan sistemdir. Manuel puantaj hatalarını ve maaş hesabındaki anlaşmazlıkları ortadan kaldırır.' },
-      { q: 'Neden Armongate?', a: 'Armongate; mobil, kartlı ve QR geçişi tek platformda birleştiren, bulut veya yerel kurulabilen, KVKK uyumlu bir PDKS ve geçiş kontrol çözümüdür. Zenthra Bilişim yetkili bayi olarak orijinal cihaz, garanti, kurulum ve desteği doğrudan sağlar.' },
+      { q: 'Neden Armongate?', a: 'Armongate; yüz tanıma, parmak izi, kartlı, mobil ve QR geçişi tek platformda birleştiren, bulut veya yerel kurulabilen, KVKK uyumlu bir PDKS ve geçiş kontrol çözümüdür. Zenthra Bilişim yetkili bayi olarak orijinal cihaz, garanti, kurulum ve desteği doğrudan sağlar.' },
+      { q: 'Yüz tanıma mı, parmak izi mi, kart mı seçmeliyim?', a: 'Hijyen ve hız öncelikliyse yüz tanıma; ofis ortamında parmak izi; toz, yağ veya eldiven olan sahalarda yüz tanıma ya da kart; kartsız çözüm isteyenlere mobil geçiş öneriyoruz. Ücretsiz keşifte ortamınıza en uygun cihazı belirliyoruz.' },
       { q: 'Kartsız, telefonla geçiş nasıl çalışır?', a: 'Personelin telefonuna dijital kimlik tanımlanır. Okuyucuya yaklaşınca Bluetooth, NFC veya QR kod ile kimlik doğrulanır ve kayıt PDKS sistemine düşer. İsteyen personel için kart seçeneği de kullanılabilir.' },
       { q: 'PDKS verileri maaş ve muhasebe programına aktarılır mı?', a: 'Evet. Puantaj raporları Excel olarak alınabilir ve bordro programlarına aktarılabilir. API desteği sayesinde Zenthra ERP ve diğer sistemlerle doğrudan entegrasyon yapıyoruz.' },
       { q: 'Hangi bölgelere kurulum yapıyorsunuz?', a: 'Samsun ve Karadeniz Bölgesi genelinde yerinde keşif ve kurulum yapıyoruz. Türkiye genelinde cihaz satışı ve uzaktan yazılım kurulum desteği veriyoruz.' },
-      { q: 'Fiyat nasıl belirleniyor?', a: 'Kapı ve personel sayısı, geçiş yöntemi (mobil, kart, QR), turnike ihtiyacı ve bulut ya da yerel kurulum tercihine göre değişir. Ücretsiz keşif sonrası net teklif veriyoruz.' },
+      { q: 'Fiyat nasıl belirleniyor?', a: 'Kapı ve personel sayısı, geçiş yöntemi (yüz tanıma, parmak izi, kart, mobil, QR), turnike ihtiyacı ve bulut ya da yerel kurulum tercihine göre değişir. Ücretsiz keşif sonrası net teklif veriyoruz.' },
     ],
   },
 };

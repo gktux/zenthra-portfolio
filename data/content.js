@@ -46,7 +46,7 @@ export const dictionary = {
         {
           id: "05",
           title: "PDKS & Personel Takip Sistemleri",
-          desc: "Armongate yetkili bayisi olarak KVKK uyumlu PDKS cihazları; telefon, kart ve QR ile geçiş, bulut tabanlı puantaj, turnike ve ziyaretçi yönetimi. Satış, kurulum ve teknik destek."
+          desc: "Armongate yetkili bayisi olarak KVKK uyumlu PDKS cihazları; yüz tanıma, parmak izi, kart, telefon ve QR ile geçiş, bulut tabanlı puantaj, turnike ve ziyaretçi yönetimi. Satış, kurulum ve teknik destek."
         }
       ]
     },
@@ -184,7 +184,7 @@ export const dictionary = {
         {
           id: "05",
           title: "PDKS & Time Attendance Systems",
-          desc: "Authorized Armongate dealer: mobile (Bluetooth, NFC, QR) and card-based attendance terminals, cloud time tracking, turnstiles and access control. Sales, installation, payroll-ready software and support."
+          desc: "Authorized Armongate dealer: face recognition, fingerprint, card and mobile (Bluetooth, NFC, QR) attendance terminals, cloud time tracking, turnstiles and access control. Sales, installation, payroll-ready software and support."
         }
       ]
     },
