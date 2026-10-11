@@ -548,6 +548,7 @@ export const rehberYazilari = {
       text: 'Zenthra Bilişim, Armongate yetkili bayisi olarak PDKS cihazı, turnike ve geçiş kontrol sistemlerini keşiften kuruluma, puantaj yazılımından teknik desteğe kadar tek elden sağlar. Ücretsiz keşif ve teklif için bize ulaşın.',
       href: '/hizmetler/pdks-personel-devam-kontrol-sistemi',
       button: 'PDKS Çözümlerini İnceleyin',
+      mail: true,
     },
   },
 
@@ -630,6 +631,7 @@ export const rehberYazilari = {
       text: 'Zenthra Bilişim, Armongate yetkili bayisi olarak PDKS cihazı, turnike ve geçiş kontrol sistemlerini keşiften kuruluma, puantaj yazılımından teknik desteğe kadar tek elden sağlar. Ücretsiz keşif ve teklif için bize ulaşın.',
       href: '/hizmetler/pdks-personel-devam-kontrol-sistemi',
       button: 'PDKS Çözümlerini İnceleyin',
+      mail: true,
     },
   },
 
@@ -690,6 +692,7 @@ export const rehberYazilari = {
       text: 'Zenthra Bilişim, Armongate yetkili bayisi olarak PDKS cihazı, turnike ve geçiş kontrol sistemlerini keşiften kuruluma, puantaj yazılımından teknik desteğe kadar tek elden sağlar. Ücretsiz keşif ve teklif için bize ulaşın.',
       href: '/hizmetler/pdks-personel-devam-kontrol-sistemi',
       button: 'PDKS Çözümlerini İnceleyin',
+      mail: true,
     },
   },
 };

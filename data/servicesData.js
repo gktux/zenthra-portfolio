@@ -123,6 +123,7 @@ export const servicesData = {
     keywords:
       'pdks, pdks sistemi, pdks cihazı, yüz tanıma pdks, yüz tanıma sistemi, parmak izi okuyucu, parmak izi pdks, personel devam kontrol sistemi, armongate, armongate bayi, armongate pdks, armongate v serisi, geçiş kontrol sistemi, kartlı geçiş sistemi, mobil geçiş, qr kod geçiş, nfc geçiş, bulut pdks, personel takip sistemi, puantaj programı, mesai takip, ziyaretçi yönetimi, turnike sistemi, pdks samsun, pdks fiyatları, pdks cihazı fiyatları, pdks programı, pdks yazılımı, personel takip cihazı, personel giriş çıkış sistemi, giriş çıkış takip sistemi, mesai takip sistemi, mesai takip programı, puantaj sistemi, zaman takip sistemi, biyometrik pdks, biyometrik geçiş, yüz tanımalı geçiş sistemi, parmak izli giriş sistemi, kartlı pdks, rfid kart okuyucu, mifare kart, turnike, bariyer sistemi, kapı geçiş kontrol, bulut pdks, mobil pdks, armongate yüz tanıma, armongate samsun, pdks karadeniz, pdks ordu, pdks trabzon, pdks çorum, pdks amasya, pdks tokat, pdks sinop, pdks giresun, pdks kurulumu, pdks bayi',
     badge: 'Armongate Yetkili Bayi',
+    mailCta: true,
     h1: 'PDKS ve Geçiş Kontrol Sistemleri',
     lead: 'Armongate yetkili bayisi olarak KVKK uyumlu PDKS ve geçiş kontrol sistemlerini kuruyoruz. Yüz tanıma, parmak izi, kart, akıllı telefon veya QR ile geçiş; giriş-çıkış, mesai ve puantaj bulutta tek ekranda.',
     serviceType: 'Personel devam kontrol sistemi (PDKS), yüz tanıma, parmak izi ve geçiş kontrol satış, kurulum ve destek',

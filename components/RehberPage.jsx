@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import { ChevronDown, Check, ArrowRight, Clock } from 'lucide-react';
+import PdksMailCta from '@/components/PdksMailCta';
 
 const VARSAYILAN_CTA = {
   badge: 'Zenthra Depo Live',
@@ -198,6 +199,14 @@ export default function RehberPage({ yazi, ilgiliYazilar = [] }) {
                 </div>
               </ScrollReveal>
             ))}
+
+            {cta.mail && (
+              <ScrollReveal distance="30px" duration="0.7s">
+                <div style={{ marginBottom: '40px' }}>
+                  <PdksMailCta />
+                </div>
+              </ScrollReveal>
+            )}
 
             {/* Ürün CTA */}
             <ScrollReveal distance="30px" duration="0.7s">

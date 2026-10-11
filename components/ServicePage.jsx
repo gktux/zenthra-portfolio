@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import { ChevronDown, ArrowUpRight, Check } from 'lucide-react';
+import { ChevronDown, ArrowUpRight, Check, Mail } from 'lucide-react';
+import PdksMailCta, { pdksMailHref } from '@/components/PdksMailCta';
 
 export default function ServicePage({ service }) {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
@@ -69,6 +70,25 @@ export default function ServicePage({ service }) {
               <a className="cb-btn cb-btn_cta -md -fill" href="/contacts">
                 <span className="cb-btn_cta-title">Teklif Alın</span>
               </a>
+              {service.mailCta && (
+                <a
+                  href={pdksMailHref}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '14px 26px',
+                    borderRadius: '100px',
+                    background: '#000',
+                    color: '#fff',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    fontFamily: 'var(--font-body)',
+                  }}
+                >
+                  <Mail size={16} /> E-posta ile Teklif
+                </a>
+              )}
               <a
                 href="tel:+905315800753"
                 style={{
@@ -249,6 +269,7 @@ export default function ServicePage({ service }) {
       >
         <div className="container">
           <ScrollReveal distance="40px" duration="0.8s">
+            {service.mailCta ? <PdksMailCta /> : (
             <div className="cuberto-card" style={{ textAlign: 'center', padding: '60px 30px' }}>
               <h2
                 style={{
@@ -274,6 +295,7 @@ export default function ServicePage({ service }) {
                 <span className="cb-btn_cta-title">İletişime Geçin</span>
               </a>
             </div>
+            )}
           </ScrollReveal>
         </div>
       </section>
