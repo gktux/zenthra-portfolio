@@ -1,5 +1,6 @@
 import { servicesList } from '@/data/servicesData';
 import { rehberListesi } from '@/data/rehberData';
+import { pdksSehirListesi } from '@/data/pdksSehirler';
 
 const BASE = 'https://www.zenthrabilisim.com';
 
@@ -29,5 +30,12 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  return [...core, ...services, ...rehber];
+  const pdks = pdksSehirListesi.map((s) => ({
+    url: `${BASE}/pdks/${s.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: s.slug === 'samsun' ? 0.9 : 0.7,
+  }));
+
+  return [...core, ...services, ...rehber, ...pdks];
 }

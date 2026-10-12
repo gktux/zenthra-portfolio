@@ -90,7 +90,7 @@ export function SoftwareSchema({ name, description, url, image, features = [] })
 }
 
 export function ServiceSchema({ service }) {
-  const url = `https://www.zenthrabilisim.com/hizmetler/${service.slug}`;
+  const url = service.url || `https://www.zenthrabilisim.com/hizmetler/${service.slug}`;
   const data = {
     '@context': 'https://schema.org',
     '@graph': [

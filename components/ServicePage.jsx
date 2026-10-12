@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import { ChevronDown, ArrowUpRight, Check, Mail } from 'lucide-react';
 import PdksMailCta, { pdksMailHref } from '@/components/PdksMailCta';
+import { pdksSehirListesi } from '@/data/pdksSehirler';
 
 export default function ServicePage({ service }) {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
@@ -299,6 +300,27 @@ export default function ServicePage({ service }) {
           </ScrollReveal>
         </div>
       </section>
+
+      {service.slug === 'pdks-personel-devam-kontrol-sistemi' && (
+        <section style={{ background: '#ffffff', padding: '0 0 80px' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '1.4rem', fontWeight: 600, color: '#1d1d1f', marginBottom: '16px' }}>
+              Hizmet Bölgelerimiz: Armongate PDKS
+            </h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+              {pdksSehirListesi.map((s) => (
+                <a
+                  key={s.slug}
+                  href={`/pdks/${s.slug}`}
+                  style={{ padding: '8px 16px', borderRadius: '999px', border: '1px solid #d2d2d7', color: '#1d1d1f', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'var(--font-body)' }}
+                >
+                  {s.ad} PDKS
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Footer />
     </main>
