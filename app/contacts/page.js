@@ -6,6 +6,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useState } from 'react';
 import { CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import KvkkCheckboxes from '@/components/KvkkCheckboxes';
+import { trackGenelIletisimConversion } from '@/lib/ads';
 
 export default function ContactsPage() {
   const { t } = useLanguage();
@@ -40,6 +41,9 @@ export default function ContactsPage() {
     } catch (err) {
       console.error('İletişim gönderim hatası:', err);
     }
+
+    // Google Ads Dönüşümü: Zenthra - Genel İletişim Formu
+    trackGenelIletisimConversion();
 
     setSubmitted(true);
     setTimeout(() => {

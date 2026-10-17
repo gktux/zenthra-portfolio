@@ -9,6 +9,7 @@ import { CheckCircle2, ChevronDown, Check, Sparkles, ExternalLink, ArrowRight } 
 import { zenthraDepoLiveData } from '@/data/zenthraDepoLiveData';
 import { rehberListesi } from '@/data/rehberData';
 import KvkkCheckboxes from '@/components/KvkkCheckboxes';
+import { trackDepoLiveDemoConversion } from '@/lib/ads';
 
 const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwcnVycJgdY5JIEB_vtCYa-JFifDpqZ7OwmyPpWSmDf-o6mY7JAu4s-0VeWQOAqZ-4j/exec";
 
@@ -92,6 +93,9 @@ export default function DepoLiveProjectPage() {
         },
         body: formData.toString()
       });
+
+      // Google Ads Dönüşümü: Depo Live - Demo Talep Formu
+      trackDepoLiveDemoConversion();
 
       setIsSubmitting(false);
       setDemoSubmitted(true);

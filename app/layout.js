@@ -4,6 +4,7 @@ import CustomCursor from '@/components/CustomCursor';
 import { OrganizationSchema } from '@/components/StructuredData';
 import SmoothScroll from '@/components/SmoothScroll';
 import Script from 'next/script';
+import MetaPixel from '@/components/MetaPixel';
 
 // Google Ads etiketi. linker: reklamdan gelen gclid app alan adina
 // (kayit orada) tasinsin, donusum kampanyaya baglansin.
@@ -72,6 +73,7 @@ gtag('set', 'linker', { domains: ['zenthrabilisim.com', 'app.zenthrabilisim.com.
 gtag('config', '${GOOGLE_ADS_ID}');
 gtag('config', '${GA4_ID}');`}
         </Script>
+        <MetaPixel />
         <OrganizationSchema />
         <LanguageProvider>
           <SmoothScroll>
