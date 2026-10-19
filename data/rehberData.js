@@ -178,9 +178,9 @@ export const rehberYazilari = {
 
   'wms-nedir': {
     slug: 'wms-nedir',
-    title: 'WMS Nedir? Depo Yönetim Sistemi ile ERP Arasındaki Fark',
+    title: 'WMS Nedir? Depo Yönetim Sistemi, ERP Farkı ve WMS Programı (2026)',
     metaDescription:
-      'WMS (Warehouse Management System) nedir, ne işe yarar, ERP ile farkı nedir ve hangi durumda ayrı bir WMS gerekir? Sade ve uygulamalı açıklama.',
+      'WMS nedir, ne demek, ne işe yarar? WMS ile ERP farkı, WMS programı seçerken dikkat edilecekler ve hangi işletmenin ayrı bir depo yönetim sistemine ihtiyacı olduğu. Sade anlatım.',
     keywords:
       'WMS nedir, warehouse management system, depo yönetim sistemi, WMS ERP farkı, WMS yazılımı, depo otomasyon sistemi',
     badge: 'Temel Kavramlar',
@@ -245,9 +245,9 @@ export const rehberYazilari = {
 
   'depo-sayimi-nasil-yapilir': {
     slug: 'depo-sayimi-nasil-yapilir',
-    title: 'Depo Sayımı Nasıl Yapılır? Depoyu Kapatmadan Sayım Rehberi',
+    title: 'Depo Sayımı Nasıl Yapılır? Adım Adım Sayım Rehberi (2026)',
     metaDescription:
-      'Depo sayımı nasıl yapılır, sayım öncesi hazırlık nasıl olmalı, dönemsel ve sürekli sayım farkı nedir? Operasyonu durdurmadan sayım yapmanın adımları.',
+      'Depo sayımı nasıl yapılır? Sayım öncesi hazırlık, dönemsel ve sürekli sayım farkı, sayım farkı çıkınca ne yapılır. Depoyu kapatmadan sayım yapmanın adımları ve kontrol listesi.',
     keywords:
       'depo sayımı nasıl yapılır, stok sayımı, dönemsel sayım, sürekli sayım, cycle counting, sayım farkı, envanter sayımı',
     badge: 'Operasyon',
