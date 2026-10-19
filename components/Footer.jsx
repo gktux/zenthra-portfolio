@@ -84,6 +84,7 @@ export default function Footer() {
           <div className="cb-footer-bgrid-col -left" style={{ display: 'flex', alignItems: 'center', gap: '24px', fontSize: '0.85rem', color: '#86868b' }}>
             <a href="https://www.zenthrabilisim.com" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 600 }}>zenthrabilisim.com</a>
             <span>2026, Zenthra Bilişim</span>
+            <span>vakanüvisler</span>
           </div>
 
           {/* Bottom Right Circular Social Buttons */}
