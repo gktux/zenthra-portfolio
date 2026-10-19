@@ -695,6 +695,121 @@ export const rehberYazilari = {
       mail: true,
     },
   },
+
+  'web-tasarim-fiyatlari-samsun': {
+    slug: 'web-tasarim-fiyatlari-samsun',
+    title: 'Samsun Web Tasarım Fiyatları 2026: Web Sitesi Maliyeti Neye Göre Değişir?',
+    metaDescription:
+      'Samsun web tasarım fiyatları neye göre belirlenir? Kurumsal site, e-ticaret, SEO, alan adı ve hosting maliyetleri, teklif alırken dikkat edilecekler. Ücretsiz görüşme ve sabit fiyatlı teklif.',
+    keywords:
+      'web tasarım fiyatları, samsun web tasarım fiyatları, web sitesi fiyatları, kurumsal web sitesi fiyatı, e-ticaret sitesi fiyatı, web sitesi yaptırma maliyeti, samsun web sitesi yaptırma',
+    badge: 'Web Tasarım',
+    h1: 'Web Tasarım Fiyatları: Maliyeti Belirleyen 6 Kalem',
+    lead:
+      'Web sitesi fiyatı tek bir rakam değildir. Sayfa sayısı, tasarımın özgünlüğü, e-ticaret ihtiyacı, entegrasyonlar ve SEO altyapısı toplam maliyeti belirler. Bu rehber, teklif alırken neyi karşılaştırmanız gerektiğini anlatır.',
+    okuma: '5 dakika',
+    guncelleme: '2026-10-19',
+    bolumler: [
+      {
+        h2: 'Web sitesi fiyatını belirleyen kalemler',
+        paragraflar: ['Teklifleri karşılaştırırken yalnızca toplam rakama bakmak yanıltıcıdır. Aşağıdakilerin hepsinin tekliflerde açıkça yazması gerekir.'],
+        liste: [
+          'Tasarım: hazır tema mı, size özel mi',
+          'Sayfa sayısı ve içerik üretimi',
+          'E-ticaret: ödeme, kargo, pazaryeri entegrasyonu',
+          'Yönetim paneli: içeriği kendiniz güncelleyebilir misiniz',
+          'SEO altyapısı: meta yapısı, site haritası, hız, yapılandırılmış veri',
+          'Yıllık maliyetler: alan adı, hosting, güvenlik ve bakım',
+        ],
+      },
+      {
+        h2: 'Ucuz web sitesinin gizli maliyeti',
+        paragraflar: [
+          'Hazır tema ile yapılan, yavaş açılan ve SEO altyapısı olmayan siteler ilk bakışta ucuzdur ama Google’da hiç görünmez. Reklam harcamadan müşteri gelmeyen bir site, yatırımın geri dönmediği bir sitedir. Önemli olan fiyat değil, siteden gelen telefon ve teklif sayısıdır.',
+        ],
+      },
+      {
+        h2: 'Reklam vermeden Google’da nasıl öne çıkılır?',
+        paragraflar: [
+          'Üç şey birlikte çalışmalıdır: hızlı ve teknik olarak temiz bir site, “samsun + hizmet” aramalarına göre kurgulanmış sayfalar ve Google İşletme Profili. Bunlara düzenli içerik eklendiğinde reklam bütçesi olmadan da arama sonuçlarından sürekli talep gelir.',
+        ],
+      },
+      {
+        h2: 'Doğru teklif nasıl alınır?',
+        paragraflar: [
+          'Sektörünüzü, sayfa listenizi, rakip sitelerden beğendiklerinizi ve e-ticaret ihtiyacınızı hazırlayın. Zenthra Bilişim olarak Samsun’da ücretsiz görüşme yapıyor, kapsamı netleştirip sabit fiyatlı teklif veriyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      { soru: 'Web sitesi fiyatları neden firmaya göre çok farklı?', cevap: 'Tasarımın özgünlüğü, kod kalitesi, SEO kapsamı ve destek süresi tekliften teklife değişir. Aynı kapsamı karşılaştırdığınızdan emin olun.' },
+      { soru: 'Alan adı ve hosting fiyata dahil mi?', cevap: 'Teklifte alan adı, hosting ve SSL kapsamı ayrıca belirtilir. Yıllık yenileme maliyetlerini baştan sorun.' },
+      { soru: 'Site yayına girdikten sonra ek ücret çıkar mı?', cevap: 'Hayır; kapsam dışı yeni istek olmadıkça sürpriz maliyet çıkmaz. Bakım ve içerik desteği ayrı ve açık bir paket olarak sunulur.' },
+    ],
+    ilgili: [],
+    cta: {
+      badge: 'Samsun Web Tasarım',
+      title: 'Siteniz Google’da öne çıksın — reklam harcamadan',
+      text: 'Zenthra Bilişim, Samsun’da size özel tasarlanmış hızlı ve SEO uyumlu web siteleri yapar. Ücretsiz görüşme ve sabit fiyatlı teklif için bize ulaşın.',
+      href: '/hizmetler/web-tasarim',
+      button: 'Web Tasarım Hizmetini İnceleyin',
+    },
+  },
+
+  'samsun-seo-reklamsiz-google': {
+    slug: 'samsun-seo-reklamsiz-google',
+    title: 'Samsun SEO: Reklam Vermeden Google’da Öne Çıkmanın 7 Adımı',
+    metaDescription:
+      'Samsun’da reklam vermeden Google’da öne çıkmak için yerel SEO rehberi: Google İşletme Profili, ilçe sayfaları, site hızı, içerik ve yorum yönetimi. Adım adım uygulanabilir liste.',
+    keywords:
+      'samsun seo, seo samsun, samsun seo uzmanı, google işletme profili samsun, yerel seo, reklamsız google, samsun google sıralama, samsun web tasarım seo, seo nasıl yapılır',
+    badge: 'SEO',
+    h1: 'Samsun SEO: Reklam Vermeden Google’da Öne Çıkmanın 7 Adımı',
+    lead:
+      'Samsun’da müşteriniz “atakum klima servisi” veya “samsun web tasarım” diye aradığında sizi bulması için reklam bütçesi gerekmez. Yerel SEO doğru kurulduğunda sürekli ve ücretsiz talep getirir. İşte uygulanabilir yol haritası.',
+    okuma: '6 dakika',
+    guncelleme: '2026-10-19',
+    bolumler: [
+      {
+        h2: '7 adımlık yerel SEO planı',
+        paragraflar: ['Sırayla uygulayın; ilk üçü en hızlı sonuç verenlerdir.'],
+        liste: [
+          'Google İşletme Profili’ni eksiksiz doldurun: kategori, hizmetler, çalışma saatleri, fotoğraflar',
+          'Her hizmet için ayrı sayfa açın; başlıkta hizmet + şehir geçsin',
+          'Her ilçe için ayrı sayfa: Atakum, İlkadım, Canik, Bafra, Çarşamba…',
+          'Siteyi hızlandırın: mobilde 2 saniyenin altı hedef',
+          'Sık sorulan sorular bölümü ve yapılandırılmış veri ekleyin',
+          'Müşteri yorumlarını düzenli toplayın ve yanıtlayın',
+          'Ayda 2-4 faydalı rehber yazısı yayınlayın',
+        ],
+      },
+      {
+        h2: 'Neden ilçe bazlı sayfalar önemli?',
+        paragraflar: [
+          'İnsanlar “samsun” yerine genelde ilçe adıyla arar. Atakum’da klinik arayan biri “atakum diş kliniği” yazar. İlçe sayfaları sizi bu daha niyetli aramalarda rakiplerden önce çıkarır.',
+        ],
+      },
+      {
+        h2: 'Ne kadar sürede sonuç alınır?',
+        paragraflar: [
+          'Teknik altyapı doğruysa rekabeti az olan yerel aramalarda 1-3 ayda görünürlük başlar; rekabetçi kelimelerde 4-6 ay sürebilir. SEO ölçülür: Search Console ile hangi aramalardan geldiğinizi takip edersiniz.',
+        ],
+      },
+    ],
+    faq: [
+      { soru: 'SEO için Google reklamı şart mı?', cevap: 'Hayır. SEO ve reklam ayrı kanaldır. SEO daha yavaş başlar ama durduğunuzda talep kesilmez; reklam ise bütçe bittiğinde durur.' },
+      { soru: 'Google İşletme Profili ücretsiz mi?', cevap: 'Evet, tamamen ücretsizdir ve yerel aramalarda harita sonuçlarında görünmenizi sağlar.' },
+      { soru: 'SEO işini siz mi yapıyorsunuz?', cevap: 'Evet. Zenthra Bilişim web sitesi geliştirirken teknik SEO altyapısını dahil eder; yerel SEO ve içerik çalışmasını ayrı plan olarak yürütebiliriz.' },
+    ],
+    ilgili: ['web-tasarim-fiyatlari-samsun'],
+    cta: {
+      badge: 'Samsun Web Tasarım & SEO',
+      title: 'Samsun’da Google’da öne çıkmak ister misiniz?',
+      text: 'Web sitenizi baştan SEO uyumlu kuruyor, ilçe bazlı yerel sayfalarla Samsun aramalarında görünür kılıyoruz. Ücretsiz görüşme için bize ulaşın.',
+      href: '/hizmetler/web-tasarim',
+      button: 'Web Tasarım ve SEO Hizmeti',
+    },
+  },
 };
 
 export const rehberListesi = Object.values(rehberYazilari).map((y) => ({

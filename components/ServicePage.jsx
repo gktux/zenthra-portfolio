@@ -7,6 +7,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 import { ChevronDown, ArrowUpRight, Check, Mail } from 'lucide-react';
 import PdksMailCta, { pdksMailHref } from '@/components/PdksMailCta';
 import { pdksSehirListesi } from '@/data/pdksSehirler';
+import { webTasarimBolgeListesi } from '@/data/webTasarimSehirler';
 
 export default function ServicePage({ service }) {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
@@ -315,6 +316,27 @@ export default function ServicePage({ service }) {
                   style={{ padding: '8px 16px', borderRadius: '999px', border: '1px solid #d2d2d7', color: '#1d1d1f', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'var(--font-body)' }}
                 >
                   {s.ad} PDKS
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {service.slug === 'web-tasarim' && (
+        <section style={{ background: '#ffffff', padding: '0 0 80px' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '1.4rem', fontWeight: 600, color: '#1d1d1f', marginBottom: '16px' }}>
+              Hizmet Bölgelerimiz: Web Tasarım ve SEO
+            </h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+              {webTasarimBolgeListesi.map((s) => (
+                <a
+                  key={s.slug}
+                  href={`/web-tasarim/${s.slug}`}
+                  style={{ padding: '8px 16px', borderRadius: '999px', border: '1px solid #d2d2d7', color: '#1d1d1f', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'var(--font-body)' }}
+                >
+                  {s.ad} Web Tasarım
                 </a>
               ))}
             </div>

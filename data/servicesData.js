@@ -60,16 +60,16 @@ export const servicesData = {
   'web-tasarim': {
     slug: 'web-tasarim',
     num: '03',
-    title: 'Web Sitesi Tasarımı ve Geliştirme | SEO Odaklı — Zenthra Bilişim',
+    title: 'Samsun Web Tasarım | Kurumsal Web Sitesi ve SEO — Zenthra Bilişim',
     metaDescription:
-      'Kurumsal kimliğinizi yansıtan modern, hızlı, mobil uyumlu ve SEO odaklı web siteleri tasarlıyor ve geliştiriyoruz. Samsun merkezli, Türkiye geneli hizmet.',
+      'Samsun web tasarım ve SEO: kurumsal web sitesi, e-ticaret, mobil uyumlu hızlı site ve Google’da üst sıralara hazır teknik altyapı. Reklam harcamadan müşteri kazanın. Ücretsiz görüşme ve teklif.',
     keywords:
-      'web tasarım samsun, web sitesi yaptırma, kurumsal web sitesi, seo uyumlu web tasarım, mobil uyumlu site, e-ticaret sitesi',
-    badge: 'Tasarım & Geliştirme',
-    h1: 'Web Sitesi Tasarımı ve Geliştirme',
-    lead: 'Şablon değil, size özel. Kurumsal kimliğinizi yansıtan, saniyeler içinde açılan, arama motorlarında bulunan ve her cihazda düzgün çalışan web siteleri.',
-    serviceType: 'Web sitesi tasarım ve geliştirme hizmeti',
-    areaServed: 'Türkiye',
+      'web tasarım samsun, samsun web tasarım, samsun web sitesi yaptırma, web sitesi yaptırma, kurumsal web sitesi, samsun seo, seo samsun, samsun seo uzmanı, seo uyumlu web tasarım, mobil uyumlu site, e-ticaret sitesi samsun, web tasarım fiyatları, web sitesi fiyatları, web yazılım samsun, web ajansı samsun, samsun web ajansı, atakum web tasarım, ilkadım web tasarım, canik web tasarım, bafra web tasarım, çarşamba web tasarım, karadeniz web tasarım, hazır site değil özel tasarım, next.js web sitesi, hızlı web sitesi, google reklamsız müşteri',
+    badge: 'Tasarım & Geliştirme · Samsun',
+    h1: 'Samsun Web Tasarım ve SEO',
+    lead: 'Şablon değil, size özel. Samsun’da kurumsal kimliğinizi yansıtan, saniyeler içinde açılan, Google’da bulunan ve her cihazda düzgün çalışan web siteleri. Amaç sadece güzel görünmek değil: reklam harcamadan arama sonuçlarından telefon ve teklif talebi getirmek.',
+    serviceType: 'Web sitesi tasarım, geliştirme ve SEO hizmeti',
+    areaServed: 'Samsun ve Türkiye',
     features: [
       { title: 'Kurumsal Web Sitesi', desc: 'Marka kimliğinize göre özgün tasarım, çok dilli yapı, yönetim paneli ve içerik güncelleme kolaylığı.' },
       { title: 'Hız Odaklı Geliştirme', desc: 'Next.js ile sunucu taraflı render, görsel optimizasyonu ve Core Web Vitals uyumu. Yavaş site ziyaretçi kaybettirir.' },
@@ -77,8 +77,13 @@ export const servicesData = {
       { title: 'Mobil Uyum', desc: 'Telefon, tablet ve masaüstünde birebir düzgün görünüm. Google mobil öncelikli indeksleme kullanıyor, mobil şart.' },
       { title: 'E-Ticaret ve Entegrasyon', desc: 'Ödeme altyapısı, kargo entegrasyonu, pazaryeri bağlantısı ve ERP veya stok sistemiyle senkronizasyon.' },
       { title: 'Bakım ve Güncelleme', desc: 'Yayın sonrası güvenlik güncellemeleri, içerik değişiklikleri, yedekleme ve performans takibi.' },
+      { title: 'Samsun Yerel SEO', desc: 'Google İşletme Profili, “samsun + hizmet” aramaları için ilçe bazlı sayfalar (Atakum, İlkadım, Canik, Bafra…), yerel yapılandırılmış veri ve harita uyumu. Reklam vermeden yerel aramalarda görünürlük.' },
+      { title: 'Reklamsız Müşteri Kazanımı', desc: 'Arama niyetine göre kurgulanmış sayfalar, net teklif/arama butonları, WhatsApp ve form dönüşüm takibi. Her ziyaretçinin ne yaptığını ölçülebilir hale getiriyoruz.' },
     ],
     faq: [
+      { q: 'Samsun’da web tasarım fiyatları ne kadar?', a: 'Fiyat; sayfa sayısı, e-ticaret ihtiyacı, çok dillilik ve entegrasyonlara göre değişir. Kapsamı ücretsiz görüşmede netleştirip sabit fiyatlı teklif veriyoruz; sürpriz maliyet çıkmaz.' },
+      { q: 'Reklam vermeden Google’da üst sıralara çıkmak mümkün mü?', a: 'Evet, ama zaman alır. Teknik SEO altyapısı, yerel SEO (Google İşletme Profili, ilçe sayfaları) ve düzenli içerikle genelde 2-4 ayda anahtar kelimelerde görünürlük kazanılır. Rekabeti az olan “samsun + hizmet” aramalarında bu süre daha kısadır.' },
+      { q: 'Samsun dışındaki firmalara da hizmet veriyor musunuz?', a: 'Evet. Samsun merkezliyiz; Karadeniz ve Türkiye genelinde uzaktan çalışıyoruz. Samsun’da yüz yüze toplantı ve yerinde destek de mümkün.' },
       { q: 'Web sitesi ne kadar sürede teslim edilir?', a: 'Kurumsal tanıtım sitesi tipik olarak 2-4 hafta, e-ticaret veya entegrasyon gerektiren projeler 4-8 hafta sürüyor. İçerik ve görsellerin hazır olması süreyi kısaltır.' },
       { q: 'Hazır tema mı kullanıyorsunuz?', a: 'Hayır. Tasarımı sıfırdan yapıyoruz ve kodu biz yazıyoruz. Bu yüzden site hem hızlı oluyor hem de rakiplerinizle aynı görünmüyor.' },
       { q: 'Siteyi kendim güncelleyebilir miyim?', a: 'Evet. İçerik yönetim paneli veriyoruz; yazı, görsel ve sayfa güncellemelerini teknik bilgi olmadan yapabilirsiniz.' },

@@ -1,6 +1,7 @@
 import { servicesList } from '@/data/servicesData';
 import { rehberListesi } from '@/data/rehberData';
 import { pdksSehirListesi } from '@/data/pdksSehirler';
+import { webTasarimBolgeListesi } from '@/data/webTasarimSehirler';
 
 const BASE = 'https://www.zenthrabilisim.com';
 
@@ -37,5 +38,12 @@ export default function sitemap() {
     priority: s.slug === 'samsun' ? 0.9 : 0.7,
   }));
 
-  return [...core, ...services, ...rehber, ...pdks];
+  const webTasarim = webTasarimBolgeListesi.map((s) => ({
+    url: `${BASE}/web-tasarim/${s.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: s.slug === 'samsun' ? 0.9 : 0.7,
+  }));
+
+  return [...core, ...services, ...rehber, ...pdks, ...webTasarim];
 }
