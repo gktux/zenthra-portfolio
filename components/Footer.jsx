@@ -54,6 +54,12 @@ export default function Footer() {
               <a className="cb-footer-nav" href="/projects/depo-live">
                 <span className="cb-footer-nav-title"><span data-text="Depo Programı" style={{ color: '#0071e3' }}>Depo Programı</span></span>
               </a>
+              <a className="cb-footer-nav" href="https://app.zenthrabilisim.com.tr/stok-takip-programi">
+                <span className="cb-footer-nav-title"><span data-text="Stok Takip Programı">Stok Takip Programı</span></span>
+              </a>
+              <a className="cb-footer-nav" href="https://app.zenthrabilisim.com.tr/depo-sayim-programi">
+                <span className="cb-footer-nav-title"><span data-text="Depo Sayım Programı">Depo Sayım Programı</span></span>
+              </a>
               <a className="cb-footer-nav" href="/rehber">
                 <span className="cb-footer-nav-title"><span data-text="Rehber">Rehber</span></span>
               </a>

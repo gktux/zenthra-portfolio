@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import { ChevronDown, Check, ArrowRight, Clock } from 'lucide-react';
 import PdksMailCta from '@/components/PdksMailCta';
+import DepoLiveCozumLinkleri, { REHBER_COZUM } from '@/components/DepoLiveCozumLinkleri';
 
 const VARSAYILAN_CTA = {
   badge: 'Zenthra Depo Live',
@@ -384,6 +385,14 @@ export default function RehberPage({ yazi, ilgiliYazilar = [] }) {
           </article>
         </div>
       </section>
+
+      {REHBER_COZUM[yazi.slug] && (
+        <DepoLiveCozumLinkleri
+          oneCikan={REHBER_COZUM[yazi.slug]}
+          baslik="Bu konuda Depo Live"
+          kaynak={`rehber_${yazi.slug}`}
+        />
+      )}
 
       <Footer />
     </main>

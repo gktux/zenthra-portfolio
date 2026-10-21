@@ -9,6 +9,7 @@ import { CheckCircle2, ChevronDown, Check, Sparkles, ExternalLink, ArrowRight } 
 import { zenthraDepoLiveData } from '@/data/zenthraDepoLiveData';
 import { rehberListesi } from '@/data/rehberData';
 import KvkkCheckboxes from '@/components/KvkkCheckboxes';
+import DepoLiveCozumLinkleri from '@/components/DepoLiveCozumLinkleri';
 import { trackDepoLiveDemoConversion } from '@/lib/ads';
 
 const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwcnVycJgdY5JIEB_vtCYa-JFifDpqZ7OwmyPpWSmDf-o6mY7JAu4s-0VeWQOAqZ-4j/exec";
@@ -580,6 +581,8 @@ export default function DepoLiveProjectPage() {
           </ScrollReveal>
         </div>
       </section>
+
+      <DepoLiveCozumLinkleri baslik="İhtiyacınıza göre Depo Live" kaynak="proje_sayfasi" />
 
       {/* Final CTA Box with Pure Minimalist Cuberto Style Expandable Form */}
       <section id="iletisim" style={{ padding: '60px 0 100px 0', background: '#ffffff' }}>
