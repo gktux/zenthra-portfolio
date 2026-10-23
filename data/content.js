@@ -65,7 +65,7 @@ export const dictionary = {
         {
           category: "Depo Programı & Lojistik WMS",
           title: "Zenthra Bilişim Depo Live — Depo Programı",
-          desc: "Mal kabulden sevkiyata tüm süreci barkodla yöneten depo programı: el terminali, karekod okuma, raf bazlı canlı stok ve anlık ERP entegrasyonu.",
+          desc: "Mal kabulden sevkiyata tüm süreci barkodla yöneten depo programı: el terminali, karekod okuma, raf bazlı canlı stok ve QNB entegrasyonu.",
           link: "/projects/depo-live",
           image: "/depo-live.png"
         },
@@ -203,7 +203,7 @@ export const dictionary = {
         {
           category: "Smart Warehouse & WMS",
           title: "Zenthra Bilişim Depo Live",
-          desc: "Real-time warehouse and inventory management platform with handheld terminal and ERP integration.",
+          desc: "Real-time warehouse and inventory management platform with handheld terminals and QNB integration.",
           link: "/projects/depo-live",
           image: "/depo-live.png"
         },

@@ -6,10 +6,10 @@ export const zenthraDepoLiveData = {
     freeTrialBadge: "⚡ 14 Gün Ücretsiz Deneyin — Kredi Kartı Gerekmez",
     hero: {
       anaBaslik: "Depo Programı: Depo ve Stok Süreçlerinizi Canlı ve Sıfır Hata ile Yönetin",
-      altBaslik: "Zenthra Bilişim Depo Live, mal kabulden sevkiyata kadar tüm süreci tek ekranda toplayan barkodlu bir depo programıdır. El terminali, karekod okuma, canlı raf lokasyonu ve ERP/e-ticaret entegrasyonlarıyla deponuzu anlık izleyin.",
+      altBaslik: "Zenthra Bilişim Depo Live, mal kabulden sevkiyata kadar tüm süreci tek ekranda toplayan barkodlu bir depo programıdır. El terminali, karekod okuma, canlı raf lokasyonu ve QNB entegrasyonuyla deponuzu anlık izleyin.",
       metrikler: [
         { deger: "7/24", aciklama: "Canlı Stok & El Terminali Senkronizasyonu" },
-        { deger: "%99.9", aciklama: "Sayım ve Sevkiyat Doğruluğu" }
+        { deger: "14 Gün", aciklama: "Ücretsiz Deneme, Kurulum Ücreti Yok" }
       ]
     },
     moduller: [
@@ -30,7 +30,7 @@ export const zenthraDepoLiveData = {
         ozellikler: [
           "Android / iOS uyumlu el terminali ve tablet yazılımı",
           "Tekli ve toplu karekod/barkod doğrulama desteği",
-          "İnternet kesintisinde dahi çevrimdışı (offline) çalışma yeteneği"
+          "Kendi telefonunuzu el terminali olarak kullanabilme"
         ]
       },
       {
@@ -50,7 +50,7 @@ export const zenthraDepoLiveData = {
         ozellikler: [
           "En kısa rota algoritması ile zaman kazandıran toplama (Pick-to-Light / Wave)",
           "Yanlış ürün paketlemeyi engelleyen sesli/görsel uyarı sistemi",
-          "Kargo ve lojistik firmaları ile otomatik irsaliye/etiket entegrasyonu"
+          "Sevkiyat öncesi kontrol okutması ile hatalı paketlemeye son"
         ]
       },
       {
@@ -65,12 +65,12 @@ export const zenthraDepoLiveData = {
       },
       {
         id: "integration",
-        modulAdi: "ERP & E-Ticaret / Pazaryeri Entegrasyonu",
-        aciklama: "Netsis, Logo, Mikro, Nebim ve Trendyol, N11, Hepsiburada gibi pazaryerleriyle çift yönlü canlı senkronizasyon.",
+        modulAdi: "QNB Entegrasyonu",
+        aciklama: "Depo Live, QNB ile entegre çalışır; depodaki hareketler QNB tarafına elle tekrar girilmeden aktarılır.",
         ozellikler: [
-          "E-Ticaret siparişlerinin depoya anında düşmesi ve stok düşüşü",
-          "Logo, Netsis, Mikro ve Nebim ERP sistemleriyle çift yönlü API",
-          "Otomatik stok güncellemeleri ile çift satış (over-selling) riskine son"
+          "QNB ile hazır entegrasyon",
+          "Çift veri girişine ve aktarım hatalarına son",
+          "Farklı sistem entegrasyonu ihtiyaçları için ekibimizle görüşün"
         ]
       }
     ],
@@ -84,8 +84,8 @@ export const zenthraDepoLiveData = {
         aciklama: "Sipariş toplama ve kargolama aşamasında yanlış ürün okutulduğunda sistem anında ikaz verir. Müşterilerinize her zaman doğru ürünü göndermenizi garantiler."
       },
       {
-        baslik: "Mevcut ERP ve Pazaryerlerinizle Tam Uyum",
-        aciklama: "Kullandığınız ticari yazılımları veya e-ticaret altyapılarınızı değiştirmeden Zenthra Bilişim Depo Live entegre olur, veri aktarımlarını otomatize eder."
+        baslik: "Ücretsiz Deneme, Kurulum Ücreti Yok",
+        aciklama: "Karar vermeden önce 14 gün boyunca kendi verilerinizle deneyin. Aylık abonelik modeliyle büyük bir ilk yatırım yapmadan başlayın."
       },
       {
         baslik: "Hızlı Kurulum ve Kolay Saha Adaptasyonu",
@@ -106,8 +106,8 @@ export const zenthraDepoLiveData = {
         cevap: "Android ve iOS işletim sistemine sahip tüm profesyonel el terminalleri, tabletler ve akıllı telefonlarla tam uyumludur. Ayrıca kablosuz barkod/karekod okuyucuları da destekler."
       },
       {
-        soru: "E-Ticaret ve pazaryeri (Trendyol, Hepsiburada, N11 vb.) siparişleri Depo Live'a nasıl aktarılır?",
-        cevap: "E-ticaret sitenizden veya pazaryerlerinden gelen siparişler Depo Live sistemine anında düşer. Saha personeli el terminalinde doğrudan toplama listesini görür ve toplama tamamlandığında stok tüm kanallarda otomatik güncellenir."
+        soru: "Depo Live başka yazılımlarla entegre çalışıyor mu?",
+        cevap: "Şu anda hazır entegrasyonumuz QNB ile bulunmaktadır. Farklı bir sistemle entegrasyon ihtiyacınız varsa ekibimizle görüşerek değerlendirebiliriz."
       },
       {
         soru: "Birden fazla depomuz veya şubemiz varsa hepsini tek panelden yönetebilir miyiz?",
@@ -119,7 +119,7 @@ export const zenthraDepoLiveData = {
       },
       {
         soru: "Depo Live kurulum süreci ne kadar zaman alır?",
-        cevap: "Deponuzun büyüklüğü ve entegre edilecek sistemlere bağlı olarak kurulum, test ve personel eğitimleri genellikle 1 ila 2 hafta içinde tamamlanmaktadır."
+        cevap: "Deponuzun büyüklüğüne ve ürün sayısına bağlı olarak kurulum, test ve personel eğitimleri genellikle 1 ila 2 hafta içinde tamamlanmaktadır."
       }
     ],
     ctaMetinleri: {
@@ -134,10 +134,10 @@ export const zenthraDepoLiveData = {
     freeTrialBadge: "⚡ Start 14-Day Free Trial — No Credit Card Required",
     hero: {
       anaBaslik: "Zenthra Bilişim Depo Live: Real-Time & Zero-Error Warehouse Management",
-      altBaslik: "Track and manage your entire warehouse operations from goods receipt to dispatch in real-time with handheld terminals, QR/barcode scanning, bin tracking, and ERP integration.",
+      altBaslik: "Track and manage your entire warehouse operations from goods receipt to dispatch in real-time with handheld terminals, QR/barcode scanning, bin tracking, and QNB integration.",
       metrikler: [
         { deger: "24/7", aciklama: "Real-Time Stock & Handheld Terminal Sync" },
-        { deger: "99.9%", aciklama: "Inventory & Dispatch Accuracy Rate" }
+        { deger: "14 Days", aciklama: "Free Trial, No Setup Fee" }
       ]
     },
     moduller: [
@@ -158,7 +158,7 @@ export const zenthraDepoLiveData = {
         ozellikler: [
           "Native Android & iOS handheld terminal / tablet software",
           "Single & batch QR/barcode validation support",
-          "Offline operation resilience during network interruptions"
+          "Use your own smartphone as a handheld terminal"
         ]
       },
       {
@@ -178,7 +178,7 @@ export const zenthraDepoLiveData = {
         ozellikler: [
           "Shortest picking route optimization (Pick-to-Light / Wave)",
           "Audio-visual alert system preventing wrong product packing",
-          "Logistics & carrier integration for auto waybills & shipping labels"
+          "Pre-dispatch verification scan to prevent packing errors"
         ]
       },
       {
@@ -193,12 +193,12 @@ export const zenthraDepoLiveData = {
       },
       {
         id: "integration",
-        modulAdi: "ERP & Marketplace Synchronization",
-        aciklama: "Bi-directional real-time integration with ERPs (Netsis, Logo, Mikro) and major e-commerce platforms.",
+        modulAdi: "QNB Integration",
+        aciklama: "Depo Live integrates with QNB, so warehouse movements are transferred without manual re-entry.",
         ozellikler: [
-          "Instant e-commerce order routing to warehouse floor",
-          "Bi-directional API connectors for ERP systems",
-          "Automated stock synchronization eliminating over-selling risks"
+          "Ready-made QNB integration",
+          "No double data entry or transfer errors",
+          "Talk to our team about other integration needs"
         ]
       }
     ],
@@ -212,8 +212,8 @@ export const zenthraDepoLiveData = {
         aciklama: "If an incorrect item is scanned during order picking or packaging, the system immediately warns the operator, guaranteeing accurate customer shipments."
       },
       {
-        baslik: "Full Compatibility with Existing ERPs",
-        aciklama: "Zenthra Bilişim Depo Live integrates smoothly without disrupting your current ERP software or e-commerce storefronts."
+        baslik: "Free Trial, No Setup Fee",
+        aciklama: "Try Depo Live with your own data for 14 days before deciding, then continue on a simple monthly subscription."
       },
       {
         baslik: "Fast Deployment & Intuitive Operation",
@@ -226,8 +226,8 @@ export const zenthraDepoLiveData = {
         cevap: "Depo Live is compatible with all professional Android/iOS handheld terminals, industrial tablets, smartphones, and wireless barcode scanners."
       },
       {
-        soru: "How are e-commerce and marketplace orders routed to Depo Live?",
-        cevap: "Orders received from your e-commerce platform or marketplaces sync instantly into Depo Live. Handheld terminals display real-time picking lists, and inventory updates automatically across all channels upon dispatch."
+        soru: "Does Depo Live integrate with other software?",
+        cevap: "Our ready-made integration is currently with QNB. If you need an integration with another system, talk to our team and we will evaluate it."
       },
       {
         soru: "Can we manage multiple warehouses or branch locations from a single platform?",
@@ -239,7 +239,7 @@ export const zenthraDepoLiveData = {
       },
       {
         soru: "How long does deployment take?",
-        cevap: "Depending on warehouse scale and software integrations, setup, testing, and staff training are typically completed within 1 to 2 weeks."
+        cevap: "Depending on warehouse scale and product count, setup, testing, and staff training are typically completed within 1 to 2 weeks."
       }
     ],
     ctaMetinleri: {

@@ -5,6 +5,7 @@ import { OrganizationSchema } from '@/components/StructuredData';
 import SmoothScroll from '@/components/SmoothScroll';
 import Script from 'next/script';
 import MetaPixel from '@/components/MetaPixel';
+import WhatsAppBot from '@/components/WhatsAppBot';
 
 // Google Ads etiketi. linker: reklamdan gelen gclid app alan adina
 // (kayit orada) tasinsin, donusum kampanyaya baglansin.
@@ -80,6 +81,7 @@ gtag('config', '${GA4_ID}');`}
             <CustomCursor />
             {children}
           </SmoothScroll>
+          <WhatsAppBot />
         </LanguageProvider>
       </body>
     </html>
