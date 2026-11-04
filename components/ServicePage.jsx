@@ -26,7 +26,9 @@ export default function ServicePage({ service }) {
             >
               <a href="/" style={{ color: '#86868b', textDecoration: 'none' }}>Ana Sayfa</a>
               <span style={{ margin: '0 8px' }}>/</span>
-              <a href="/hizmetler" style={{ color: '#86868b', textDecoration: 'none' }}>Hizmetler</a>
+              <a href={service.crumb?.href || '/hizmetler'} style={{ color: '#86868b', textDecoration: 'none' }}>
+                {service.crumb?.name || 'Hizmetler'}
+              </a>
               <span style={{ margin: '0 8px' }}>/</span>
               <span style={{ color: '#6e6e73' }}>{service.h1}</span>
             </nav>
@@ -188,6 +190,62 @@ export default function ServicePage({ service }) {
         </div>
       </section>
 
+      {service.priceTable && (
+        <section className="section-padding" style={{ background: '#ffffff' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '2.4rem', marginBottom: '12px', fontFamily: 'var(--font-display)' }}>
+              {service.priceTable.baslik}
+            </h2>
+            {service.priceTable.not && (
+              <p style={{ color: '#6e6e73', maxWidth: '760px', lineHeight: 1.7, marginBottom: '32px', fontFamily: 'var(--font-body)' }}>
+                {service.priceTable.not}
+              </p>
+            )}
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', minWidth: '560px', borderCollapse: 'collapse', fontFamily: 'var(--font-body)' }}>
+                <thead>
+                  <tr>
+                    {['Paket', 'Kimler için', 'Kapsam', 'Fiyat'].map((h) => (
+                      <th key={h} style={{ textAlign: 'left', padding: '14px 12px', borderBottom: '2px solid #1d1d1f', fontSize: '0.95rem' }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {service.priceTable.satirlar.map((r) => (
+                    <tr key={r.paket}>
+                      <td style={{ padding: '16px 12px', borderBottom: '1px solid #e5e5ea', fontWeight: 600, verticalAlign: 'top' }}>{r.paket}</td>
+                      <td style={{ padding: '16px 12px', borderBottom: '1px solid #e5e5ea', color: '#6e6e73', verticalAlign: 'top' }}>{r.kimin}</td>
+                      <td style={{ padding: '16px 12px', borderBottom: '1px solid #e5e5ea', color: '#6e6e73', verticalAlign: 'top' }}>{r.kapsam}</td>
+                      <td style={{ padding: '16px 12px', borderBottom: '1px solid #e5e5ea', fontWeight: 600, verticalAlign: 'top', whiteSpace: 'nowrap' }}>{r.fiyat || 'Teklif ile'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {service.sections?.length > 0 && (
+        <section className="section-padding" style={{ background: '#ffffff' }}>
+          <div className="container" style={{ maxWidth: '860px' }}>
+            {service.sections.map((s) => (
+              <div key={s.h2} style={{ marginBottom: '48px' }}>
+                <h2 style={{ fontSize: '1.9rem', marginBottom: '16px', fontFamily: 'var(--font-display)' }}>{s.h2}</h2>
+                {s.p?.map((t, i) => (
+                  <p key={i} style={{ color: '#3a3a3c', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '14px', fontFamily: 'var(--font-body)' }}>{t}</p>
+                ))}
+                {s.list && (
+                  <ul style={{ paddingLeft: '20px', color: '#3a3a3c', lineHeight: 1.8, fontFamily: 'var(--font-body)' }}>
+                    {s.list.map((li) => <li key={li} style={{ marginBottom: '6px' }}>{li}</li>)}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* SSS */}
       <section className="section-padding" style={{ background: '#ffffff' }}>
         <div className="container">
@@ -337,6 +395,27 @@ export default function ServicePage({ service }) {
                   style={{ padding: '8px 16px', borderRadius: '999px', border: '1px solid #d2d2d7', color: '#1d1d1f', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'var(--font-body)' }}
                 >
                   {s.ad} Web Tasarım
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {service.related?.length > 0 && (
+        <section style={{ background: '#ffffff', padding: '0 0 80px' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '1.4rem', fontWeight: 600, color: '#1d1d1f', marginBottom: '16px' }}>
+              {service.relatedTitle || 'İlgili Sayfalar'}
+            </h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+              {service.related.map((r) => (
+                <a
+                  key={r.href}
+                  href={r.href}
+                  style={{ padding: '8px 16px', borderRadius: '999px', border: '1px solid #d2d2d7', color: '#1d1d1f', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'var(--font-body)' }}
+                >
+                  {r.label}
                 </a>
               ))}
             </div>

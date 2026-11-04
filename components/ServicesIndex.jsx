@@ -5,7 +5,13 @@ import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import { ArrowUpRight } from 'lucide-react';
 
-export default function ServicesIndex({ services }) {
+export default function ServicesIndex({
+  services,
+  basePath = '/hizmetler',
+  eyebrow = 'Neler Yapıyoruz?',
+  heading = 'Uçtan Uca Dijital Çözümler',
+  intro = 'Yazılım geliştirmeden teknik servise kadar işletmenizin bilişim ihtiyacını tek elden karşılıyoruz. Aşağıdaki başlıklardan detaylara ulaşabilirsiniz.',
+}) {
   return (
     <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: '#ffffff' }}>
       <Navbar />
@@ -22,7 +28,7 @@ export default function ServicesIndex({ services }) {
                 letterSpacing: '0.1em',
               }}
             >
-              Neler Yapıyoruz?
+              {eyebrow}
             </span>
             <h1
               style={{
@@ -33,7 +39,7 @@ export default function ServicesIndex({ services }) {
                 lineHeight: 1.1,
               }}
             >
-              Uçtan Uca Dijital Çözümler
+              {heading}
             </h1>
             <p
               style={{
@@ -44,8 +50,7 @@ export default function ServicesIndex({ services }) {
                 fontFamily: 'var(--font-body)',
               }}
             >
-              Yazılım geliştirmeden teknik servise kadar işletmenizin bilişim ihtiyacını tek elden
-              karşılıyoruz. Aşağıdaki başlıklardan detaylara ulaşabilirsiniz.
+              {intro}
             </p>
           </ScrollReveal>
         </div>
@@ -60,7 +65,7 @@ export default function ServicesIndex({ services }) {
             {services.map((item, idx) => (
               <ScrollReveal key={item.slug} delay={idx * 0.1} distance="50px" duration="0.85s">
                 <a
-                  href={`/hizmetler/${item.slug}`}
+                  href={`${basePath}/${item.slug}`}
                   style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}
                 >
                   <div
@@ -83,7 +88,7 @@ export default function ServicesIndex({ services }) {
                           fontFamily: 'var(--font-display)',
                         }}
                       >
-                        {item.num}
+                        {item.num ?? String(idx + 1).padStart(2, '0')}
                       </div>
                       <h2 style={{ fontSize: '1.6rem', marginBottom: '12px', fontFamily: 'var(--font-display)' }}>
                         {item.h1}

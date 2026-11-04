@@ -60,6 +60,12 @@ export default function Footer() {
               <a className="cb-footer-nav" href="https://app.zenthrabilisim.com.tr/depo-sayim-programi">
                 <span className="cb-footer-nav-title"><span data-text="Depo Sayım Programı">Depo Sayım Programı</span></span>
               </a>
+              <a className="cb-footer-nav" href="/sektorler">
+                <span className="cb-footer-nav-title"><span data-text="Sektörel Çözümler">Sektörel Çözümler</span></span>
+              </a>
+              <a className="cb-footer-nav" href="/fiyatlar">
+                <span className="cb-footer-nav-title"><span data-text="Fiyatlar">Fiyatlar</span></span>
+              </a>
               <a className="cb-footer-nav" href="/rehber">
                 <span className="cb-footer-nav-title"><span data-text="Rehber">Rehber</span></span>
               </a>

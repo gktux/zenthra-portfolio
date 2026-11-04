@@ -123,7 +123,12 @@ export function ServiceSchema({ service }) {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://www.zenthrabilisim.com' },
-          { '@type': 'ListItem', position: 2, name: 'Hizmetler', item: 'https://www.zenthrabilisim.com/hizmetler' },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: service.crumb?.name || 'Hizmetler',
+            item: `https://www.zenthrabilisim.com${service.crumb?.href || '/hizmetler'}`,
+          },
           { '@type': 'ListItem', position: 3, name: service.h1, item: url },
         ],
       },
