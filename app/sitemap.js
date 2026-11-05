@@ -19,6 +19,7 @@ export default function sitemap() {
     { url: `${BASE}/fiyatlar`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/rehber`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/contacts`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/cerez-politikasi`, lastModified: now, changeFrequency: 'yearly', priority: 0.2 },
   ];
 
   const services = servicesList.map((s) => ({

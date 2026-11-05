@@ -6,7 +6,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useState } from 'react';
 import { CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import KvkkCheckboxes from '@/components/KvkkCheckboxes';
-import { trackGenelIletisimConversion } from '@/lib/ads';
+import { addAttribution, trackGenelIletisimConversion } from '@/lib/ads';
 
 export default function ContactsPage() {
   const { t } = useLanguage();
@@ -31,6 +31,8 @@ export default function ContactsPage() {
     postData.append('commercialConsent', commercialConsent ? 'Evet (İzin Verildi)' : 'Hayır');
     postData.append('marketingConsent', marketingConsent ? 'Evet (İzin Verildi)' : 'Hayır');
     postData.append('timestamp', new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' }));
+
+    addAttribution(postData);
 
     try {
       await fetch("https://script.google.com/macros/s/AKfycbxww9AQplejwu3YxZn6U62cBjPJ8FAkFQaNwR4g2Zg8CuCrZPqlLz1hth71A0QLjzQrNQ/exec", {
@@ -121,7 +123,7 @@ export default function ContactsPage() {
                     <div style={{ fontWeight: 700, fontSize: '1.05rem', color: '#000000', display: 'flex', items: 'center', gap: '12px' }}>
                       <span>{t.contacts.phone}</span>
                       <a
-                        href="https://wa.me/905315800753?text=Merhaba,%20size%20zenthrabilisim.com%20web%20sitesi%20üzerinden%20ulaşıyorum."
+                        href="https://wa.me/905524906576?text=Merhaba,%20size%20zenthrabilisim.com%20web%20sitesi%20üzerinden%20ulaşıyorum."
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{

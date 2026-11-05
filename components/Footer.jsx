@@ -1,6 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/context/LanguageContext';
+import CerezTercihleriLink from '@/components/CerezTercihleriLink';
 import { Globe, Linkedin, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
@@ -26,7 +27,7 @@ export default function Footer() {
                     </span>
                   </a>
 
-                  <a className="cb-btn_cta -inverse-btn" href="https://wa.me/905315800753?text=Merhaba,%20size%20zenthrabilisim.com%20web%20sitesi%20üzerinden%20ulaşıyorum." target="_blank" rel="noopener noreferrer" style={{ padding: '10px 24px', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                  <a className="cb-btn_cta -inverse-btn" href="https://wa.me/905524906576?text=Merhaba,%20size%20zenthrabilisim.com%20web%20sitesi%20üzerinden%20ulaşıyorum." target="_blank" rel="noopener noreferrer" style={{ padding: '10px 24px', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                     <MessageCircle size={16} color="#25D366" />
                     <span className="cb-btn_cta-title">
                       <span data-text={t.contacts.phone}>{t.contacts.phone}</span>
@@ -97,12 +98,13 @@ export default function Footer() {
             <a href="https://www.zenthrabilisim.com" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 600 }}>zenthrabilisim.com</a>
             <span>2026, Zenthra Bilişim</span>
             <span>vakanüvisler</span>
+            <CerezTercihleriLink />
           </div>
 
           {/* Bottom Right Circular Social Buttons */}
           <div className="cb-footer-bgrid-col -right">
             <div className="cb-footer-socials" style={{ display: 'flex', gap: '12px' }}>
-              <a className="cb-btn_round" href="https://wa.me/905315800753?text=Merhaba,%20size%20zenthrabilisim.com%20web%20sitesi%20üzerinden%20ulaşıyorum." target="_blank" rel="noopener noreferrer" title="WhatsApp"><MessageCircle size={18} /></a>
+              <a className="cb-btn_round" href="https://wa.me/905524906576?text=Merhaba,%20size%20zenthrabilisim.com%20web%20sitesi%20üzerinden%20ulaşıyorum." target="_blank" rel="noopener noreferrer" title="WhatsApp"><MessageCircle size={18} /></a>
               <a className="cb-btn_round" href="https://www.zenthrabilisim.com" target="_blank" rel="noopener noreferrer" title="zenthrabilisim.com"><Globe size={18} /></a>
               <a className="cb-btn_round" href="https://www.linkedin.com/company/zenthra-bi%CC%87li%CC%87%C5%9Fi%CC%87m/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={18} /></a>
             </div>

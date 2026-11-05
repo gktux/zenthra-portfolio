@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { X, Send } from 'lucide-react'
+import { trackContactClick } from '@/lib/ads'
 
 const NUMARA = '905524906576'
 const GIRIS = 'Merhaba, zenthrabilisim.com web sitenizden geliyorum. '
@@ -49,6 +50,7 @@ export default function WhatsAppBot() {
   const gonder = e => {
     e.preventDefault()
     const m = metin.trim() || 'Bilgi almak istiyorum.'
+    trackContactClick('whatsapp')
     window.open(waLink(m), '_blank', 'noopener')
     setMetin('')
   }

@@ -6,6 +6,8 @@ import SmoothScroll from '@/components/SmoothScroll';
 import Script from 'next/script';
 import MetaPixel from '@/components/MetaPixel';
 import WhatsAppBot from '@/components/WhatsAppBot';
+import ConsentBanner from '@/components/ConsentBanner';
+import { CONSENT_KEY } from '@/lib/ads';
 
 // Google Ads etiketi. linker: reklamdan gelen gclid app alan adina
 // (kayit orada) tasinsin, donusum kampanyaya baglansin.
@@ -15,6 +17,17 @@ const GA4_ID = 'G-1NJ1VPY1BR';
 // Tag Manager konteyneri. GA4 ve Ads zaten gtag ile yukleniyor; konteynere
 // ayni etiketler eklenirse sayim ikiye katlanir.
 const GTM_ID = 'GTM-W9C4QLFR';
+
+// Consent Mode v2 varsayilani: tum etiketlerden once calismali, o yuzden <head>
+// icinde duz script. Onceki secim varsa ayni anda uygulanir.
+const CONSENT_DEFAULT = `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+var c = null; try { c = localStorage.getItem('${CONSENT_KEY}'); } catch (e) {}
+var s = c === 'granted' ? 'granted' : 'denied';
+gtag('consent', 'default', { ad_storage: s, ad_user_data: s, ad_personalization: s, analytics_storage: s, wait_for_update: 500 });
+gtag('set', 'ads_data_redaction', s === 'denied');
+gtag('set', 'url_passthrough', true);`;
 
 export const metadata = {
   metadataBase: new URL('https://www.zenthrabilisim.com'),
@@ -48,6 +61,7 @@ export default function RootLayout({ children }) {
     <html lang="tr">
       <head>
         <meta name="google-site-verification" content="vEm4p5z4Oa5jJi8BIfG1AZwMWLz5Lq4DLTHI6_Bs8q8" />
+        <script dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT }} />
       </head>
       <body>
         <noscript>
@@ -67,9 +81,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} strategy="afterInteractive" />
         <Script id="google-ads" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+          {`gtag('js', new Date());
 gtag('set', 'linker', { domains: ['zenthrabilisim.com', 'app.zenthrabilisim.com.tr'] });
 gtag('config', '${GOOGLE_ADS_ID}');
 gtag('config', '${GA4_ID}');`}
@@ -82,6 +94,7 @@ gtag('config', '${GA4_ID}');`}
             {children}
           </SmoothScroll>
           <WhatsAppBot />
+          <ConsentBanner />
         </LanguageProvider>
       </body>
     </html>

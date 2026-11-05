@@ -10,7 +10,18 @@ const SERVICE_LINKS = {
   '03': '/hizmetler/web-tasarim',
   '04': '/hizmetler/yazici-bakim-onarim',
   '05': '/hizmetler/pdks-personel-devam-kontrol-sistemi',
+  '06': '/projects/depo-live',
 };
+
+const EXTRA_LINKS = [
+  { href: '/sektorler', label: 'Sektörel çözümler' },
+  { href: '/fiyatlar/depo-programi-fiyatlari', label: 'Depo programı fiyatları' },
+  { href: '/fiyatlar/pdks-fiyatlari', label: 'PDKS fiyatları' },
+  { href: '/fiyatlar/web-tasarim-fiyatlari', label: 'Web tasarım fiyatları' },
+  { href: '/web-tasarim/samsun', label: 'Samsun web tasarım' },
+  { href: '/pdks/samsun', label: 'Samsun PDKS' },
+  { href: '/projects/erp', label: 'Zenthra ERP' },
+];
 
 export default function Services() {
   const { t } = useLanguage();
@@ -46,7 +57,9 @@ export default function Services() {
                     {item.id}
                   </div>
                   <h3 style={{ fontSize: '1.6rem', marginBottom: '12px', fontFamily: "var(--font-display)" }}>
-                    {item.title}
+                    <a href={SERVICE_LINKS[item.id] || '/hizmetler'} style={{ color: 'inherit', textDecoration: 'none' }}>
+                      {item.title}
+                    </a>
                   </h3>
                   <p style={{ color: '#6e6e73', fontSize: '1rem', lineHeight: 1.6, fontFamily: "var(--font-body)" }}>
                     {item.desc}
@@ -54,7 +67,7 @@ export default function Services() {
                 </div>
                 
                 <div style={{ marginTop: '24px', display: 'flex', justifyContent: 'flex-end' }}>
-                  <a href={SERVICE_LINKS[item.id] || '/hizmetler'} aria-label={item.title} style={{
+                  <a href={SERVICE_LINKS[item.id] || '/hizmetler'} aria-hidden="true" tabIndex={-1} style={{
                     width: '44px',
                     height: '44px',
                     borderRadius: '50%',
@@ -73,6 +86,17 @@ export default function Services() {
             </ScrollReveal>
           ))}
         </div>
+
+        <nav aria-label="Hizmet sayfaları" style={{ marginTop: '48px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+          <a href="/hizmetler" style={{ padding: '8px 16px', borderRadius: '999px', background: '#000', color: '#fff', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'var(--font-body)' }}>
+            Tüm hizmetler
+          </a>
+          {EXTRA_LINKS.map((l) => (
+            <a key={l.href} href={l.href} style={{ padding: '8px 16px', borderRadius: '999px', border: '1px solid #d2d2d7', color: '#1d1d1f', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'var(--font-body)' }}>
+              {l.label}
+            </a>
+          ))}
+        </nav>
 
       </div>
     </section>

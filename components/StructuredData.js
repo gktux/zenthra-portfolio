@@ -48,7 +48,27 @@ export function OrganizationSchema() {
           'Stok takip programı',
           'Özel yazılım geliştirme',
           'Kurumsal IT bakım',
+          'Web tasarım ve SEO',
+          'PDKS personel devam kontrol sistemi',
+          'Armongate yüz tanıma',
+          'Yazıcı bakım ve onarım',
+          'Mobil uygulama geliştirme',
         ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Zenthra Bilişim hizmetleri',
+          itemListElement: [
+            ['Özel Yazılım ve Mobil Uygulama Geliştirme', '/hizmetler/ozel-yazilim'],
+            ['Kurumsal IT Bakım ve Altyapı Hizmetleri', '/hizmetler/kurumsal-it-bakim'],
+            ['Samsun Web Tasarım ve SEO', '/hizmetler/web-tasarim'],
+            ['Yazıcı Tamiri, Bakım ve Toner Servisi', '/hizmetler/yazici-bakim-onarim'],
+            ['PDKS ve Personel Takip Sistemi', '/hizmetler/pdks-personel-devam-kontrol-sistemi'],
+            ['Depo ve Stok Takip Programı (Depo Live)', '/projects/depo-live'],
+          ].map(([name, path]) => ({
+            '@type': 'Offer',
+            itemOffered: { '@type': 'Service', name, url: `https://www.zenthrabilisim.com${path}` },
+          })),
+        },
       },
     ],
   };

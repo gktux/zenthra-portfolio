@@ -19,34 +19,39 @@ export const dictionary = {
       ctaContact: "İletişime Geçin"
     },
     services: {
-      badge: "Neler Yapıyoruz?",
-      title: "Uçtan Uca Dijital Çözümler",
-      description: "Yenilikçi teknolojiler ve estetik tasarım yaklaşımımızla işinizi dijital dünyada öne çıkarıyoruz.",
+      badge: "Hizmetlerimiz",
+      title: "Samsun’da Yazılım, Web Tasarım, IT ve PDKS Hizmetleri",
+      description: "Zenthra Bilişim, Samsun merkezli bir bilişim firmasıdır. Özel yazılım, web tasarım ve SEO, kurumsal IT bakım, yazıcı servisi, Armongate PDKS kurulumu ve Depo Live depo programı hizmetlerini Karadeniz Bölgesi ve Türkiye genelinde veriyoruz.",
       items: [
         {
           id: "01",
-          title: "Özel Web & Mobil Yazılım",
-          desc: "Şirketinize ve iş süreçlerinize özel web yazılımları, mobil uygulamalar, otomasyon sistemleri ve ölçeklenebilir dijital çözümler."
+          title: "Özel Yazılım ve Mobil Uygulama Geliştirme",
+          desc: "Şirketinizin iş süreçlerine göre web yazılımı, Android/iOS mobil uygulama, ERP ve otomasyon sistemleri geliştiriyoruz. Mevcut programlarınızla API entegrasyonu ve sürekli bakım dahil."
         },
         {
           id: "02",
-          title: "Kurumsal IT & Bakım Hizmetleri",
-          desc: "Şirketler, fabrikalar ve kurumlar için IT altyapı kurulumu, sunucu yönetimi, ağ güvenliği ve kesintisiz periyodik teknik bakım desteği."
+          title: "Kurumsal IT Bakım ve Altyapı Hizmetleri",
+          desc: "Şirket, fabrika ve kurumlar için sunucu kurulumu, ağ ve kablolama, güvenlik duvarı, 5651 loglama, yedekleme ve aylık bakım sözleşmesi. Samsun’da yerinde, Türkiye genelinde uzaktan destek."
         },
         {
           id: "03",
-          title: "Web Site Tasarımı & Geliştirme",
-          desc: "Kurumsal kimliğinizi yansıtan modern, ultra hızlı, tüm mobil cihazlarla tam uyumlu ve arama motoru (SEO) odaklı web siteleri tasarlıyor ve geliştiriyoruz."
+          title: "Samsun Web Tasarım ve SEO",
+          desc: "Kurumsal web sitesi, e-ticaret sitesi ve SEO çalışması. Hızlı açılan, mobil uyumlu, Google’da “şehir + hizmet” aramalarında üst sıralara çıkmak için teknik SEO altyapısıyla teslim edilen siteler."
         },
         {
           id: "04",
-          title: "Yazıcı Bakım & Onarım Hizmetleri",
-          desc: "Karadeniz Bölgesi genelinde tüm marka ve model yazıcı, fotokopi ve tarayıcı cihazları için orijinal yedek parça, periyodik bakım, kartuş/toner servisi ve hızlı tamir çözümleri."
+          title: "Yazıcı Tamiri, Bakım ve Toner Servisi",
+          desc: "Samsun ve Karadeniz Bölgesi’nde HP, Canon, Epson, Brother, Kyocera ve tüm marka yazıcı ve fotokopi cihazları için yerinde tamir, periyodik bakım, toner ve kartuş servisi."
         },
         {
           id: "05",
-          title: "PDKS & Personel Takip Sistemleri",
-          desc: "Armongate yetkili bayisi olarak KVKK uyumlu PDKS cihazları; yüz tanıma, parmak izi, kart, telefon ve QR ile geçiş, bulut tabanlı puantaj, turnike ve ziyaretçi yönetimi. Satış, kurulum ve teknik destek."
+          title: "PDKS ve Personel Takip Sistemi",
+          desc: "Armongate yetkili bayisi olarak yüz tanıma, parmak izi, kartlı ve mobil PDKS cihazları; bulut puantaj, turnike ve ziyaretçi yönetimi. KVKK uyumlu satış, kurulum ve teknik destek."
+        },
+        {
+          id: "06",
+          title: "Depo ve Stok Takip Programı (Depo Live)",
+          desc: "Kendi geliştirdiğimiz bulut depo programı Depo Live: barkodlu mal kabul, raf adresleme, SKT ve lot takibi, depo sayımı ve pazaryeri siparişleri. Telefon el terminali olur, 14 gün ücretsiz deneme."
         }
       ]
     },
@@ -157,9 +162,9 @@ export const dictionary = {
       ctaContact: "Get in Touch"
     },
     services: {
-      badge: "What We Do",
-      title: "End-to-End Digital Solutions",
-      description: "Empowering your business in the digital realm with cutting-edge technologies and aesthetic design philosophy.",
+      badge: "Our Services",
+      title: "Software, Web Design, IT and Time Attendance in Samsun",
+      description: "Zenthra Bilişim is an IT company based in Samsun, Türkiye. We provide custom software, web design and SEO, corporate IT maintenance, printer service, Armongate PDKS installation and the Depo Live warehouse management app.",
       items: [
         {
           id: "01",
@@ -185,6 +190,11 @@ export const dictionary = {
           id: "05",
           title: "PDKS & Time Attendance Systems",
           desc: "Authorized Armongate dealer: face recognition, fingerprint, card and mobile (Bluetooth, NFC, QR) attendance terminals, cloud time tracking, turnstiles and access control. Sales, installation, payroll-ready software and support."
+        },
+        {
+          id: "06",
+          title: "Warehouse & Stock Management App (Depo Live)",
+          desc: "Our own cloud warehouse app: barcode receiving, bin locations, expiry and lot tracking, cycle counts and marketplace orders. Any phone becomes a scanner. 14-day free trial."
         }
       ]
     },

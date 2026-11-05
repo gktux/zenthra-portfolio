@@ -10,7 +10,7 @@ import { zenthraDepoLiveData } from '@/data/zenthraDepoLiveData';
 import { rehberListesi } from '@/data/rehberData';
 import KvkkCheckboxes from '@/components/KvkkCheckboxes';
 import DepoLiveCozumLinkleri from '@/components/DepoLiveCozumLinkleri';
-import { trackDepoLiveDemoConversion } from '@/lib/ads';
+import { addAttribution, trackDepoLiveDemoConversion } from '@/lib/ads';
 
 const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwcnVycJgdY5JIEB_vtCYa-JFifDpqZ7OwmyPpWSmDf-o6mY7JAu4s-0VeWQOAqZ-4j/exec";
 
@@ -86,6 +86,7 @@ export default function DepoLiveProjectPage() {
       formData.append('commercialConsent', commercialConsent ? 'Evet (İzin Verildi)' : 'Hayır');
       formData.append('marketingConsent', marketingConsent ? 'Evet (İzin Verildi)' : 'Hayır');
       formData.append('timestamp', safeData.timestamp);
+      addAttribution(formData);
 
       await fetch(GOOGLE_SHEET_WEBHOOK_URL, {
         method: 'POST',
