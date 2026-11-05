@@ -23,10 +23,13 @@ export default function CerezPolitikasi() {
           <p>Çerez tercihiniz ve dil seçiminiz tarayıcınızda saklanır. Bunlar sitenin çalışması için gereklidir ve onay gerektirmez. Reklamdan geldiyseniz kaynak bilgisi (gclid, UTM) oturum boyunca tutulur ve formu gönderirseniz talebinize eklenir.</p>
 
           <h2 style={baslik}>Analiz çerezleri</h2>
-          <p>Google Analytics, sitenin nasıl kullanıldığını ölçmemize yardım eder. Yalnızca onay verirseniz çalışır.</p>
+          <p>Google Analytics, sitenin nasıl kullanıldığını ölçmemize yardım eder. Çerezleri yalnızca onay verirseniz kullanılır.</p>
 
           <h2 style={baslik}>Reklam çerezleri</h2>
-          <p>Google Ads ve Meta Pixel, reklamlarımızın sonucunu ölçmek ve sitemizi ziyaret edenlere reklam göstermek için kullanılır. Yalnızca onay verirseniz çalışır. Bu hizmetler verileri yurt dışındaki sunucularda işleyebilir.</p>
+          <p>Google Ads ve Meta Pixel, reklamlarımızın sonucunu ölçmek ve sitemizi ziyaret edenlere reklam göstermek için kullanılır. Çerezleri yalnızca onay verirseniz kullanılır. Bu hizmetler verileri yurt dışındaki sunucularda işleyebilir.</p>
+
+          <h2 style={baslik}>Onay vermezseniz</h2>
+          <p>Google etiketleri çerez yazmadan, kimliğinizle eşleşmeyen sınırlı ölçüm sinyalleri gönderebilir. Meta Pixel olay göndermez.</p>
 
           <h2 style={baslik}>Tercihinizi değiştirme</h2>
           <p><CerezTercihleriLink /> bağlantısından analiz ve reklam çerezlerini ayrı ayrı açıp kapatabilirsiniz. Tüm isteğe bağlı çerezleri reddederseniz tercihinizi 6 ay sonra yeniden sorarız. Tarayıcı ayarlarınızdan da çerezleri silebilirsiniz.</p>
