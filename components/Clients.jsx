@@ -13,7 +13,9 @@ export default function Clients() {
     { name: 'EXE GRUP' },
     { name: 'ZENTEK MAKİNE' },
     { name: 'REVİZYON PRİME' },
-    { name: 'BİLİM FORMÜLÜ' }
+    { name: 'BİLİM FORMÜLÜ' },
+    { name: 'MED-SES' },
+    { name: 'TÜRK SAĞLIK-SEN' }
   ];
 
   return (
