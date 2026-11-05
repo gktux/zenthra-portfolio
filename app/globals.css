@@ -867,4 +867,10 @@ h1, h2, h3, h4 {
 .cerez__metin a { color: inherit; text-decoration: underline; }
 .cerez__butonlar { display: flex; gap: 10px; }
 .cerez__buton { flex: 1; padding: 10px 14px; border-radius: 100px; border: 1px solid #000; background: #000; color: #fff; font: inherit; font-size: 0.875rem; font-weight: 600; cursor: pointer; }
+.cerez__buton--ikincil { background: #fff; color: #000; }
+.cerez__baslik { margin: 0 0 10px; font-size: 0.95rem; font-weight: 600; }
+.cerez__kategori { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; font-size: 0.8125rem; line-height: 1.45; }
+.cerez__kategori input { margin-top: 3px; accent-color: #000; }
+.cerez__kategori strong { display: block; }
+.cerez__tercih { display: block; margin: 10px auto 0; padding: 0; border: 0; background: none; color: inherit; font: inherit; font-size: 0.8125rem; text-decoration: underline; cursor: pointer; }
 @media (max-width: 600px) { .cerez { left: 14px; bottom: 88px; width: calc(100vw - 28px); } }

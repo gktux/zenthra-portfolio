@@ -20,7 +20,7 @@ export default function CerezPolitikasi() {
           <p>Bu sayfa, zenthrabilisim.com adresinde hangi çerezlerin neden kullanıldığını açıklar.</p>
 
           <h2 style={baslik}>Zorunlu kayıtlar</h2>
-          <p>Çerez tercihiniz ve dil seçiminiz tarayıcınızda saklanır. Bunlar sitenin çalışması için gereklidir ve onay gerektirmez.</p>
+          <p>Çerez tercihiniz ve dil seçiminiz tarayıcınızda saklanır. Bunlar sitenin çalışması için gereklidir ve onay gerektirmez. Reklamdan geldiyseniz kaynak bilgisi (gclid, UTM) oturum boyunca tutulur ve formu gönderirseniz talebinize eklenir.</p>
 
           <h2 style={baslik}>Analiz çerezleri</h2>
           <p>Google Analytics, sitenin nasıl kullanıldığını ölçmemize yardım eder. Yalnızca onay verirseniz çalışır.</p>
@@ -29,7 +29,7 @@ export default function CerezPolitikasi() {
           <p>Google Ads ve Meta Pixel, reklamlarımızın sonucunu ölçmek ve sitemizi ziyaret edenlere reklam göstermek için kullanılır. Yalnızca onay verirseniz çalışır. Bu hizmetler verileri yurt dışındaki sunucularda işleyebilir.</p>
 
           <h2 style={baslik}>Tercihinizi değiştirme</h2>
-          <p><CerezTercihleriLink /> bağlantısından seçiminizi istediğiniz zaman değiştirebilirsiniz. Tarayıcı ayarlarınızdan da çerezleri silebilirsiniz.</p>
+          <p><CerezTercihleriLink /> bağlantısından analiz ve reklam çerezlerini ayrı ayrı açıp kapatabilirsiniz. Tüm isteğe bağlı çerezleri reddederseniz tercihinizi 6 ay sonra yeniden sorarız. Tarayıcı ayarlarınızdan da çerezleri silebilirsiniz.</p>
 
           <h2 style={baslik}>İletişim</h2>
           <p>Sorularınız için: <a href="mailto:info@zenthrabilisim.com">info@zenthrabilisim.com</a></p>

@@ -7,7 +7,7 @@ import Script from 'next/script';
 import MetaPixel from '@/components/MetaPixel';
 import WhatsAppBot from '@/components/WhatsAppBot';
 import ConsentBanner from '@/components/ConsentBanner';
-import { CONSENT_KEY } from '@/lib/ads';
+import { CONSENT_READ_JS } from '@/lib/ads';
 
 // Google Ads etiketi. linker: reklamdan gelen gclid app alan adina
 // (kayit orada) tasinsin, donusum kampanyaya baglansin.
@@ -23,10 +23,10 @@ const GTM_ID = 'GTM-W9C4QLFR';
 const CONSENT_DEFAULT = `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 window.gtag = gtag;
-var c = null; try { c = localStorage.getItem('${CONSENT_KEY}'); } catch (e) {}
-var s = c === 'granted' ? 'granted' : 'denied';
-gtag('consent', 'default', { ad_storage: s, ad_user_data: s, ad_personalization: s, analytics_storage: s, wait_for_update: 500 });
-gtag('set', 'ads_data_redaction', s === 'denied');
+${CONSENT_READ_JS}
+var s = zOnay.reklam ? 'granted' : 'denied';
+gtag('consent', 'default', { ad_storage: s, ad_user_data: s, ad_personalization: s, analytics_storage: zOnay.analiz ? 'granted' : 'denied', wait_for_update: 500 });
+gtag('set', 'ads_data_redaction', !zOnay.reklam);
 gtag('set', 'url_passthrough', true);`;
 
 export const metadata = {
