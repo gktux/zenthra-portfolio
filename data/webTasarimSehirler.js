@@ -80,6 +80,11 @@ export const webTasarimBolgeler = {
     cevre: 'Merkez, Sungurlu, Osmancık',
     not: 'Çorum’daki üretim ve ticaret firmaları için kurumsal web sitesi ve SEO hizmeti veriyoruz.',
   },
+  ankara: {
+    ad: 'Ankara', de: 'Ankara’da', tip: 'il',
+    cevre: 'Çankaya, Keçiören, Yenimahalle, Etimesgut, Mamak, Sincan, Ostim ve İvedik OSB',
+    not: 'Ankara’daki kurumsal firmalar, OSB üreticileri ve hizmet işletmeleri için uzaktan çalışarak kurumsal web sitesi, e-ticaret ve SEO hizmeti veriyoruz; toplantılar online, teslim süreci şeffaf.',
+  },
   tokat: {
     ad: 'Tokat', de: 'Tokat’ta', tip: 'il',
     cevre: 'Merkez, Turhal, Erbaa, Niksar',
