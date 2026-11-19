@@ -53,7 +53,7 @@ export default function Footer() {
                 <span className="cb-footer-nav-title"><span data-text="Zenthra Bilişim ERP" style={{ color: '#0071e3' }}>Zenthra Bilişim ERP</span></span>
               </a>
               <a className="cb-footer-nav" href="/projects/depo-live">
-                <span className="cb-footer-nav-title"><span data-text="Depo Programı" style={{ color: '#0071e3' }}>Depo Programı</span></span>
+                <span className="cb-footer-nav-title"><span data-text="Depo Yönetim Programı" style={{ color: '#0071e3' }}>Depo Yönetim Programı</span></span>
               </a>
               <a className="cb-footer-nav" href="https://app.zenthrabilisim.com.tr/stok-takip-programi">
                 <span className="cb-footer-nav-title"><span data-text="Stok Takip Programı">Stok Takip Programı</span></span>

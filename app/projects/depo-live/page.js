@@ -340,6 +340,33 @@ export default function DepoLiveProjectPage() {
         </div>
       </section>
 
+      {/* WMS tanim ve iceri aktarim bolumu - SEO odakli */}
+      {isTr && (
+        <section style={{ padding: '80px 0 20px 0', background: '#ffffff' }}>
+          <div className="container" style={{ maxWidth: '900px' }}>
+            <ScrollReveal distance="40px" duration="0.8s">
+              <h2 style={{ fontSize: 'clamp(1.8rem, 3.2vw, 2.4rem)', fontWeight: 500, color: '#000000', marginBottom: '20px', fontFamily: 'var(--font-display)', letterSpacing: '-0.025em' }}>
+                Depo Yönetim Sistemi (WMS) Nedir?
+              </h2>
+              <p style={{ fontSize: '1.08rem', color: '#1d1d1f', lineHeight: 1.75, fontFamily: 'var(--font-body)', marginBottom: '18px' }}>
+                Depo yönetim sistemi (WMS — Warehouse Management System), deponuzdaki her ürünün hangi rafta, hangi lotta ve hangi miktarda olduğunu <strong>canlı</strong> olarak takip etmenizi sağlayan depo yönetim yazılımıdır. Klasik stok takip programından farkı, depo içi fiziksel operasyonları (mal kabul, raf yerleştirme, sayım, toplama, sevkiyat) barkodla ve el terminaliyle yönetmesidir.
+              </p>
+              <p style={{ fontSize: '1.08rem', color: '#1d1d1f', lineHeight: 1.75, fontFamily: 'var(--font-body)', marginBottom: '18px' }}>
+                <strong>Zenthra Bilişim Depo Live</strong>, Türkiye için geliştirilmiş bulut tabanlı bir depo yönetim programıdır. Kendi akıllı telefonunuzu el terminali olarak kullanabilir, raf/koridor bazlı canlı sayım yapabilir, seri ve lot numarası izlenebilirliği sağlayabilirsiniz. Depo programı fiyatları kullanıcı sayısına ve modüllere göre belirlenir; kurulum ücreti alınmaz, 14 gün ücretsiz denersiniz.
+              </p>
+              <p style={{ fontSize: '1.02rem', color: '#6e6e73', lineHeight: 1.7, fontFamily: 'var(--font-body)' }}>
+                İlgili rehberler:{' '}
+                <a href="/rehber" style={{ color: '#0071e3', textDecoration: 'none', fontWeight: 600 }}>Depo sayımı nasıl yapılır</a>
+                {' • '}
+                <a href="/sektorler" style={{ color: '#0071e3', textDecoration: 'none', fontWeight: 600 }}>Sektörel depo çözümleri</a>
+                {' • '}
+                <a href="/fiyatlar" style={{ color: '#0071e3', textDecoration: 'none', fontWeight: 600 }}>Depo programı fiyatları</a>
+              </p>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
       {/* 6 Modules / Capabilities Grid Section */}
       <section style={{ padding: '100px 0', background: '#ffffff' }}>
         <div className="container">

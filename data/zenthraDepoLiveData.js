@@ -5,8 +5,8 @@ export const zenthraDepoLiveData = {
     freeTrialUrl: "https://app.zenthrabilisim.com.tr",
     freeTrialBadge: "⚡ 14 Gün Ücretsiz Deneyin — Kredi Kartı Gerekmez",
     hero: {
-      anaBaslik: "Depo Programı: Depo ve Stok Süreçlerinizi Canlı ve Sıfır Hata ile Yönetin",
-      altBaslik: "Zenthra Bilişim Depo Live, mal kabulden sevkiyata kadar tüm süreci tek ekranda toplayan barkodlu bir depo programıdır. El terminali, karekod okuma, canlı raf lokasyonu ve QNB entegrasyonuyla deponuzu anlık izleyin.",
+      anaBaslik: "Depo Yönetim Programı: Barkodlu WMS ile Canlı Stok, Sıfır Hata",
+      altBaslik: "Zenthra Bilişim Depo Live, mal kabulden sevkiyata kadar tüm süreci tek ekranda toplayan barkodlu bir depo yönetim programıdır (WMS). El terminali, karekod okuma, canlı raf lokasyonu ve QNB entegrasyonuyla deponuzu anlık izleyin. Depo yönetim sistemi arayan tüm işletmelere uyarlanır.",
       metrikler: [
         { deger: "7/24", aciklama: "Canlı Stok & El Terminali Senkronizasyonu" },
         { deger: "14 Gün", aciklama: "Ücretsiz Deneme, Kurulum Ücreti Yok" }
