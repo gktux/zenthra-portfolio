@@ -86,24 +86,38 @@ export function OrganizationSchema() {
 }
 
 export function SoftwareSchema({ name, description, url, image, features = [] }) {
+  const APP_URL = 'https://app.zenthrabilisim.com.tr';
   const data = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
+    '@id': `${APP_URL}#software`,
     name,
+    alternateName: ['Depo Live', 'Zenthra Bilişim Depo Live', 'Depo Programı'],
     description,
     url,
     image,
     applicationCategory: 'BusinessApplication',
+    applicationSubCategory: 'WarehouseManagement',
     operatingSystem: 'Web, Android, iOS',
     inLanguage: 'tr-TR',
     featureList: features,
+    downloadUrl: APP_URL,
+    installUrl: `${APP_URL}/register`,
+    softwareHelp: `${APP_URL}/depo-yonetim-sistemi`,
+    sameAs: [APP_URL, `${APP_URL}/depo-yonetim-sistemi`, `${APP_URL}/stok-takip-programi`, `${APP_URL}/depo-takip-programi`],
     publisher: { '@id': 'https://www.zenthrabilisim.com/#organization' },
     offers: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'TRY',
       description: '14 gün ücretsiz deneme, kredi kartı gerekmez',
+      url: `${APP_URL}/register`,
       availability: 'https://schema.org/InStock',
+    },
+    potentialAction: {
+      '@type': 'ViewAction',
+      target: APP_URL,
+      name: 'Uygulamayı Aç',
     },
   };
   return (
