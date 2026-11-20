@@ -6,8 +6,6 @@ import Projects from '@/components/Projects';
 import MissionVision from '@/components/MissionVision';
 import Faq from '@/components/Faq';
 import Footer from '@/components/Footer';
-import DepoLiveLaunch from '@/components/DepoLiveLaunch';
-
 export default function Home() {
   return (
     <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: '#ffffff' }}>
@@ -19,7 +17,6 @@ export default function Home() {
       <MissionVision />
       <Faq />
       <Footer />
-      <DepoLiveLaunch />
     </main>
   );
 }
