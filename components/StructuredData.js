@@ -11,6 +11,10 @@ const ORG = {
   telephone: '+90-531-580-07-53',
   areaServed: { '@type': 'Country', name: 'Türkiye' },
   address: { '@type': 'PostalAddress', addressCountry: 'TR', addressRegion: 'Samsun' },
+  sameAs: [
+    'https://app.zenthrabilisim.com.tr',
+    'https://www.linkedin.com/company/zenthra-bi%CC%87li%CC%87%C5%9Fi%CC%87m/',
+  ],
 };
 
 export function OrganizationSchema() {
@@ -25,6 +29,7 @@ export function OrganizationSchema() {
         name: 'Zenthra Bilişim',
         inLanguage: 'tr-TR',
         publisher: { '@id': 'https://www.zenthrabilisim.com/#organization' },
+        isRelatedTo: { '@type': 'WebSite', url: 'https://app.zenthrabilisim.com.tr', name: 'Zenthra Depo Live' },
       },
       {
         '@type': 'ProfessionalService',

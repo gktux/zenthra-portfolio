@@ -102,6 +102,22 @@ export default function Hero() {
               <span>{t.hero.ctaProjects}</span>
               <ArrowUpRight size={20} />
             </a>
+            <a
+              href="https://app.zenthrabilisim.com.tr/depo-yonetim-sistemi"
+              style={{
+                padding: '16px 32px',
+                fontSize: '1rem',
+                color: '#1d1d1f',
+                textDecoration: 'none',
+                fontWeight: 500,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                borderBottom: '1px solid #1d1d1f'
+              }}
+            >
+              Depo Live uygulamasını açın <ArrowUpRight size={18} />
+            </a>
           </div>
         </div>
 
