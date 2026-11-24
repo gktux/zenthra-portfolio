@@ -1,17 +1,13 @@
-'use client';
-
-import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import { ChevronDown, ArrowUpRight, Check, Mail } from 'lucide-react';
+import FaqAccordion from '@/components/FaqAccordion';
+import { ArrowUpRight, Check, Mail } from 'lucide-react';
 import PdksMailCta, { pdksMailHref } from '@/components/PdksMailCta';
 import { pdksSehirListesi } from '@/data/pdksSehirler';
 import { webTasarimBolgeListesi } from '@/data/webTasarimSehirler';
 
 export default function ServicePage({ service }) {
-  const [openFaqIndex, setOpenFaqIndex] = useState(null);
-
   return (
     <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: '#ffffff' }}>
       <Navbar />
@@ -268,57 +264,7 @@ export default function ServicePage({ service }) {
             </div>
           </ScrollReveal>
 
-          <div style={{ maxWidth: '860px' }}>
-            {service.faq.map((item, idx) => (
-              <ScrollReveal key={item.q} delay={idx * 0.08} distance="30px" duration="0.7s">
-                <div style={{ borderBottom: '1px solid rgba(0,0,0,0.1)' }}>
-                  <button
-                    onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
-                    aria-expanded={openFaqIndex === idx}
-                    style={{
-                      width: '100%',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      gap: '20px',
-                      padding: '26px 0',
-                      background: 'none',
-                      border: 'none',
-                      cursor: 'pointer',
-                      textAlign: 'left',
-                      fontSize: '1.2rem',
-                      fontWeight: 600,
-                      fontFamily: 'var(--font-display)',
-                      color: '#000',
-                    }}
-                  >
-                    {item.q}
-                    <ChevronDown
-                      size={20}
-                      style={{
-                        flexShrink: 0,
-                        transition: 'transform 0.3s',
-                        transform: openFaqIndex === idx ? 'rotate(180deg)' : 'none',
-                      }}
-                    />
-                  </button>
-                  {openFaqIndex === idx && (
-                    <p
-                      style={{
-                        color: '#6e6e73',
-                        fontSize: '1.02rem',
-                        lineHeight: 1.7,
-                        paddingBottom: '26px',
-                        fontFamily: 'var(--font-body)',
-                      }}
-                    >
-                      {item.a}
-                    </p>
-                  )}
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+          <FaqAccordion items={service.faq} />
         </div>
       </section>
 
